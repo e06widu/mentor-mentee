@@ -1,0 +1,58 @@
+{
+  "connections": "3",
+  "mentors": "2",
+  "mentees": "0",
+  "learning Areas": "2",
+  "connectionList": [
+    {
+      "img": "../../../assets/i/user-big-boy.jpg",
+      "userName": "David Brown",
+      "title": "Basics of HTML & CSS",
+      "description": "PROGRAMMING",
+      "status": "Active",
+      "startDate": "24 Jan 2018",
+      "upcomingMeeting": "13 Feb 2018, 10:00"
+    },
+    {
+      "img": "../../../assets/i/user3.jpg",
+      "userName": "Nancy Allen",
+      "title": "Public Speaking",
+      "description": "MARKETING",
+      "status": "Active",
+      "startDate": "24 Jan 2018",
+      "upcomingMeeting": "14 Feb 2018, 10:00"
+    },
+    {
+      "img": "../../../assets/i/user3.jpg",
+      "userName": "Nancy Allen",
+      "title": "Public Speaking",
+      "description": "MARKETING",
+      "status": "Active",
+      "startDate": "24 Jan 2018",
+      "upcomingMeeting": "Waiting confirmation"
+    },
+    {
+      "img": "../../../assets/i/user2.jpg",
+      "userName": "Alex Thompson",
+      "title": "German Classes",
+      "description": "LANGUAGES",
+      "status": "Pending",
+      "startDate": "",
+      "upcomingMeeting": ""
+    }
+  ],
+  "newMeetingRequestData": {
+    "messageText": "Hi Jessica, I am going in a trip next Friday. Let's have the meeting ASAP. What time works best for you?<br/>Looking forward,<br/>Nancy",
+    "optionList": [
+      {
+        "value": "Feb 15, 15:00"
+      },
+      {
+        "value": "Feb 16, 14:00"
+      },
+      {
+        "value": "Feb 20, 10:00"
+      }
+    ]
+  }
+}

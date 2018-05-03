@@ -1,0 +1,51 @@
+@import '../../../styles/variables';
+
+.login-wrapper {
+	width: 100%;
+	height: 100%;
+	display: flex;
+  .titles {
+		font-size: 20px;
+		margin-bottom: 25px;
+		font-weight: bold;
+	}
+	.login-main {
+		width: 394px;
+		border-radius: 4px;
+		background-color: $whiteColor;
+		padding: 30px;
+		margin: 0 auto;
+	}
+	.login-form {
+		.row-line {
+			margin-bottom: 15px;
+		}
+		.label-txt {
+			font-size: 15px;
+			color: $grayFormTextColor;
+			margin-bottom: 10px;
+		}
+		.btn-boxs {
+			padding-top: 10px;
+			.btn {
+				margin-bottom: 15px;
+				width: 100%;
+				height: 40px;
+				line-height: 40px;
+			}
+			.blue-links {
+				text-align: center;
+				font-size: 15px;
+				color: $blueNameColor;
+
+			}
+		}
+	}
+}
+
+/* fix layout issue when smaller than 1024px width */
+@media (max-width: 1024px) {
+	.login-wrapper {
+		padding: 0 20px;
+	}
+}

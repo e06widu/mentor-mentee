@@ -1,0 +1,46 @@
+<!-- learning area table header -->
+<div *ngIf="index === 0" class="learning-table-row header clearfix">
+  <div class="td th">
+    Learning Area
+  </div>
+  <div class="td mentee-td th">
+    <i class="mentor"></i>Mentors / Pending
+  </div>
+  <div class="td mentee-td th">
+    <i class="mentee"></i> Mentees / New
+  </div>
+  <div class="td day-td th">
+    Duration
+  </div>
+  <div class="td day-td th">
+    Remainder
+  </div>
+  <div class="td day-td th">
+    Feedback
+  </div>
+  <div class="td day-td th">
+  </div>
+</div>
+<!-- learning area table row -->
+<div class="learning-table-row clearfix">
+  <div class="td">
+    <a href="javascript:;" class="link">{{data.title}}</a>
+    <p>{{data.type}}</p>
+  </div>
+  <div class="td mentee-td"><span class="red">{{data.mentor}}</span><span class="red">{{data.pending}}</span></div>
+  <div class="td mentee-td"><span class="orange">{{data.mentee}}</span><span class="orange">{{data.new}}</span></div>
+  <div class="td day-td">
+    <span class="gray">{{data.duration}} Days</span>
+  </div>
+  <div class="td day-td">
+    <span class="gray">{{data.remainder}} Days</span>
+  </div>
+  <div class="td day-td">
+    <span class="gray">{{data.feedback}} Days</span>
+  </div>
+  <div class="td day-td">
+    <app-more
+      (action)="onShare($event)"
+      [items]="[{name: 'Edit'}, {name: 'Share', type: 'green'}]"></app-more>
+  </div>
+</div>

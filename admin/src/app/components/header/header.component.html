@@ -1,0 +1,58 @@
+<header>
+  <a [class.open]="open" (click)="clickMenu()" href="javascript:;" class="menu-icon"></a>
+
+  <!-- logout -->
+  <a href="javascript:;" class="logout"></a>
+  <span class="separator"></span>
+
+  <!-- notification -->
+  <a href="javascript:;" class="notification"></a>
+  <span class="separator"></span>
+
+  <!-- search  -->
+  <a href="javascript:;" class="search-button-icon"></a>
+  <span class="separator search-button-icon-separator"></span>
+
+  <!-- drop down wrapper -->
+  <div class="drop-down-wrapper">
+    <a (click)="openDropDown = !openDropDown; $event.stopPropagation()" href="javascript:;" class="drop-down"></a>
+
+    <div class="drop-down-popup" *ngIf="openDropDown">
+      <div class="arrow-box">
+        <a href="javascript:;" [class.active]="user.admin">
+          <i></i>
+          <span>Admin</span>
+        </a>
+        <a href="javascript:;" [class.active]="user.mentor">
+          <i></i>
+          <span>Mentor</span>
+        </a>
+        <a href="javascript:;" [class.active]="user.mentee">
+          <i></i>
+          <span>Mentee</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- avatar image -->
+  <img src="{{user.image}}" alt=""/>
+  <!-- logo -->
+  <a routerLink="/admin/dashboard" class="logo">
+    <i></i>
+    <span>Wipro</span> Mentorship
+  </a>
+
+  <div class="welcome-label">
+    <h5>{{user.name}}</h5>
+    <p>{{user.role}}</p>
+  </div>
+  <!-- search field -->
+  <input placeholder="Global Search" class="search" type="search"/>
+
+  <!-- search button -->
+  <button class="search-button">Search</button>
+
+
+</header>

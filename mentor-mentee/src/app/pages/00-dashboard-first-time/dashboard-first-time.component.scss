@@ -1,0 +1,141 @@
+@import '../../../styles/variables';
+
+.right-txt {
+  margin-left: 165px;
+  p {
+    font-size: 15px;
+    color: $grayBgColor;
+    line-height: 23px;
+    margin-bottom: 30px;
+  }
+  .link-btn a{
+    display: inline-block;
+    line-height: 36px;
+    height: 36px;
+    padding: 0 20px;
+    background: $blueNameColor;
+    font-size: 14px;
+    color: #fafcfe;
+    border-radius: 4px;
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+  .text-center {
+    text-align: center;
+  }
+}
+.margin-l {
+  margin-left: 2px;
+}
+.mentor-items {
+  overflow: hidden;
+}
+.mentor-items li{
+  margin-bottom: 30px;
+  float: left;
+  width: 30%;
+  &:nth-child(2) {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .pic {
+    display: block;
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 20px;
+    img {
+      width: 100%;
+    }
+  }
+  .items-title {
+    font-size: 15px;
+    color: $grayInputTextColor;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #797979;
+    padding: 0 10%;
+    margin-bottom: 0;
+  }
+}
+
+
+.areas-btn {
+  height: 36px;
+  margin-top: -30px;
+  a{
+    display: block;
+    float: right;
+    width: auto;
+    padding: 0 30px;
+    text-align: center;
+    background: $greenBgColor;
+    border-radius: 4px;
+    line-height: 36px;
+    height: 36px;
+    font-size: 14px;
+    color: $whiteColor;
+    //margin-right: -0.5%;
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+}
+
+.tab {
+  border-bottom: solid 1px #dce3f7;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  a {
+    display: inline-block;
+    color: $grayTitleColor;
+    font-weight: bold;
+    font-size: 12px;
+    margin-right: 36px;
+    &.active {
+      color: $blueTitleColor;
+    }
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+}
+
+/* fix layout issue when smaller than 1024px width */
+@media (max-width: 1024px) {
+  .right-txt {
+    margin-left: 0;
+    .link-btn {
+      a {
+        display: none;
+      }
+    }
+  }
+  .mentor-items {
+    li{ 
+      float: none;
+      width: auto;
+      .items-title {
+        font-size: 16px;
+      }
+      p {
+        line-height: 24px;
+        font-size: 15px;
+      }
+    }
+  }
+
+  /* .areas-btn  */
+  .areas-btn {
+    a {
+      width: 100%;
+      margin: 10px 0 50px 0;
+    }
+  }
+}

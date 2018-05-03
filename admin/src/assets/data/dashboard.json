@@ -1,0 +1,267 @@
+{
+  "status": [
+    {
+      "type": "connection",
+      "value": "325",
+      "new": "31",
+      "label": "Connections"
+    },
+    {
+      "type": "mentor",
+      "value": "120",
+      "new": "15",
+      "label": "Mentors"
+    },
+    {
+      "type": "mentee",
+      "value": "250",
+      "new": "48",
+      "label": "Mentees"
+    },
+    {
+      "type": "learning",
+      "value": "45",
+      "new": "4",
+      "label": "Learning areas "
+    },
+    {
+      "type": "admin",
+      "value": "15",
+      "new": "3",
+      "label": "Sub Admins"
+    }
+  ],
+  "mentors": {
+    "count": 31,
+    "mentors": [
+      "/assets/i/user/user-1.jpg",
+      "/assets/i/user/user-7.jpg",
+      "/assets/i/user/user-8.jpg",
+      "/assets/i/user/user-9.jpg",
+      "/assets/i/user/user-10.jpg"
+    ],
+    "mentees": [
+      "/assets/i/user/user-11.jpg",
+      "/assets/i/user/user-12.jpg",
+      "/assets/i/user/user-13.jpg",
+      "/assets/i/user/user-14.jpg",
+      "/assets/i/user/user-15.jpg"
+    ],
+    "admins": [
+      "/assets/i/user/user-16.jpg",
+      "/assets/i/user/user-17.jpg",
+      "/assets/i/user/user-18.jpg"
+    ]
+  },
+  "learnings": [
+    {
+      "open": false,
+      "name": "Spring Framework",
+      "type": "Programming"
+    },
+    {
+      "open": false,
+      "name": "Adobe XD",
+      "type": "WEB DESIGN"
+    },
+    {
+      "open": false,
+      "name": "IBM DB2",
+      "type": "DATABASE"
+    }
+  ],
+  "filters": [
+    {
+      "id": 1,
+      "name": "Most Mentor"
+    },
+    {
+      "id": 2,
+      "name": "Least Mentor"
+    }
+  ],
+  "learningAreas": [
+    {
+      "name": "Learn Javascript",
+      "type": "Programming",
+      "mentees": 210
+    },
+    {
+      "name": "C# Basics",
+      "type": "Programming",
+      "mentees": 187
+    },
+    {
+      "name": "Management",
+      "type": "Soft Skills",
+      "mentees": 165
+    },
+    {
+      "name": "Negotiations",
+      "type": "Soft Skills",
+      "mentees": 137
+    },
+    {
+      "name": "Marketing",
+      "type": "Soft Skills",
+      "mentees": 115
+    },
+    {
+      "name": "Hindi",
+      "type": "LANGUAGE",
+      "mentees": 102
+    }
+  ],
+  "accounts": [
+    {
+      "image": "/assets/i/user/user-2.jpg",
+      "name": "George Clooney",
+      "field": "Telecommunication",
+      "active": 151,
+      "taken": 68
+    },
+    {
+      "image": "/assets/i/user/user-3.jpg",
+      "name": "Petyr Baelish",
+      "field": "Analytics",
+      "active": 147,
+      "taken": 57
+    },
+    {
+      "image": "/assets/i/user/user-4.jpg",
+      "name": "Sansa Lunafreya",
+      "field": "Applications",
+      "active": 142,
+      "taken": 46
+    },
+    {
+      "image": "/assets/i/user/user-5.jpg",
+      "name": "Yunalesca",
+      "field": "Consulting",
+      "active": 138,
+      "taken": 33
+    },
+    {
+      "image": "/assets/i/user/user-6.jpg",
+      "name": "Mark Rufallo",
+      "field": "Manufacturing",
+      "active": 130,
+      "taken": 29
+    }
+  ],
+  "mentorRequests": [
+    {
+      "image": "/assets/i/user/user-large-1.png",
+      "name": "Haru Glory",
+      "designation": "Senior Web Developer",
+      "experience": 7
+    },
+    {
+      "image": "/assets/i/user/user-large-2.png",
+      "name": "Nicole Kidman",
+      "designation": "Senior Web Designer",
+      "experience": 5
+    },
+    {
+      "image": "/assets/i/user/user-large-3.png",
+      "name": "Ajay Devgn",
+      "designation": "Data Scietist",
+      "experience": 8
+    }
+  ],
+  "topMentors": [
+    {
+      "image": "/assets/i/user/user-large-1.png",
+      "name": "Lex Luthor",
+      "designation": "Senior Web Developer",
+      "star": 100,
+      "mentees": 231
+    },
+    {
+      "image": "/assets/i/user/user-large-3.png",
+      "name": "Ezra Miller",
+      "designation": "Senior Web Developer",
+      "star": 100,
+      "mentees": 168
+    },
+    {
+      "image": "/assets/i/user/user-large-4.png",
+      "name": "Gal Gadot",
+      "designation": "Senior Digital Marketing",
+      "star": 100,
+      "mentees": 142
+    },
+    {
+      "image": "/assets/i/user/user-large-5.png",
+      "name": "Andrew Garfield",
+      "designation": "Site Manager",
+      "star": 100,
+      "mentees": 129
+    },
+    {
+      "image": "/assets/i/user/user-large-6.png",
+      "name": "Charlize Theron",
+      "designation": "HRD Manager",
+      "star": 90,
+      "mentees": 125
+    }
+  ],"bottomMentors": [
+    {
+      "image": "/assets/i/user/user-large-4.png",
+      "name": "Lex Luthor",
+      "designation": "Senior Web Developer",
+      "star": 10,
+      "mentees": 7
+    },
+    {
+      "image": "/assets/i/user/user-large-5.png",
+      "name": "Ezra Miller",
+      "designation": "Senior Web Developer",
+      "star": 10,
+      "mentees": 8
+    },
+    {
+      "image": "/assets/i/user/user-large-6.png",
+      "name": "Gal Gadot",
+      "designation": "Senior Digital Marketing",
+      "star": 10,
+      "mentees": 10
+    },
+    {
+      "image": "/assets/i/user/user-large-7.png",
+      "name": "Andrew Garfield",
+      "designation": "Site Manager",
+      "star": 10,
+      "mentees": 13
+    },
+    {
+      "image": "/assets/i/user/user-large-8.png",
+      "name": "Charlize Theron",
+      "designation": "HRD Manager",
+      "star": 10,
+      "mentees": 12
+    }
+  ],
+  "inactiveMentors": [
+    {
+      "image": "/assets/i/user/user-large-7.png",
+      "name": "Mara Jade",
+      "lastLogin": "Feb 20, 2018"
+    },
+    {
+      "image": "/assets/i/user/user-large-8.png",
+      "name": "Anton Yelchin",
+      "lastLogin": "Feb 12, 2018"
+    },
+    {
+      "image": "/assets/i/user/user-large-9.png",
+      "name": "Marc Russo",
+      "lastLogin": "Jan 28, 2018"
+    },
+    {
+      "image": "/assets/i/user/user-large-10.png",
+      "name": "Kailtyn Moore",
+      "lastLogin": "Jan 11, 2018"
+    }
+  ]
+}

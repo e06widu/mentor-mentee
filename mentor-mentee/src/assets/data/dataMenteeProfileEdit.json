@@ -1,0 +1,86 @@
+{
+  "userPhoto": "../../../assets/i/user-big-photo.jpg",
+  "userName": "Jessica Snow",
+  "userRole": "Junior Web Developer",
+  "starNumber": 0,
+  "reviewLabelLeft": "",
+  "reviewLabelRight": "",
+  "status": "",
+  "sentRequest": false,
+  "formData": [
+    {
+      "personalDetails": {
+        "Name": "Jessica Snow",
+        "Email": "jessica.snow@wipro.com",
+        "Phone": "0099540835394",
+        "Domain": "Information Technology",
+        "Designation": "Junior Web Developer",
+        "Location": "Dublin, Ireland",
+        "Wipro Experience": "2 years",
+        "Total Experience": "2 years"
+      },
+      "aboutMyCurrentRole": {
+        "description": "I have a Computer Science Degree and MBA.",
+        "specialties": "- Intersection of Media & Technology\n- Developing new startups" ,
+        "strengthAreas": "- Web 2.0 and Web Services\n- Real Time Internet: Blogs, Podcasting"
+      },
+      "workDetails": [
+        {
+          "img": "",
+          "title": "Wipro",
+          "timeFrom": "2018-03-13",
+          "timeTo": "2018-03-18",
+          "description": "Started as a Senior Front End Developer responsible for optimizing the Wipro main site and moved to backend where I worked with databased  as large as 100K records."
+        }
+      ],
+      "Volunteer as Mentor": {
+        "description": "I believe that every day is a learning process. Life is a marathon that needs a lot of perseverence. That's why I am always eager to learn more.",
+        "learningCategory": "Information Technology",
+        "learningArea": "Career Development",
+        "keyStrengths": "Curiosity, patience, perseverance, hard-working"
+      },
+      "Skills and Band": {
+        "list": [
+          {
+            "value": "Analytical Thinking"
+          },
+          {
+            "value": "Strong Attention to Details"
+          },
+          {
+            "value": "Collaboration"
+          }
+        ],
+        "band": "B2"
+      },
+      "reviewsData": {
+        "labelMin": "3",
+        "labelMax": "15",
+        "length": 3,
+        "list": [
+          {
+            "img": "../../../assets/i/user1.jpg",
+            "starNumber": 4,
+            "time": "Feb 11, 2018",
+            "name": "Nikita Stone",
+            "description": "David has built a series of interesting tech media businesses. He's a great mentor - he does his homework and asks good questions to see if you understood what he explained."
+          },
+          {
+            "img": "../../../assets/i/user2.jpg",
+            "starNumber": 3,
+            "time": "Jan 10, 2018",
+            "name": "Tom Hanks",
+            "description": "He has strong business development and deep technological know-how. Whether its Web 2.0, wireless or larger system's architecture, David easily walks the talk."
+          },
+          {
+            "img": "../../../assets/i/user3.jpg",
+            "starNumber": 4,
+            "time": "Jan 2, 2018",
+            "name": "Jessie Smith",
+            "description": "I met David at an ICANN meeting in Melbourne, Australia 2 years ago and I have a great deal of respect for his personal passion. It was great being able to have him as my mentor."
+          }
+        ]
+      }
+    }
+  ]
+}

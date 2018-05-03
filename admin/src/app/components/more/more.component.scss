@@ -1,0 +1,62 @@
+@import "variable";
+
+/* more action popup */
+.more-wrapper {
+  width: 27px;
+  height: 7px;
+  float: right;
+  margin-top: 8px;
+  position: relative;
+  a {
+    display: inline-block;
+    i {
+      float: left;
+      width: 7px;
+      height: 7px;
+      border-radius: 100%;
+      margin-right: 3px;
+      background: $more-button-bg;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .popup {
+    z-index: 100;
+    position: absolute;
+    right: 0;
+    top: 15px;
+    width: 79px;
+    height: 91px;
+    border-radius: 2px;
+    background-color: $white-color;
+    box-shadow: 0 0 3px 0 $more-popup-shadow-color;
+    a {
+      text-decoration: none;
+      padding-left: 15px;
+      height: 43px;
+      font-size: 14px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      letter-spacing: normal;
+      text-align: left;
+      line-height: 43px;
+      display: block;
+      color: $button-color;
+      border-bottom: solid 1px $more-button-border;
+      &:last-child {
+        border-bottom: 0;
+      }
+      &.red {
+        color: $notification-bg;
+      }
+      &.green {
+        color: $dashboard-status-learning;
+      }
+      &:hover {
+        opacity: $hover-opacity;
+      }
+    }
+  }
+}

@@ -1,0 +1,391 @@
+{
+  "availableLearningCategories": [
+    {
+      "title": "Programming",
+      "description": "15 Learning Areas",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Soft Skills",
+      "description": "5 Learning Areas",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Marketing",
+      "description": "14 Learning Areas",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Languages",
+      "description": "3 Learning Areas",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Sales",
+      "description": "8 Learning Areas",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Engineering",
+      "description": "5 Learning Areas",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Accounting",
+      "description": "13 Learning Areas",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Oil & Gas",
+      "description": "11 Learning Areas",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Programming",
+      "description": "15 Learning Areas",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Soft Skills",
+      "description": "5 Learning Areas",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Marketing",
+      "description": "14 Learning Areas",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Languages",
+      "description": "3 Learning Areas",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Sales",
+      "description": "8 Learning Areas",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Engineering",
+      "description": "5 Learning Areas",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Accounting",
+      "description": "13 Learning Areas",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    }
+  ]
+}

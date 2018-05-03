@@ -1,0 +1,345 @@
+<div class="body-wrapper flex-box" 
+  [ngClass]="{'open-left': hiddenElementGroup['showMenu']}"
+  (click)="hiddenElementGroup['showMenu'] = false;">
+  <app-sd-left-side data-activeMenu="mentee-profile-edit" [hiddenElementGroup]="hiddenElementGroup"></app-sd-left-side>
+  <div class="right-contents">
+    <app-sd-header data-activeMenu="mentee-profile-edit" [hiddenElementGroup]="hiddenElementGroup"></app-sd-header>
+    <div class="right-mains inner" 
+      [ngClass]="{'mobile-hide': hiddenElementGroup['showSearchPopupMobile'] || hiddenElementGroup['showNotification']}">
+      <h4 class="titles">My Profile</h4>
+      <div class="row-line">
+        <div class="left">
+          <div class="left-white">
+            <div class="user-info">
+              <div class="user-photo">
+                <a href="javascript:;"><img src="{{dataList['userPhoto']}}" alt="img"></a>
+                <input type="file" (change)="onChangePic($event)" (click)="$event.stopPropagation();"/>
+              </div>
+              <div class="name">{{dataList['userName']}}</div>
+              <div class="txt">{{dataList['userRole']}}</div>
+              <div class="status-txt">
+                <div class="success-txt">Mentee</div>
+              </div>
+            </div>
+          </div>
+        </div> 
+        <!-- end .col-3 -->
+        <div class="right">
+          <div class="right-white-panel my-profile-detail" *ngFor="let formItem of dataList['formData']">
+            <div class="detail-box ">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="section-personal section">
+                    <h4 class="title">Personal Details</h4>
+                    <div class="info">
+                      <div class="list-line">
+                        <div class="label-txt">Name:</div>
+                        <div class="inputs"
+  				                [ngClass]="{'error': formItem['personalDetails']['Name'] === '' && showError}">
+                          <input type="text" [(ngModel)]="formItem['personalDetails']['Name']">
+                        </div>
+                      </div>
+                      <div class="list-line">
+                        <div class="label-txt">Email:</div>
+                        <div class="inputs"
+  				                [ngClass]="{'error': (formItem['personalDetails']['Email'] === '' || showEmailError) && showError}">
+                          <input type="text" [(ngModel)]="formItem['personalDetails']['Email']">
+                        </div>
+                      </div>
+                      <div class="list-line">
+                        <div class="label-txt">Phone:</div>
+                        <div class="inputs"
+  				                [ngClass]="{'error': formItem['personalDetails']['Phone'] === '' && showError}">
+                          <input type="text" [(ngModel)]="formItem['personalDetails']['Phone']">
+                        </div>
+                      </div>
+                      <div class="list-line">
+                        <div class="label-txt">Domain:</div>
+                        <div class="inputs"
+  				                [ngClass]="{'error': formItem['personalDetails']['Domain'] === '' && showError}">
+                          <input type="text" [(ngModel)]="formItem['personalDetails']['Domain']">
+                        </div>
+                      </div>
+                      <div class="list-line">
+                        <div class="label-txt">Designation:</div>
+                        <div class="inputs"
+  				                [ngClass]="{'error': formItem['personalDetails']['Designation'] === '' && showError}">
+                          <input type="text" [(ngModel)]="formItem['personalDetails']['Designation']">
+                        </div>
+                      </div>
+                      <div class="list-line">
+                         <div class="label-txt">Location:</div>
+                         <div class="inputs"
+  				                [ngClass]="{'error': formItem['personalDetails']['Location'] === '' && showError}">
+                          <input type="text" [(ngModel)]="formItem['personalDetails']['Location']">
+                        </div>
+                      </div>
+                      <div class="list-line">
+                        <div class="label-txt">Wipro Experience:</div>
+                        <div class="inputs"
+  				                [ngClass]="{'error': formItem['personalDetails']['Wipro Experience'] === '' && showError}">
+                          <input type="text" [(ngModel)]="formItem['personalDetails']['Wipro Experience']">
+                        </div>
+                      </div>
+                      <div class="list-line">
+                        <div class="label-txt">Total Experience:</div>
+                         <div class="inputs"
+  				                [ngClass]="{'error': formItem['personalDetails']['Total Experience'] === '' && showError}">
+                          <input type="text" [(ngModel)]="formItem['personalDetails']['Total Experience']">
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end .info -->
+                  </div>
+                </div>  
+                <!-- end .col-md-12 -->
+                <div class="col-md-12">
+                  <div class="section-about-roles section ">
+                    <h4 class="title">ABOUT MY CURRENT ROLE</h4>
+                    <div class="info">
+                      <div class="list-line label-top">
+                        <div class="label-txt">Intro:</div>
+                        <div class="textareas"
+  				                [ngClass]="{'error': formItem['aboutMyCurrentRole']['description'] === '' && showError}">
+                          <textarea [(ngModel)]="formItem['aboutMyCurrentRole']['description']"></textarea>
+                        </div>
+                      </div>
+                      <div class="list-line label-top">
+                        <div class="label-txt">Specialities:</div>
+                        <div class="textareas"
+  				                [ngClass]="{'error': formItem['aboutMyCurrentRole']['specialties'] === '' && showError}">
+                          <textarea [(ngModel)]="formItem['aboutMyCurrentRole']['specialties']"></textarea>
+                        </div>
+                      </div>
+                      <div class="list-line label-top">
+                        <div class="label-txt">Strength Areas:</div>
+                        <div class="textareas"
+  				                [ngClass]="{'error': formItem['aboutMyCurrentRole']['strengthAreas'] === '' && showError}">
+                          <textarea [(ngModel)]="formItem['aboutMyCurrentRole']['strengthAreas']"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end .info -->
+                  </div>
+                  <!-- end .section -->
+                </div>  
+                <!-- end .col-12  -->
+                <div class="col-md-12">
+                  <div class="section-work-details section">
+                    <h4 class="title">Work Details</h4>
+                    <div class="info" *ngFor="let workDetailsItem of formItem['workDetails']">
+                      <div class="list-line">
+                        <div class="label-txt">Company:</div>
+                        <div class="inputs"
+  				                [ngClass]="{'error': workDetailsItem['title'] === '' && showError}">
+                          <input type="text" [(ngModel)]="workDetailsItem['title']">
+                        </div>
+                      </div>
+                      <div class="list-line">
+                        <div class="label-txt">Period:</div>
+                        <div class="date-two clearfix">
+                          <span class="inputs"
+  				                  [ngClass]="{'error': modelPeriodFrom === undefined && showError}">
+                            <input class="form-control" placeholder="yyyy-mm-dd"
+                              name="fromDate" [(ngModel)]="modelPeriodFrom" 
+                              (ngModelChange)="changeStartDate()"
+                              ngbDatepicker #fromDate="ngbDatepicker" readonly="readonly">
+                            <a href="javascript:;" class="fa fa-calendar" (click)="toDate.close();fromDate.toggle()"></a>
+                          </span>
+                          <span class="to">-</span>
+                          <span class="inputs"
+  				                  [ngClass]="{'error': modelPeriodTo === undefined && showError}">
+                            <input class="form-control" placeholder="yyyy-mm-dd"
+                              name="fromDate" [(ngModel)]="modelPeriodTo" 
+                              (ngModelChange)="changeEndDate()"
+                              ngbDatepicker #toDate="ngbDatepicker" readonly="readonly">
+                            <a href="javascript:;" class="fa fa-calendar" (click)="fromDate.close();toDate.toggle()"></a>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="list-line label-top">
+                        <div class="label-txt">Description:</div>
+                        <div class="textareas"
+  				                [ngClass]="{'error': workDetailsItem['description'] === '' && showError}">
+                          <textarea [(ngModel)]="workDetailsItem['description']"></textarea>
+                        </div>
+                      </div>
+                      <div class="list-line">
+                        <div class="label-txt"></div>
+                        <div class="btn-boxs">
+                          <a href="javascript:;" class="btn btn-border-blue mw182">Add Another Company</a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end .info -->
+                  </div>
+                  <!-- end .section -->
+                </div>  
+                <!-- end .col-12  -->
+                <div class="col-md-12">
+                  <div class="section-volunteer section label-top">
+                    <h4 class="title">VOLUNTEER AS MENTEE</h4>
+                    <div class="info">
+                      <div class="list-line label-top">
+                        <div class="label-txt">Reason:</div>
+                        <div class="textareas"
+  				                [ngClass]="{'error': formItem['Volunteer as Mentor']['description'] === '' && showError}">
+                          <textarea [(ngModel)]="formItem['Volunteer as Mentor']['description']"></textarea>
+                        </div>
+                      </div>
+                      <div class="list-line">
+                        <div class="label-txt">Domain Expertise:</div>
+                        <div ngbDropdown class="d-inline-block drop-down">
+                          <button class="btn btn-outline-primary" ngbDropdownToggle>
+                            {{formItem['Volunteer as Mentor']['learningCategory']}}
+                          </button>
+                          <div ngbDropdownMenu>
+                            <button class="dropdown-item" 
+                              (click)="formItem['Volunteer as Mentor']['learningCategory'] = 'All'">
+                              All
+                            </button>
+                            <button class="dropdown-item" 
+                              (click)="formItem['Volunteer as Mentor']['learningCategory'] = 'Information Technology'">
+                              Information Technology
+                            </button>
+                            <button class="dropdown-item" 
+                              (click)="formItem['Volunteer as Mentor']['learningCategory'] = 'Option 1'">
+                              Option 1
+                            </button>
+                            <button class="dropdown-item" 
+                              (click)="formItem['Volunteer as Mentor']['learningCategory'] = 'Option 2'">
+                              Option 2
+                            </button>
+                            <button class="dropdown-item" 
+                              (click)="formItem['Skills and Band']['band'] = 'Option 3'">
+                              Option 3
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="list-line">
+                        <div class="label-txt">General:</div>
+                        <div ngbDropdown class="d-inline-block drop-down">
+                          <button class="btn btn-outline-primary" ngbDropdownToggle>
+                            {{formItem['Volunteer as Mentor']['learningArea']}}
+                          </button>
+                          <div ngbDropdownMenu>
+                            <button class="dropdown-item" 
+                              (click)="formItem['Volunteer as Mentor']['learningArea'] = 'All'">
+                              All
+                            </button>
+                            <button class="dropdown-item" 
+                              (click)="formItem['Volunteer as Mentor']['learningArea'] = 'Career Development'">
+                              Career Development
+                            </button>
+                            <button class="dropdown-item" 
+                              (click)="formItem['Volunteer as Mentor']['learningArea'] = 'Option 1'">
+                              Option 1
+                            </button>
+                            <button class="dropdown-item" 
+                              (click)="formItem['Volunteer as Mentor']['learningArea'] = 'Option 2'">
+                              Option 2
+                            </button>
+                            <button class="dropdown-item" 
+                              (click)="formItem['Volunteer as Mentor']['learningArea'] = 'Option 3'">
+                              Option 3
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="list-line">
+                        <div class="label-txt">Key Strengths:</div>
+                        <div class="inputs"
+  				                [ngClass]="{'error': formItem['Volunteer as Mentor']['keyStrengths'] === '' && showError}">
+                          <input type="text" [(ngModel)]="formItem['Volunteer as Mentor']['keyStrengths']">
+                        </div>
+                      </div>
+                      
+                    </div>
+                    <!-- end .info -->
+                  </div>
+                  <!-- end .section -->
+                </div>  
+                <!-- end .col-12  -->
+                <div class="col-md-12">
+                  <div class="section-skills-band section label-top">
+                    <h4 class="title">SKILLS AND BAND</h4>
+                    <div class="info">
+                      <div class="list-line label-top">
+                        <div class="label-txt">Skills:</div>
+                        <div class="right-area">
+                          <div class="tool-boxs" *ngFor="let skillsAndBandItem of formItem['Skills and Band']['list'];let i = index">
+                            <div class="inputs">
+                              <input type="text" [(ngModel)]="skillsAndBandItem['value']">
+                            </div>
+                            <a href="javascript:;" class="btn btn-border-red"
+                              *ngIf="formItem['Skills and Band']['list'].length !== 1"
+                              (click)="removeSkill(formItem['Skills and Band']['list'], i)">
+                              -
+                            </a>
+                            <a href="javascript:;" class="btn btn-border-blue btn-plus"
+                              *ngIf="i === formItem['Skills and Band']['list'].length - 1"
+                              (click)="addSkill(formItem['Skills and Band']['list'])">
+                              +
+                            </a>
+                          </div>
+                          <!-- end .tool-boxs -->
+                        </div>
+                      </div>
+                      <div class="list-line">
+                        <div class="label-txt">Band:</div>
+                        <div ngbDropdown class="d-inline-block drop-down">
+                          <button class="btn btn-outline-primary" ngbDropdownToggle>
+                            {{formItem['Skills and Band']['band']}}
+                          </button>
+                          <div ngbDropdownMenu>
+                            <button class="dropdown-item" 
+                              (click)="formItem['Skills and Band']['band'] = 'All'">
+                              All
+                            </button>
+                            <button class="dropdown-item"
+                              (click)="formItem['Skills and Band']['band'] = 'B2'">
+                              B2
+                            </button>
+                            <button class="dropdown-item"
+                              (click)="formItem['Skills and Band']['band'] = 'B3'">
+                              B3
+                            </button>
+                            <button class="dropdown-item"
+                              (click)="formItem['Skills and Band']['band'] = 'B4'">
+                              B4
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end .info -->
+                  </div>
+                  <!-- end .section -->
+                </div>  
+                <!-- end .col-12  -->
+              </div>
+            </div>
+            <!-- end .detail-box -->
+            <div class="detail-bottom-btn clearfix">
+              <a href="javascript:;" class="btn btn-border-blue" (click)="cancel()">Cancel</a>
+              <a href="javascript:;" class="btn btn-green" (click)="clickSave()">Save</a>
+            </div>
+            <!-- end .bottom-btn -->
+          </div>
+          <!-- end .right-white-panel -->
+          <div *ngFor="let formItem of dataList['formData']">
+            <app-sd-review-panel *ngIf="formItem['reviewsData']['list'].length > 0" 
+              [dataList]="formItem.reviewsData">
+            </app-sd-review-panel>
+          </div>
+          <!-- end .right-white-panel -->
+        </div> 
+        <!-- end .col-3 -->
+      </div>
+    </div>
+    <!-- end .right-mains -->
+  </div>
+  <!-- end .right-contents -->
+</div>
+<!-- end .body-wrapper -->

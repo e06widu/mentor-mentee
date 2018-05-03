@@ -1,0 +1,129 @@
+<div class="right">
+  <div class="reg-group" *ngIf="status === '' && showStatus">
+    <a href="javascript:;" (click)="registerAsMentee()">Register as Mentee</a>
+    <a href="javascript:;">Register as Mentor</a>
+  </div>
+  <div class="reg-group" *ngIf="status === 'Mentee' && showStatus">
+    <span>
+      Status <em>Mentee</em>
+    </span>
+    <a href="javascript:;" class="one-btn">Register as Mentor</a>
+  </div>
+  <div class="mentors-items" *ngIf="showMainContent">
+    <div class="title">
+      TOP MENTORS
+    </div>
+    <ul class="list">
+      <li class="clearfix" *ngFor="let item of dataList['topMentors']">
+        <div class="left-name">
+          <a href="javascrpt::" [routerLink]="['/mentee/mentor-profile']">{{item['title']}}</a>
+          <span>{{item['description']}}</span>
+        </div>
+        <div class="right-start">
+          <div class="start-group">
+            <span class="full" *ngIf="item['starNumber'] > 0" [ngClass]="{'full': item['starNumber'] >= 1, 'half': item['starNumber'] === 0.5}"></span>
+            <span class="full" *ngIf="item['starNumber'] > 1" [ngClass]="{'full': item['starNumber'] >= 2, 'half': item['starNumber'] === 1.5}"></span>
+            <span class="full" *ngIf="item['starNumber'] > 2" [ngClass]="{'full': item['starNumber'] >= 3, 'half': item['starNumber'] === 2.5}"></span>
+            <span class="full" *ngIf="item['starNumber'] > 3" [ngClass]="{'full': item['starNumber'] >= 4, 'half': item['starNumber'] === 3.5}"></span>
+            <span class="full" *ngIf="item['starNumber'] > 4" [ngClass]="{'full': item['starNumber'] >= 5, 'half': item['starNumber'] === 4.5}"></span>
+          </div>
+          <div class="score">
+            <em>{{item['leftNumber']}}</em> / {{item['rightNumber']}} rev.
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!--end .mentors-items-->
+  <div class="mentors-items" *ngIf="showMainContent">
+    <div class="title">
+      TOP MENTEES
+    </div>
+    <ul class="list">
+      <li class="clearfix" *ngFor="let item of dataList['topMentees']">
+        <div class="left-name">
+          <a href="javascrpt::">{{item['title']}}</a>
+          <span>{{item['description']}}</span>
+        </div>
+        <div class="right-start">
+          <div class="start-group">
+            <span class="full" *ngIf="item['starNumber'] > 0" [ngClass]="{'full': item['starNumber'] >= 1, 'half': item['starNumber'] === 0.5}"></span>
+            <span class="full" *ngIf="item['starNumber'] > 1" [ngClass]="{'full': item['starNumber'] >= 2, 'half': item['starNumber'] === 1.5}"></span>
+            <span class="full" *ngIf="item['starNumber'] > 2" [ngClass]="{'full': item['starNumber'] >= 3, 'half': item['starNumber'] === 2.5}"></span>
+            <span class="full" *ngIf="item['starNumber'] > 3" [ngClass]="{'full': item['starNumber'] >= 4, 'half': item['starNumber'] === 3.5}"></span>
+            <span class="full" *ngIf="item['starNumber'] > 4" [ngClass]="{'full': item['starNumber'] >= 5, 'half': item['starNumber'] === 4.5}"></span>
+          </div>
+          <div class="score">
+            <em>{{item['leftNumber']}}</em> / {{item['rightNumber']}} rev.
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!--end .mentors-items-->
+  <div class="right-info" *ngIf="showCalendar">
+     <div class="right-calendar">
+      <h4 class="title">My Calendar</h4>
+      <div class="canlendar-boxs">
+        <ngb-datepicker #dp [(ngModel)]="model"></ngb-datepicker>
+      </div>
+    </div>
+    <!-- end .right-calendar -->
+  </div>
+  <!-- end .right-info -->
+  <div class="mentors-items" *ngIf="showThreeBanners">
+    <ul class="sm-post">
+      <li>
+        <a href="javascript:;" class="mobile-hide desktop-show">
+          <img src="../../../assets/i/sm-post1.png" alt="img"/>
+        </a>
+        <a href="javascript:;" class="mobile-show desktop-hide">
+          <img src="../../../assets/i/sm-post1-mobile.png" alt="img"/>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;" class="mobile-hide desktop-show">
+          <img src="../../../assets/i/sm-post2.png" alt="img"/>
+        </a>
+        <a href="javascript:;" class="mobile-show desktop-hide">
+          <img src="../../../assets/i/sm-post2-mobile.png" alt="img"/>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;" class="mobile-hide desktop-show">
+          <img src="../../../assets/i/sm-post3.png" alt="img"/>
+        </a>
+        <a href="javascript:;" class="mobile-show desktop-hide">
+          <img src="../../../assets/i/sm-post3-mobile.png" alt="img"/>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!--end .mentors-items-->
+  
+  <div class="mentors-items" *ngIf="showChart">
+    <div class="title">
+      MOST POPULAR
+    </div>
+    <div class="data-content">
+      <div class="bar-chart clearfix">
+        <ul class="clearfix">
+          <li *ngFor="let item of dataList['chartList']">
+            <div class="color-block {{item.color}} h{{item.menteesNumber}}">
+              <span class="num">{{item.menteesNumber}}</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <ul class="data-list">
+        <li class="border-{{item['color']}}" *ngFor="let item of dataList['chartList']">
+          <span class="category">{{item['title']}}</span>
+          <span class="data">{{item['menteesNumber']}} mentees, {{item['mentorsNumber']}} mentors</span>
+        </li>
+      </ul>
+    </div>
+    <!--end .data-content-->
+  </div>
+  <!--end .mentors-items-->
+</div>
+<!--end .right-->

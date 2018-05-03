@@ -1,0 +1,265 @@
+<div class="content">
+  <h1>Create New Learning Areas</h1>
+
+  <!-- learning -->
+  <div class="panel add-new">
+    <h5>LEARNING AREAS DETAILS</h5>
+    <div class="clearfix row">
+      <label class="form-label">Learning title:</label>
+      <div class="value">
+        <input [class.error]="learningError.title" [(ngModel)]="learning.title" type="text"/>
+      </div>
+    </div>
+    <div class="clearfix row">
+      <label class="form-label">Category:</label>
+      <div class="value">
+
+        <div class="radio-box">
+          <label><input type="radio" value="EXISTING" [(ngModel)]="learning.category" checked name="category"/>
+            <span><i></i></span>
+            Select Existing</label>
+        </div>
+        <div class="radio-box">
+          <label><input type="radio" value="NEW" [(ngModel)]="learning.category" name="category"/>
+            <span><i></i></span>
+            New Category</label>
+        </div>
+
+        <div class="clearfix dropdown-wrapper" *ngIf="learning.category === 'EXISTING'">
+          <app-dropdown
+            (select)="onSelect($event, 'categoryExisting')"
+            [error]="learningError.categoryExisting"
+            [large]="true"
+            [value]="learning.categoryExisting"
+            [options]="masterData.categories"></app-dropdown>
+        </div>
+        <div class="value" *ngIf="learning.category === 'NEW'">
+          <input
+            [class.error]="learningError.categoryNew"
+            [(ngModel)]="learning.categoryNew" type="text"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="clearfix row">
+      <label class="form-label">Mentors Domain:</label>
+      <div class="value">
+        <input [class.error]="learningError.domain" [(ngModel)]="learning.domain" type="text"/>
+      </div>
+    </div>
+
+    <div class="clearfix row">
+      <label class="form-label">Default Duration:</label>
+      <div class="value">
+        <div class="clearfix dropdown-wrapper">
+          <app-dropdown
+            [error]="learningError.duration"
+            (select)="onSelect($event, 'duration')"
+            [large]="true"
+            [value]="learning.duration"
+            [options]="masterData.frequency"></app-dropdown>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- mentors -->
+    <h5>MENTORS</h5>
+    <div class="clearfix row">
+      <label class="form-label">Assign Mentors:</label>
+      <div class="value">
+
+        <div class="radio-box">
+          <label><input type="radio" value="CHOOSE" [(ngModel)]="learning.mentor" checked name="mentors"/>
+            <span><i></i></span>
+            Choose Mentors</label>
+        </div>
+        <div class="radio-box">
+          <label><input type="radio" value="UPLOAD" [(ngModel)]="learning.mentor" name="mentors"/>
+            <span><i></i></span>
+            Upload Mentor List</label>
+        </div>
+
+        <div *ngIf="learning.mentor === 'CHOOSE'" class="clearfix">
+          <div class="dropdown-wrapper-small">
+            <app-dropdown
+              [error]="learningError.mentorDomain"
+              (select)="onSelect($event, 'mentorDomain')"
+              [large]="true"
+              [placeholder]="'Mentors Domain'"
+              [value]="learning.mentorDomain"
+              [options]="masterData.mentorDomains"></app-dropdown>
+          </div>
+          <div class="mentor-search">
+            <app-mentor-select
+              [error]="learningError.noOfMentos"
+              (select)="onMentorSelect($event)"
+              [items]="masterData.mentors"
+            ></app-mentor-select>
+          </div>
+        </div>
+        <div *ngIf="learning.mentor === 'CHOOSE' && learning.noOfMentos !== 0" class="clearfix no-of-mentors">
+          {{learning.noOfMentos}} Mentor{{learning.noOfMentos !== 1 ? 's': ''}} Choosen
+        </div>
+        <div *ngIf="learning.mentor === 'UPLOAD'" class="clearfix upload-section">
+          <app-file-drop-zone
+            [allowedExtensions]="'.csv'"
+            [fileSelected]="learning.mentorUpload"
+            [error]="learningError.mentorUpload"
+            (filesChangeEmitter)="uploadMentor($event)"
+            [text]="'Drag and drop<br/>new mentor list here or '"
+          ></app-file-drop-zone>
+        </div>
+
+      </div>
+    </div>
+    <!-- feedback section -->
+    <h5>REMINDERS AND FEEDBACKS</h5>
+
+
+    <div class="clearfix row">
+      <label class="form-label">Reminders mail:</label>
+      <div class="value">
+        <div class="radio-box">
+          <label><input type="radio" value="MANUAL" [(ngModel)]="learning.reminder" checked name="reminders"/>
+            <span><i></i></span>
+            Manual Type</label>
+        </div>
+        <div class="radio-box">
+          <label><input type="radio" value="TEMPLATE" [(ngModel)]="learning.reminder" name="reminders"/>
+            <span><i></i></span>
+            Use Template</label>
+        </div>
+
+        <div class="clearfix" *ngIf="learning.reminder === 'MANUAL'">
+          <textarea
+            [class.error]="learningError.remindersManual" [(ngModel)]="learning.remindersManual"
+            placeholder="Body email here"></textarea>
+          <a *ngIf="learning.remindersManual !== ''" href="javascript:;" class="save-as">Save As Template</a>
+        </div>
+        <div class="feedback-upload" *ngIf="learning.reminder === 'TEMPLATE'">
+          <div class="box" *ngFor="let file of learning.reminders; let index = index;">
+            <div class="border"
+                 [class.error]="learningError.selectedReminder && index === 0"
+                 [class.selected]="learning.selectedReminder === index">
+              <img src="/assets/i/reminder-image.png" alt=""/>
+              <div class="overlay">
+                <p>Remainder Template {{index + 1}}</p>
+                <button (click)="learning.selectedReminder = index;  learningError.selectedReminder = false">Choose
+                </button>
+              </div>
+            </div>
+            <div class="clearfix">
+              <a href="javascript:;" class="preview"
+                 (click)="showPreview('remainder','Remainder Template ' + (index + 1));"></a>
+              <a href="javascript:;" class="download">Download</a>
+            </div>
+          </div>
+          <div class="box">
+            <app-file-drop-zone
+              [error]="learningError.reminders"
+              [showFile]="false"
+              (filesChangeEmitter)="uploadReminders($event)"
+              [text]="'Drag and drop<br/>new template here or '"
+            ></app-file-drop-zone>
+            <div class="clearfix invisible"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- mails frequency-->
+    <div class="clearfix row">
+      <label class="form-label">Mails frequency:</label>
+      <div class="value">
+        <div class="clearfix dropdown-wrapper">
+          <app-dropdown
+            [error]="learningError.mailsFrequency"
+            (select)="onSelect($event, 'mailsFrequency')"
+            [large]="true"
+            [value]="''"
+            [options]="masterData.frequency"></app-dropdown>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feedback Forms -->
+    <div class="clearfix row">
+      <label class="form-label">Feedback Forms:</label>
+      <div class="value">
+        <div class="radio-box">
+          <label><input type="radio" value="MANUAL" [(ngModel)]="learning.feedback" checked name="feedback"/>
+            <span><i></i></span>
+            Manual Type</label>
+        </div>
+        <div class="radio-box">
+          <label><input type="radio" value="TEMPLATE" [(ngModel)]="learning.feedback" name="feedback"/>
+            <span><i></i></span>
+            Use Template</label>
+        </div>
+
+        <div class="clearfix" *ngIf="learning.feedback === 'MANUAL'">
+          <textarea
+            [class.error]="learningError.feedbackManual" [(ngModel)]="learning.feedbackManual"
+            placeholder="Form content here"></textarea>
+        </div>
+        <div class="feedback-upload" *ngIf="learning.feedback === 'TEMPLATE'">
+          <div class="box" *ngFor="let file of learning.feedbacks; let index = index;">
+            <div class="border"
+                 [class.error]="learningError.selectedFeedback && index === 0"
+                 [class.selected]="learning.selectedFeedback === index">
+              <img src="/assets/i/feedback-image.png" alt=""/>
+              <div class="overlay">
+                <p>Feedback Template {{index + 1}}</p>
+                <button (click)="learning.selectedFeedback = index; learningError.selectedFeedback = false">Choose
+                </button>
+              </div>
+            </div>
+            <div class="clearfix">
+              <a href="javascript:;" class="preview"
+                 (click)="showPreview('feedback','Feedback Template ' + (index + 1));"></a>
+              <a href="javascript:;" class="download">Download</a>
+            </div>
+          </div>
+          <div class="box">
+            <!-- file drop zone -->
+            <app-file-drop-zone
+              [error]="learningError.feedbacks"
+              [showFile]="false"
+              (filesChangeEmitter)="uploadFeedback($event)"
+              [text]="'Drag and drop<br/>new template here or '"
+            ></app-file-drop-zone>
+            <div class="clearfix invisible"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feedbacks frequency section -->
+    <div class="clearfix row">
+      <label class="form-label">Feedbacks frequency:</label>
+      <div class="value">
+        <div class="clearfix dropdown-wrapper">
+          <app-dropdown
+            [error]="learningError.feedbackFrequency"
+            (select)="onSelect($event, 'feedbackFrequency')"
+            [large]="true"
+            [value]="''"
+            [options]="masterData.frequency"></app-dropdown>
+        </div>
+      </div>
+    </div>
+    <!-- buttons -->
+    <div class="buttons">
+      <a routerLink="/admin/dashboard" class="btn-modal-blue">Cancel</a>
+      <button type="submit" class="btn-modal-green" (click)="onSave()">Save</button>
+    </div>
+  </div>
+
+</div>
+<!-- preview modal -->
+<app-preview
+  *ngIf="showPreviewPopup"
+  [title]="previewTitle"
+  [template]="previewContent"
+  (cancel)="closePreview()"></app-preview>

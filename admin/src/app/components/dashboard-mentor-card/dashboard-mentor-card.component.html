@@ -1,0 +1,17 @@
+<div class="dashboard-mentor-card">
+  <a href="javascript:;"><img src="{{data.image}}" alt=""/></a>
+
+  <a href="javascript:;">{{data.name}}</a>
+  <p class="designation" *ngIf="data.designation">{{data.designation}}</p>
+  <p class="experience" *ngIf="data.experience">{{data.experience}} years exp</p>
+  <div class="star" *ngIf="data.star">
+    <div class="bar" [style.width.%]="data.star"></div>
+  </div>
+  <p class="mentees" *ngIf="data.mentees">{{data.mentees}} Mentees</p>
+  <div class="clearfix buttons" *ngIf="data.experience">
+    <button class="btn-reject">Reject</button>
+    <button class="btn-approve">Approve</button>
+  </div>
+  <p class="experience login" *ngIf="data.lastLogin">Last Login</p>
+  <p class="last-login" *ngIf="data.lastLogin">{{data.lastLogin}}</p>
+</div>

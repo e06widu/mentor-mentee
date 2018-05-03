@@ -1,0 +1,409 @@
+@import '../../../styles/variables';
+
+/* .top-tip */
+.top-tip {
+  position: fixed;
+  right: 44px;
+  top: 76px;
+  padding: 14px 55px 14px 18px;
+  background-color: $whiteColor;
+  border-radius: 4px;
+  color: $whiteColor;
+  font-size: 15px;
+  z-index: 777;
+  &.success {
+    background-color: #81c84a;
+    .txt {
+      margin-right: 50px;
+    }
+  }
+  &.error {
+    background-color: #d21523;
+    .txt {
+      margin-right: 50px;
+    }
+  }
+  .icon-close {
+    background: url(../../../assets/i/icons-cancel@2x.png) center center no-repeat;
+    background-size: 23px 23px;
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -11px;
+  }
+}
+
+/* .left-white */
+.left-white {
+  padding: 24px 20px 43px 20px;
+  text-align: center;
+  background-color: $whiteColor;
+  border-radius: 4px;
+  .user-photo {
+    margin-bottom: 20px;
+    img {
+      width: 188px;
+      height: 188px;
+      border-radius: 100%;
+      overflow: hidden;
+    }
+  }
+  .user-info {
+    .name {
+      font-size: 18px;
+      color: $blueTitleColor;
+      margin-bottom: 10px;
+      line-height: 20px;
+      font-weight: bold;
+    }
+    .txt {
+      font-size: 15px;
+      line-height: 16px;
+      color: $grayInputTextColor;
+      margin-bottom: 20px;
+      .bold {
+        font-weight: bold;
+      }
+      .gray-txt {
+        color: #b8b8b8;
+      }
+    }
+  }
+  .request-status {
+    .success-txt,
+    .error-txt {
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+    .btn-blue {
+      margin-top: 20px;
+    }
+    &.accepted {
+      .success-txt {
+        display: block;
+        color: $greenBgColor;
+      }
+    }
+    .error-txt {
+      color: $redTextColor;
+    }
+    .fa {
+      font-size: 14px;
+      margin-right: 5px;
+    }
+  }
+}
+
+/* .right-white-panel */
+.right-white-panel {
+  padding: 30px 20px 27px 35px;
+  background-color: $whiteColor;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .title {
+    font-size: 15px;
+    letter-spacing: 0.2px;
+    color: $grayTitleColor;
+    font-weight: bold;
+    line-height: 17px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+}
+
+
+
+/* .detail-box */
+.detail-box {
+  padding-right: 148px;
+  margin-bottom: 40px;
+  .list-line {
+    margin-bottom: 14px;
+    min-height: 20px;
+    display: table;
+    width: 100%;
+    .label-txt {
+      display: table-cell;
+      vertical-align: middle;
+      color: $grayFormTextColor;
+      font-size: 15px;
+      line-height: 22px;
+      width: 50%;
+    }
+    .value-txt {
+      display: table-cell;
+      vertical-align: middle;
+      color: $grayInputTextColor;
+      font-size: 15px;
+    }
+  }
+}
+
+/* .about-role */
+.about-role {
+  .txt {
+    color: $grayInputTextColor;
+    font-size: 15px;
+    font-style: italic;
+    line-height: 1.3;
+  }
+  .txt-list {
+    margin-top: 30px;
+    .title {
+      margin-bottom: 4px;
+      color: $grayInputTextColor;
+      font-style: italic;
+      font-size: 15px;
+      text-transform: none;
+      font-weight: normal;
+    }
+    .list {
+      li {
+        line-height: 17px;
+        color: $grayInputTextColor;
+        margin-bottom: 4px;
+        font-style: italic;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+/* .work-details */
+.work-details {
+  ul {
+    li {
+      padding: 20px 24px 20px 90px;
+      position: relative;
+      border-bottom: solid 1px #f1f1f1;
+      .icons {
+        &.wipo-logo {
+          background: url(../../../assets/i/wipro-logo.png) no-repeat;
+          background-size: 60px auto;
+          width: 60px;
+          height: 60px;
+          position: absolute;
+          left: 20px;
+          top: 50%;
+          margin-top: -30px;
+        }
+        &.f-logo {
+          background: url(../../../assets/i/f-logo.jpg) no-repeat;
+          background-size: 55px auto;
+          width: 55px;
+          height: 55px;
+          position: absolute;
+          left: 20px;
+          top: 50%;
+          margin-top: -28px;
+        }
+        &.visma-logo {
+          background: url(../../../assets/i/visma-logo.jpg) no-repeat;
+          background-size: 60px auto;
+          width: 60px;
+          height: 28px;
+          position: absolute;
+          left: 20px;
+          top: 50%;
+          margin-top: -14px;
+        }
+      }
+      /* .right-txt */
+      .right-txt {
+        .top-txt {
+          font-size: 15px;
+          margin-bottom: 5px;
+          .logo-name {
+            font-weight: bold;
+            color: $grayInputTextColor;
+            display: inline;
+          }
+          .gray-txt {
+            font-size: 15px;
+            color: $grayFormTextColor;
+            line-height: 17px;
+            display: inline;
+          }
+        }
+        .txt {
+          font-size: 15px;
+          color: $grayInputTextColor;
+          line-height: 19px;
+        }
+      }
+    }
+  }
+}
+
+/* .volunteer-as-mentor */
+.volunteer-as-mentor {
+  margin-top: 40px;
+  .txt {
+    position: relative;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    .point {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 50px;
+      color: #aaa;
+      line-height: 50px;
+      font-style: italic;
+    }
+    p {
+      font-size: 15px;
+      font-style: italic;
+      color: $grayInputTextColor;
+    }
+  }
+}
+
+/* .ul-list */
+.ul-list {
+  margin-bottom: 20px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  ul {
+    li {
+      display: table;
+      width: 100%;
+      min-height: 33px;
+      .label-txt,
+      .value-txt {
+        display: table-cell;
+        vertical-align: middle;
+        font-size: 15px;
+      }
+      .label-txt {
+        color: $grayFormTextColor;
+        width: 20%;
+      }
+      .value-txt {
+        color: $grayInputTextColor;
+      }
+    }
+  }
+}
+
+.row-line {
+  .left {
+    float: left;
+    width: 297px;
+    margin-right: 0;
+    padding-bottom: 0;
+  }
+  .right {
+    margin-left: 325px;
+  }
+}
+
+/* fix layout issue when smaller than 1024px width */
+@media (max-width: 1024px) {
+  /* .top-tip */
+  .top-tip {
+    right: 0;
+    margin: -5px 20px 20px 20px;
+    padding: 10px 10px;
+    position: initial;
+    .txt {
+      max-width: 80%;
+      display: block;
+    }
+  }
+  .left-white {
+    .user-photo {
+      img {
+        width: 128px;
+        height: 128px;
+      }
+    }
+    .request-status {
+      .btn-blue {
+        height: 48px;
+        line-height: 48px;
+        font-size: 18px;
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+    }
+  }
+  .right-mains {
+    .titles {
+      display: none;
+    }
+  }
+  .detail-box {
+    padding-right: 0;
+    margin-bottom: 20px;
+    .list-line {
+      margin-bottom: 4px;
+      .value-txt {
+        width: 50%;
+        word-break: break-word;
+        font-size: 14px;
+      }
+    }
+  }
+  .right-white-panel {
+    padding: 0 20px 27px 20px;
+    .title {
+      margin-top: 30px;
+      font-size: 12px;
+    }
+  }
+  .row-line {
+    .left {
+      float: none;
+      width: 100%;
+    }
+    .right {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+  }
+  .work-details {
+    ul {
+      li {
+        .icons {
+          &.wipo-logo {
+            left: 0;
+            top: 58px
+          }
+          &.f-logo {
+            left: 0;
+            top: 52px;
+          }
+
+          &.visma-logo {
+            left: 0;
+            top: 44px;
+          }
+        }
+      }
+    }
+  }
+
+  .ul-list {
+    ul {
+      li {
+        margin-bottom: 15px;
+        .label-txt {
+          width: 50%;
+          vertical-align: top;
+        }
+        .value-txt {
+          vertical-align: top;
+        }
+      }
+    }
+  }
+}

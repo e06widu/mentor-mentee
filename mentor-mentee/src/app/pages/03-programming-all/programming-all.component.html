@@ -1,0 +1,87 @@
+<div class="body-wrapper flex-box" 
+  [ngClass]="{'open-left': hiddenElementGroup['showMenu']}"
+  (click)="hiddenElementGroup['showMenu'] = false">
+  <app-sd-left-side data-activeMenu="programming-all" [hiddenElementGroup]="hiddenElementGroup"></app-sd-left-side>
+  <div class="right-contents">
+    <app-sd-header data-activeMenu="programming-all" [hiddenElementGroup]="hiddenElementGroup"></app-sd-header>
+    <div class="right-mains inner" 
+      [ngClass]="{'mobile-hide': hiddenElementGroup['showSearchPopupMobile'] || hiddenElementGroup['showNotification']}">
+      <div class="top-title">
+        {{dataList['title']}}
+      </div>
+      <!--end .top-title-->
+      <div class="left">
+        <div class="areas-section">
+          <div class="tab">
+            <a href="javascript:;" [routerLink]="['/mentee/programming-all']">ALL POSTS</a>
+            <a href="javascript:;" class="active" [routerLink]="['/mentee/programming-learning-areas']">LEARNING AREAS</a>
+          </div>
+          <ul class="areas-list">
+            <li *ngFor="let item of postList">
+              <span class="left-pic">
+                <img src="{{item.userPhoto}}" alt="img"/>
+              </span>
+              <span class="liked">
+                <span class="pic"></span>
+                <span class="num">{{item.favNumber}}</span>
+              </span>
+              <div class="right-txt">
+                <a href="javascript:;" class="post-pic" *ngIf="item['bannerImg'] !== ''">
+                  <img src="{{item['bannerImg']}}" alt="img"/>
+                </a>
+                <div class="txt" *ngIf="item['bannerImg'] === ''">
+                  <span class="tag">{{item['postType']}}</span>
+                  <a href="javascript:;" class="title">{{item['title']}}</a>
+                  <a href="javascript:;" class="website">{{item['url']}}</a>
+                </div>
+                <div class="txt" *ngIf="item['bannerImg'] !== ''">
+                  <span class="tag">{{item['postType']}}</span>
+                  <div class="date-view">
+                    <div class="date">
+                      <span class="day">{{item['dayLabel']}}</span>
+                      <span class="month">{{item['monthLabel']}}</span>
+                    </div>
+                    <a href="javascript:;" class="title">{{item['title']}}</a>
+                    <a href="javascript:;" class="website">{{item['time']}}</a>
+                  </div>
+                </div>
+                <!--end .txt-->
+                <div class="bottom">
+                  <a href="javascript:;" class="comment-link">Comments ({{item['commentNumber']}})</a>
+                  <ul class="members">
+                    <li *ngFor="let photoItem of item['userList'].slice(0,5)">
+                      <img src="{{photoItem.img}}" alt="img"/>
+                    </li>
+                    <li *ngIf="item['userList'].length > 5">
+                      {{item['userList'].length > 5 ? '+' + (item['userList'].length-5) : ''}}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <!--end .areas-list-->
+          <div class="areas-list-btn" *ngIf="postList.length > 0">
+            <a href="javascript:;" class="more-btn" (click)="loadMoreAreaList()">Load More</a>
+          </div>
+        </div>
+        <!--end .areas-section-->
+        
+        <app-sd-category-and-area-list title="AVAILABLE LEARNING CATEGORIES AND AREAS"
+          [dataList]="availableLearningCategoriesAndAreas">
+        </app-sd-category-and-area-list>
+        <a href="javascript:;" class="more-btn" 
+          *ngIf="availableLearningCategoriesAndAreas.length > 0"
+          (click)="loadMoreCategoriesAndAreas()">
+          Load More
+        </a>
+      </div>
+      <!--end .left-->
+      <app-sd-right-side data-status="Mentee"></app-sd-right-side>
+      
+    </div>
+    <!-- end .right-mains -->
+  </div>
+  <!-- end .right-contents -->
+</div>
+<!-- end .body-wrapper -->

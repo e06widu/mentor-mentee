@@ -1,0 +1,15 @@
+<!-- dropdown -->
+<div class="drop-down" [class.large]="large" [class.error]="error"
+     [class.extralarge]="extraLarge">
+  <!-- dropdown selected-->
+  <div class="selected" (click)="open = !open" [class.watermark]="value === placeholder">
+    {{value}}
+  </div>
+  <!-- dropdown popup -->
+  <div *ngIf="open" class="popup">
+    <ul>
+      <li [class.active]="value === option.name" *ngFor="let option of options" (click)="onSelect(option.name)"><a
+        href="javascript:;">{{option.name}}</a></li>
+    </ul>
+  </div>
+</div>

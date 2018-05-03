@@ -1,0 +1,12 @@
+<!-- learning area reqesut -->
+<div class="learning-request">
+  <h3>{{title}}</h3>
+  <ul>
+    <li *ngFor="let item of data">
+      <a href="javascript:;" *ngIf="approval" class="approve">Approve</a>
+      <app-more *ngIf="!approval" [items]="[{name: 'Approve'}, {name: 'Reject', type: 'red'}]"></app-more>
+      <a class="link">{{item.name}}</a>
+      <p>{{item.type}}</p>
+    </li>
+  </ul>
+</div>

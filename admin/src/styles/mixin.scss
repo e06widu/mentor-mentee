@@ -1,0 +1,21 @@
+$m-max: 767px;
+$t-max: 1024px;
+$l-max: 1280px;
+
+@mixin mobile {
+  @media screen and (max-width: $m-max) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: $t-max) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media screen and (min-width: $t-max) and (max-width: $l-max) {
+    @content;
+  }
+}

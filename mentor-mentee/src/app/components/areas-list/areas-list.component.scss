@@ -1,0 +1,118 @@
+@import '../../../styles/variables';
+
+//.areas-section
+.areas-section {
+  margin-bottom: 30px;
+  .title {
+    font-size: 13px;
+    font-weight: bold;
+    color: $grayTitleColor;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+  }
+  .row {
+    .areas-view {
+      background: $whiteColor;
+      border-radius: 4px;
+      box-sizing: border-box;
+      padding: 20px 15px 15px;
+      margin: 0 1% 18px;
+      width: 23%;
+      .title {
+        display: block;
+        font-size: 17px;
+        font-weight: bold;
+        color: $blueTitleColor;
+        margin-bottom: 5px;
+        text-align: center;
+        text-transform: initial;
+        line-height: 19px;
+        &:hover {
+          opacity: 0.85;
+        }
+      }
+      .tag {
+        font-size: 12px;
+        text-align: center;
+        color: #686868;
+        margin-bottom: 20px;
+      }
+      .subtitle {
+        font-size: 13px;
+        text-align: center;
+        color: $grayRoleTextColor;
+        margin-bottom: 10px;
+      }
+      .members {
+        text-align: center;
+        li {
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          border-radius: 30px;
+          overflow: hidden;
+          border: solid 2px $whiteColor;
+          margin: 0 -6px;
+          &:last-child {
+            background: $greenBgColor;
+            font-size: 14px;
+            color: #e6f3dc;
+            line-height: 30px;
+            border: solid 1px $whiteColor;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      
+      .mentor-pic {
+        width: 80px;
+        height: 80px;
+        display: block;
+        margin: 0 auto 10px;
+        border-radius: 80px;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+/* fix layout issue when smaller than 1024px width */
+@media (max-width: 1024px) {
+  //.areas-section
+  .areas-section {
+    .row {
+      margin-left: 0;
+      margin-right: 0;
+      .areas-view {
+        width: 100%;
+        .title {
+          font-size: 18px;
+        }
+        .tag {
+          font-size: 16px;
+        }
+        .subtitle {
+          font-size: 14px; 
+        }
+        .members {
+          li {
+            width: 43px;
+            height: 43px;
+            &:last-child {
+              line-height: 42px;
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

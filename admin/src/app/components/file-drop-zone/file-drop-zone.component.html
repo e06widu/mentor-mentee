@@ -1,0 +1,10 @@
+<!-- file upload draag and drop-->
+<div class="file-drop-zone" [class.large]="large" [class.error]="error">
+  <input [accept]="allowedExtensions" #selectedFile class="hide-element" type="file" (change)="fileChange($event)">
+  <div class="center-div">
+    <p [innerHTML]="text"></p>
+    <a href="javascript:;" (click)="showBrowseDlg()">Pick file</a>
+
+    <strong *ngIf="showFile">{{fileSelected && fileSelected.name}}</strong>
+  </div>
+</div>

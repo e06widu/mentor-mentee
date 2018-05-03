@@ -1,0 +1,30 @@
+<!-- share document modal -->
+<div class="modal">
+  <h3>Share Documents</h3>
+  <div class="clearfix row">
+    <label>Upload Document :</label>
+    <div class="value">
+      <app-file-drop-zone
+        (filesChangeEmitter)="uploadFile($event)"
+        [text]="'Drag and drop<br/>Documents here or'"
+      ></app-file-drop-zone>
+    </div>
+  </div>
+  <div class="clearfix row">
+    <label class="dropdown-text">Share with :</label>
+    <div class="value">
+      <app-dropdown
+        [large]="true"
+        [value]="'Both mentors and mentees'"
+        [placeholder]="'Both mentors and mentees'"
+        [options]="mentorsDropDown"></app-dropdown>
+    </div>
+  </div>
+  <!-- buttons -->
+  <div class="buttons">
+    <button class="btn-modal-blue" (click)="onShare()">Cancel</button>
+    <button class="btn-modal-green" [disabled]="fileSelected === null" (click)="onCancel()">Share</button>
+  </div>
+</div>
+<!-- overlay -->
+<div class="overlay" (click)="onCancel()"></div>

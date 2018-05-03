@@ -1,0 +1,208 @@
+@import "mixin";
+@import "variable";
+
+aside {
+  z-index: 200;
+  position: fixed;
+  top: 62px;
+  left: 0;
+  width: 71px;
+  height: calc(100% - 62px);
+  background: $primary-color;
+  .user-block {
+    display: none;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+    padding-right: 15px;
+    li {
+      display: block;
+      margin-bottom: 10px;
+      &:hover {
+        opacity: $hover-opacity;
+      }
+      a {
+        text-decoration: none;
+        height: 46px;
+        overflow: hidden;
+        &.active {
+          i {
+            background-color: $secondary-color;
+            &.dashboard {
+              background-image: url('/assets/i/menu/dashboard-icon-hover.png');
+            }
+            &.learning {
+              background-image: url('/assets/i/menu/learning-icon-hover.png');
+            }
+          }
+        }
+        i {
+          width: 46px;
+          height: 46px;
+          border-radius: 6px;
+          display: block;
+          background-repeat: no-repeat;
+          background-position: center center;
+          &.dashboard {
+            background-image: url('/assets/i/menu/dashboard-icon.png');
+            background-size: 25px 25px;
+          }
+          &.learning {
+            background-image: url('/assets/i/menu/learning-icon.png');
+            background-size: 23px 22px;
+          }
+          &.connections {
+            background-image: url('/assets/i/menu/connections-icon.png');
+            background-size: 27px 29px;
+          }
+          &.mentors {
+            background-image: url('/assets/i/menu/mentors-icon.png');
+            background-size: 26px 29px;
+          }
+          &.analytics {
+            background-image: url('/assets/i/menu/analytics-icon.png');
+            background-size: 26px 25px;
+          }
+          &.reports {
+            background-image: url('/assets/i/menu/report-icon.png');
+            background-size: 26px 24px;
+          }
+          &.admins {
+            background-image: url('/assets/i/menu/admin-icon.png');
+            background-size: 23px 25px;
+          }
+          &.logout {
+            background-image: url('/assets/i/menu/logout-icon.png');
+            background-size: 20px 20px;
+          }
+        }
+        span {
+          display: none;
+        }
+      }
+      &.logout-menu {
+        display: none;
+      }
+    }
+  }
+}
+
+aside.open {
+  width: 249px;
+  overflow: auto;
+  display: block;
+  ul {
+    padding-left: 32px;
+    padding-right: 27px;
+    li {
+      a {
+        &.active {
+          span {
+            background-color: $secondary-color;
+            color: $primary-color;
+            border-bottom-right-radius: 6px;
+            border-top-right-radius: 6px;
+          }
+          i {
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+          }
+        }
+      }
+      a {
+        i {
+          float: left;
+        }
+        span {
+          display: block;
+          width: calc(100% - 46px);
+          float: left;
+          padding-left: 2px;
+          height: 46px;
+          overflow: hidden;
+          font-size: 15px;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 46px;
+          letter-spacing: -0.3px;
+          text-align: left;
+          color: $white-color;
+
+        }
+      }
+    }
+  }
+  .user-block {
+    display: block;
+    img {
+      display: block;
+      width: 92px;
+      height: 92px;
+      border-radius: 100%;
+      margin: 19px auto 4px auto;
+    }
+    a {
+      position: absolute;
+      margin-left: 10px;
+      margin-top: 5px;
+      width: 22px;
+      height: 22px;
+      display: inline-block;
+      background-image: url('/assets/i/menu/settings-icon.png');
+      background-size: 22px 22px;
+    }
+    h5 {
+      font-size: 15px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: -0.3px;
+      text-align: center;
+      color: $white-color;
+      margin: 0;
+      padding: 0;
+    }
+    p {
+      margin: 0;
+      padding: 0 0 18px 0;
+      display: block;
+      font-size: 13px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: -0.3px;
+      text-align: center;
+      color: #ffffff;
+    }
+  }
+}
+
+/* overlay */
+.overlay {
+  background-color: $overlay-bg;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 199;
+
+}
+
+@include mobile() {
+  aside {
+    display: none;
+    ul {
+      li {
+        &.logout-menu {
+          display: block;
+        }
+
+      }
+    }
+  }
+}

@@ -1,0 +1,219 @@
+<div class="body-wrapper flex-box" 
+  [ngClass]="{'open-left': hiddenElementGroup['showMenu']}"
+  (click)="hiddenElementGroup['showMenu'] = false">
+  <app-sd-left-side data-activeMenu="learn-javascript-area" [hiddenElementGroup]="hiddenElementGroup"></app-sd-left-side>
+  <div class="right-contents">
+    <app-sd-header data-activeMenu="learn-javascript-area" [hiddenElementGroup]="hiddenElementGroup"></app-sd-header>
+    <div class="right-mains inner" 
+      [ngClass]="{'mobile-hide': hiddenElementGroup['showSearchPopupMobile'] || hiddenElementGroup['showNotification']}">
+      <div class="top-title">
+        Programming
+      </div>
+      <!--end .top-title-->
+      <div class="left">
+        <div class="areas-section">
+          <div class="tab">
+            <a href="javascript:;" class="active" [routerLink]="['/mentee/programming-all']">ALL POSTS</a>
+            <a href="javascript:;" [routerLink]="['/mentee/programming-learning-areas']">LEARNING AREAS</a>
+          </div>
+          <!--end .tab-->
+          <div class="headlines">
+            Learn Javascript
+            <a href="javascript:;" class="back-btn" (click)="cancel()">Go Back</a>
+          </div>
+          <!--end .headlines-->
+          <div class="title">MENTORS</div>
+          <div class="select-view clearfix">
+            <div class="title">SEARCH AS MENTOR</div>
+            <div class="select-items ">
+              <div class="form-select">
+                <label for="">Location:</label>
+                <div ngbDropdown class="d-inline-block drop-down">
+                  <button class="btn btn-outline-primary" ngbDropdownToggle>
+                    {{mentorFilterLocation}}
+                  </button>
+                  <div ngbDropdownMenu>
+                    <button class="dropdown-item" 
+                      (click)="mentorFilterLocation = 'All';">
+                      All
+                    </button>
+                    <button class="dropdown-item" 
+                      *ngFor="let item of this.mentorFilterLocationDropdownOption"
+                      (click)="mentorFilterLocation = item.value;">
+                      {{item.value}}
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!--end .form-select-->
+              <div class="form-select">
+                <label for="">Business Unit</label>
+                <div ngbDropdown class="d-inline-block drop-down">
+                  <button class="btn btn-outline-primary" ngbDropdownToggle>
+                    {{mentorFilterBusinessUnit}}
+                  </button>
+                  <div ngbDropdownMenu>
+                    <button class="dropdown-item" 
+                      (click)="mentorFilterBusinessUnit = 'All';">
+                      All
+                    </button>
+                    <button class="dropdown-item" 
+                      *ngFor="let item of this.mentorFilterBusinessUnitDropdownOption"
+                      (click)="mentorFilterBusinessUnit = item.value;">
+                      {{item.value}}
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!--end .form-select-->
+              <div class="form-select">
+                <label for="">Account</label>
+                <div ngbDropdown class="d-inline-block drop-down">
+                  <button class="btn btn-outline-primary" ngbDropdownToggle>
+                    {{mentorFilterAccount}}
+                  </button>
+                  <div ngbDropdownMenu>
+                    <button class="dropdown-item" 
+                      (click)="mentorFilterAccount = 'All';">
+                      All
+                    </button>
+                    <button class="dropdown-item" 
+                      *ngFor="let item of this.mentorFilterAccountDropdownOption"
+                      (click)="mentorFilterAccount = item.value;">
+                      {{item.value}}
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!--end .form-select-->
+              <div class="form-select">
+                <label for="">Experience</label>
+                <div ngbDropdown class="d-inline-block drop-down">
+                  <button class="btn btn-outline-primary" ngbDropdownToggle>
+                    {{mentorFilterExperience}}
+                  </button>
+                  <div ngbDropdownMenu>
+                    <button class="dropdown-item" 
+                      (click)="mentorFilterExperience = 'All';">
+                      All
+                    </button>
+                    <button class="dropdown-item" 
+                      *ngFor="let item of this.mentorFilterExperienceDropdownOption"
+                      (click)="mentorFilterExperience = item.value;">
+                      {{item.value}}
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!--end .form-select-->
+              <div class="form-select">
+                <label for="">Band</label>
+                <div ngbDropdown class="d-inline-block drop-down">
+                  <button class="btn btn-outline-primary" ngbDropdownToggle>
+                    {{mentorFilterBand}}
+                  </button>
+                  <div ngbDropdownMenu>
+                    <button class="dropdown-item" 
+                      (click)="mentorFilterBand = 'All';">
+                      All
+                    </button>
+                    <button class="dropdown-item" 
+                      *ngFor="let item of this.mentorFilterBandDropdownOption"
+                      (click)="mentorFilterBand = item.value;">
+                      {{item.value}}
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!--end .form-select-->
+              <div class="submit-btn">
+                <a href="javascript:;" (click)="changeFilterMentor();">Filter</a>
+              </div>
+            </div>
+          </div>
+          <!--end .select-view-->
+          <app-sd-learning-areas-list [dataList]="mentorContent" data-showYear="true"></app-sd-learning-areas-list>
+
+          <div class="title">MENTEES</div>
+          <div class="select-view clearfix">
+            <div class="title">SEARCH AS MENTEE</div>
+            <div class="select-items">
+              <div class="form-select">
+                <label for="">Location:</label>
+                <div ngbDropdown class="d-inline-block drop-down">
+                  <button class="btn btn-outline-primary" ngbDropdownToggle>
+                    {{menteeFilterLocation}}
+                  </button>
+                  <div ngbDropdownMenu>
+                    <button class="dropdown-item" 
+                      (click)="menteeFilterLocation = 'All';">
+                      All
+                    </button>
+                    <button class="dropdown-item" 
+                      *ngFor="let item of menteeFilterLocationDropdownOption"
+                      (click)="menteeFilterLocation = item.value;">
+                      {{item.value}}
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!--end .form-select-->
+              <div class="form-select">
+                <label for="">Account</label>
+                <div ngbDropdown class="d-inline-block drop-down">
+                  <button class="btn btn-outline-primary" ngbDropdownToggle>
+                    {{menteeFilterAccount}}
+                  </button>
+                  <div ngbDropdownMenu>
+                    <button class="dropdown-item" 
+                      (click)="menteeFilterAccount = 'All';">
+                      All
+                    </button>
+                    <button class="dropdown-item" 
+                      *ngFor="let item of menteeFilterAccountDropdownOption"
+                      (click)="menteeFilterAccount = item.value;">
+                      {{item.value}}
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!--end .form-select-->
+              <div class="form-select">
+                <label for="">Experience</label>
+                <div ngbDropdown class="d-inline-block drop-down">
+                  <button class="btn btn-outline-primary" ngbDropdownToggle>
+                    {{menteeFilterExperience}}
+                  </button>
+                  <div ngbDropdownMenu>
+                    <button class="dropdown-item" 
+                      (click)="menteeFilterExperience = 'All';">
+                      All
+                    </button>
+                    <button class="dropdown-item" 
+                      *ngFor="let item of menteeFilterExperienceDropdownOption"
+                      (click)="menteeFilterExperience = item.value;">
+                      {{item.value}}
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!--end .form-select-->
+              <div class="submit-btn">
+                <a href="javascript:;" (click)="changeFilterMentee();">Filter</a>
+              </div>
+            </div>
+          </div>
+          <!--end .select-view-->
+          <app-sd-learning-areas-list [dataList]="menteeContent" data-showYear="false" class="mentee-card"></app-sd-learning-areas-list>
+        </div>
+        <!--end .areas-section-->
+      </div>
+      <!--end .left-->
+      <app-sd-right-side data-status="Mentee"></app-sd-right-side>
+      
+    </div>
+    <!-- end .right-mains -->
+  </div>
+  <!-- end .right-contents -->
+</div>
+<!-- end .body-wrapper -->

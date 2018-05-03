@@ -1,0 +1,223 @@
+@import '../../../styles/variables';
+
+/* .left-aside */
+.left-aside {
+  background-color: $blueTitleColor;
+  width: 71px;
+  flex: 1;
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top: 0;
+  padding: 0 12px;
+  /* .tab-list */
+  .tab-list {
+    width: 100%;
+    li {
+      display: table;
+      width: 100%;
+      min-height: 46px;
+      height: 46px;
+      margin-bottom: 20px;
+      &:first-child {
+        height: 71px;
+        margin-bottom: 0;
+        .items {
+          &:hover {
+            background-color: transparent;
+          }
+          .icons {
+            margin-right: 0;
+          }
+        }
+      }
+      &.current {
+          .items{
+            background-color: #fae044;
+          }
+      }
+      .items {
+          padding: 0;
+          text-align: center;
+          min-height: 46px;
+          height: 46px;
+          display: table-cell;
+          vertical-align: middle;
+          padding: 0;
+          color: $whiteColor;
+          font-size: 17px;
+          .txt {
+            display: inline-block;
+            vertical-align: middle;
+          }
+          &.current,
+          &:hover {
+            background-color: #fae044;
+            border-radius: 4px;
+            text-align: center;
+          }
+          .icons {
+            margin-right: 0;
+          }
+        }
+    }
+  }
+  
+  .icons {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    &.menu {
+      background: url("../../../assets/i/hamburger-menu.svg") center center no-repeat;
+      background-size: 20px 17px;
+    }
+  }
+}
+/* .items */
+.items {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 53px;
+    height: 53px;
+    padding: 0 16px 0 28px;
+    color: $whiteColor;
+    font-size: 17px;
+    &:hover,
+    &.current {
+        background-color: #fae044;
+        color: $blueTitleColor;
+        .icons {
+          &.icon-dashboard {
+            background: url(../../../assets/i/icons-dashboard@2x-blue.png) center center no-repeat;
+            background-size: 28px auto;
+          }
+          &.icon-search {
+            background: url(../../../assets/i/icon-search@2x-blue.png) center center no-repeat;
+            background-size: 28px auto;
+          }
+          &.icon-learning {
+            background: url(../../../assets/i/icons-literature@2x-blue.png) center center no-repeat;
+            background-size: 28px auto;
+          }
+          &.icon-connections {
+            background: url(../../../assets/i/icons-omnichannel@2x-blue.png) center center no-repeat;
+            background-size: 28px auto;
+          }
+          &.icon-profile {
+            background: url(../../../assets/i/icons-user@2x-blue.png) center center no-repeat;
+            background-size: 28px auto;
+          }
+          &.icon-request {
+            background: url(../../../assets/i/icons-calendar@2x.png) center center no-repeat;
+            background-size: 28px auto;
+          }
+        }
+    }
+    .icons {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        vertical-align: middle;
+        margin-right: 15px;
+        &.icon-dashboard {
+          background: url(../../../assets/i/icons-dashboard@2x.png) center center no-repeat;
+          background-size: 28px auto;
+        }
+        &.icon-search {
+          background: url(../../../assets/i/icon-search@2x.png) center center no-repeat;
+          background-size: 28px auto;
+        }
+        &.icon-learning {
+          background: url(../../../assets/i/icons-literature@2x.png) center center no-repeat;
+          background-size: 28px auto;
+        }
+        &.icon-connections {
+          background: url(../../../assets/i/icons-omnichannel@2x.png) center center no-repeat;
+          background-size: 28px auto;
+        }
+        &.icon-profile {
+          background: url(../../../assets/i/icons-user@2x.png) center center no-repeat;
+          background-size: 28px auto;
+        }
+        &.icon-request {
+          background: url(../../../assets/i/icons-calendar@2x.png) center center no-repeat;
+          background-size: 28px auto;
+        }
+      }
+  }
+
+.menu-boxs {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 326px;
+  height: calc(100%);
+  background-color: $blueTitleColor;
+  display: none;
+
+  .user-area {
+    padding: 40px 20px;
+    .logo-box {
+      width: auto;
+      height: auto;
+      text-align: center;
+      margin: 0 auto;
+      img {
+        width: auto;
+        height: 40px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 5px;
+      }
+      .right-txt {
+        display: inline-block;
+        vertical-align: middle;
+        .txt {
+          color: $whiteColor;
+          font-size: 23px;
+        }
+        &.bold-txt {
+          font-weight: bold;
+        }
+      } 
+    }
+  }
+  /* .photo-area */
+  .photo-area {
+    width: 145px;
+    margin: 0 auto;
+    height: auto;
+    padding: 20px 0;
+    img {
+      width: 145px;
+      height: 145px;
+      border-radius: 100%;
+      overflow: hidden;
+    }
+
+  }
+  /* .name */
+  .name {
+      text-align: center;
+      color: $greenBgColor;
+      margin-bottom: 6px;
+      font-size: 20px;
+      line-height: 22px;
+      letter-spacing: 0.5px;
+      font-weight: bold;
+    }
+  .white-txt {
+      text-align: center;
+      color: $whiteColor;
+      font-size: 15px;
+  }
+  .tab-list {
+    li {
+      height: auto;
+      span {
+        text-transform: uppercase;
+      }
+    }
+  }
+}

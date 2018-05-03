@@ -1,0 +1,116 @@
+<aside class="left-aside mobile-hide desktop-show">
+  <ul class="tab-list">
+    <li>
+      <a href="javascript:;" class="items h71"
+        (click)="hiddenElementGroup['showMenu'] = !hiddenElementGroup['showMenu'];$event.stopPropagation();">
+        <i class="icons menu"></i>
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/mentee/' + (status === '' ? 'dashboard-first-time' : 'dashboard')]" class="items"
+         [ngClass]="{'current': activeMenu === 'dashboard-first-time' || activeMenu === 'dashboard'}">
+        <i class="icons icon-dashboard"></i>
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/mentee/learning-categories']" class="items"
+         [ngClass]="{'current': activeMenu === 'learning-categories' 
+                             || activeMenu === 'programming-all' 
+                             || activeMenu === 'programming-learning-areas' 
+                             || activeMenu === 'learn-javascript-area' 
+                             || activeMenu === 'mentor-profile'}">
+        <i class="icons icon-learning"></i>
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/mentee/my-connections']" class="items"
+         [ngClass]="{'current': activeMenu === 'my-connections'}">
+        <i class="icons icon-connections"></i>
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/mentee/mentee-profile-edit']" class="items"
+         [ngClass]="{'current': activeMenu === 'mentee-profile-edit'}">
+        <i class="icons icon-profile"></i>
+      </a>
+    </li>
+    <li>
+      <a href="javascript:;" class="items">
+        <i class="icons icon-request"></i>
+      </a>
+    </li>
+  </ul>
+</aside>
+<!-- end .left-aside -->
+<div class="menu-boxs" (click)="$event.stopPropagation();">
+  <div class="user-area">
+    <div class="logo-box">
+      <img src="../../../assets/i/wipro-logo.png" alt="logo">
+      <div class="right-txt">
+        <span class="txt bold-txt">Wipro </span>
+        <span class="txt">Mentorship</span>
+      </div>
+    </div>
+    <div class="photo-area">
+      <img src="../../../assets/i/user-big-photo.jpg" alt="photo">
+    </div>
+    <div class="name">
+      Jessica Snow
+    </div>
+    <div class="white-txt">
+      Junior Web Developer
+    </div>
+  </div>  
+  <!-- end .user-area -->
+  <ul class="tab-list">
+    <li>
+      <a [routerLink]="['/mentee/' + (status === '' ? 'dashboard-first-time' : 'dashboard')]" 
+        [ngClass]="{'current': activeMenu === 'dashboard-first-time' || activeMenu === 'dashboard'}"
+        class="items">
+        <i class="icons icon-dashboard"></i>
+        <span class="txt">Dashboard</span>
+      </a>
+    </li>
+    <li class="desktop-hide mobile-show">
+      <a href="javascript:;" class="items" (click)="hiddenElementGroup['showSearchPopupMobile'] = true;hiddenElementGroup['showMenu'] = false;">
+        <i class="icons icon-search"></i>
+        <span class="txt">Search</span>
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/mentee/learning-categories']" 
+        [ngClass]="{'current': activeMenu === 'learning-categories' 
+                             || activeMenu === 'programming-all' 
+                             || activeMenu === 'programming-learning-areas' 
+                             || activeMenu === 'learn-javascript-area' 
+                             || activeMenu === 'mentor-profile'}"
+        class="items">
+        <i class="icons icon-learning"></i>
+        <span class="txt">Learning Areas</span>
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/mentee/my-connections']"
+        [ngClass]="{'current': activeMenu === 'my-connections'}"
+        class="items">
+        <i class="icons icon-connections"></i>
+        <span class="txt">My Connections</span>
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/mentee/mentee-profile-edit']"
+        [ngClass]="{'current': activeMenu === 'mentee-profile-edit'}"
+        class="items">
+        <i class="icons icon-profile"></i>
+        <span class="txt">My Profile</span>
+      </a>
+    </li>
+    <li>
+      <a href="javascript:;" class="items">
+        <i class="icons icon-request"></i>
+        <span class="txt">Create Meeting Request</span>
+      </a>
+    </li>
+  </ul>
+</div> 
+<!-- end .menu-boxs -->

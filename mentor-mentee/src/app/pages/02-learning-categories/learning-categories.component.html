@@ -1,0 +1,26 @@
+<div class="body-wrapper flex-box" 
+  [ngClass]="{'open-left': hiddenElementGroup['showMenu']}"
+  (click)="hiddenElementGroup['showMenu'] = false">
+  <app-sd-left-side data-activeMenu="learning-categories" [hiddenElementGroup]="hiddenElementGroup"></app-sd-left-side>
+  <div class="right-contents">
+    <app-sd-header data-activeMenu="learning-categories" [hiddenElementGroup]="hiddenElementGroup"></app-sd-header>
+    <div class="right-mains inner" 
+      [ngClass]="{'mobile-hide': hiddenElementGroup['showSearchPopupMobile'] || hiddenElementGroup['showNotification']}">
+      <div class="top-title">
+        Learning Categories
+      </div>
+      <!--end .top-title-->
+      <div class="left">
+        <app-sd-areas-list title="Available Learning Categories ({{availableLearningCategories.length}})"
+          linkTarget="programming-all"
+          [dataList]="availableLearningCategories">
+        </app-sd-areas-list>
+      </div>
+      <!--end .left-->
+      <app-sd-right-side class="rights" data-status="Mentee" [showStatus]="false" [showMainContent]="false" [showChart]="true" [showThreeBanners]="false"></app-sd-right-side>
+    </div>
+    <!-- end .right-mains -->
+  </div>
+  <!-- end .right-contents -->
+</div>
+<!-- end .body-wrapper -->

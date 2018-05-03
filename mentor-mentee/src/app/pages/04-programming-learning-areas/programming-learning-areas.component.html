@@ -1,0 +1,41 @@
+<div class="body-wrapper flex-box" 
+  [ngClass]="{'open-left': hiddenElementGroup['showMenu']}"
+  (click)="hiddenElementGroup['showMenu'] = false">
+  <app-sd-left-side data-activeMenu="programming-learning-areas" [hiddenElementGroup]="hiddenElementGroup"></app-sd-left-side>
+  <div class="right-contents">
+    <app-sd-header data-activeMenu="programming-learning-areas" [hiddenElementGroup]="hiddenElementGroup"></app-sd-header>
+    <div class="right-mains inner" 
+      [ngClass]="{'mobile-hide': hiddenElementGroup['showSearchPopupMobile'] || hiddenElementGroup['showNotification']}">
+      <div class="top-title">
+        Programming
+      </div>
+      <!--end .top-title-->
+      <div class="left">
+        <div class="tab">
+          <a href="javascript:;" class="active" [routerLink]="['/mentee/programming-all']">ALL POSTS</a>
+          <a href="javascript:;" [routerLink]="['/mentee/programming-learning-areas']">LEARNING AREAS</a>
+        </div>
+          
+        <app-sd-areas-list 
+          linkTarget="learn-javascript-area"
+          [dataList]="availableLearningAreas">
+        </app-sd-areas-list>
+        
+        <app-sd-category-and-area-list title="Available Learning Categories And Areas"
+          [dataList]="availableLearningCategoriesAndAreas">
+        </app-sd-category-and-area-list>
+        <a href="javascript:;" class="more-btn" 
+          *ngIf="availableLearningCategoriesAndAreas.length > 0"
+          (click)="loadMoreCategoriesAndAreas()">
+          Load More
+        </a>
+      </div>
+      <!--end .left-->
+      <app-sd-right-side data-status="Mentee" [showChart]="true"></app-sd-right-side>
+      
+    </div>
+    <!-- end .right-mains -->
+  </div>
+  <!-- end .right-contents -->
+</div>
+<!-- end .body-wrapper -->

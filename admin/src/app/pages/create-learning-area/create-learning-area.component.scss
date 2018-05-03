@@ -1,0 +1,266 @@
+@import "mixin";
+@import "variable";
+
+.add-new {
+  margin-top: 20px;
+  padding: 26px 56px 22px 53px;
+  h5 {
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: $header-name-color;
+    padding: 8px 0 23px;
+  }
+  .row {
+    padding-bottom: 12.5px;
+    label.form-label {
+      width: 180px;
+      line-height: 40px;
+      float: left;
+      font-size: 15px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: $file-upload-color;
+    }
+    .value {
+      float: left;
+      width: calc(100% - 180px);
+      .dropdown-wrapper {
+        width: 380px;
+      }
+      .dropdown-wrapper-small {
+        width: 196px;
+        float: left;
+        margin-right: 10px;
+      }
+      .mentor-search {
+        width: 395px;
+        float: left;
+      }
+      .no-of-mentors {
+        padding: 11px 0;
+        font-size: 15px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: $button-color;
+      }
+      .upload-section {
+        width: 380px;
+      }
+
+      .save-as {
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.2px;
+        text-align: left;
+        color: $button-color;
+        display: block;
+        &:hover {
+          opacity: $hover-opacity;
+        }
+      }
+    }
+  }
+  .buttons {
+    margin-top: 56px;
+    text-align: left;
+    border-top: solid 1px $bg-color;
+    padding-top: 18px;
+    padding-left: 180px;
+    .btn-modal-blue {
+      margin-right: 15px;
+    }
+  }
+}
+
+.feedback-upload {
+  .box {
+    overflow: hidden;
+    float: left;
+    width: 196px;
+    height: 181px;
+    margin-bottom: 5px;
+    margin-right: 19px;
+    .preview {
+      float: right;
+      margin-top: 10px;
+      width: 24px;
+      height: 13px;
+      background: url('/assets/i/preview-icon.png') no-repeat;
+      background-size: 24px 13px;
+      &:hover {
+        opacity: $hover-opacity;
+      }
+    }
+    .download {
+      text-decoration: none;
+      float: left;
+      margin-top: 10px;
+      font-size: 14px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: $download-link-color;
+      &:hover {
+        opacity: $hover-opacity;
+      }
+    }
+    .invisible {
+      height: 26px;
+    }
+    .border {
+      position: relative;
+      border-radius: 2px;
+      border: solid 1px transparent;
+      overflow: hidden;
+      height: 154px;
+      &.error {
+        border: solid 1px $notification-bg;
+      }
+      &.selected {
+        border: solid 1px $button-color;
+      }
+      &:hover {
+        .overlay {
+          display: block;
+        }
+      }
+      img {
+        width: 196px;
+        height: 154px;
+      }
+      .overlay {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        background-color: $file-overlay-color;
+        p {
+          font-size: 14px;
+          font-weight: bold;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          text-align: center;
+          color: $white-color;
+          padding: 24px 0 0 0;
+          margin: 0;
+        }
+        button {
+          margin-top: 60px;
+          display: inline-block;
+          width: 94px;
+          height: 33px;
+          border-radius: 4px;
+          background-color: $secondary-color;
+          border: 1px solid $secondary-color;
+          line-height: 31px;
+          text-align: center;
+          font-size: 14px;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          letter-spacing: normal;
+          color: $primary-color;
+          &:hover {
+            opacity: $hover-opacity;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include tablet() {
+  .add-new {
+    .row {
+      .value {
+        .dropdown-wrapper-small {
+          width: 100%;
+          float: none;
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+        .mentor-search {
+          width: 100%;
+          float: none;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+@include mobile() {
+  .add-new {
+    margin-top: 15px;
+    padding: 14px 12px 23px 17px;
+    .row {
+      padding-bottom: 12.5px;
+      label.form-label {
+        width: 100%;
+        float: none;
+      }
+      .value {
+        float: none;
+        width: 100%;
+        .dropdown-wrapper {
+          width: 100%;
+        }
+        .dropdown-wrapper-small {
+          width: 100%;
+          float: none;
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+        .mentor-search {
+          width: 100%;
+          float: none;
+          margin-bottom: 10px;
+        }
+        .upload-section {
+          width: 100%;
+        }
+      }
+    }
+    .buttons {
+      text-align: center;
+      padding-left: 0;
+      .btn-modal-blue {
+        margin: 0 10px;
+      }
+    }
+  }
+  .feedback-upload {
+    white-space: nowrap;
+    overflow: auto;
+    .box {
+      display: inline-block;
+      float: none;
+    }
+  }
+}

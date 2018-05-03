@@ -1,0 +1,3 @@
+{
+  "template": "<p>1. How do you think about this learning areas mentorship?</p><input type='text' /><p>2. Loren Ipsum selection feedback ?</p><div class='radio-box'><label><input type='radio' name='preview'/><span><i></i></span>Option 1</label></div><div class='radio-box'><label><input type='radio' name='preview'/><span><i></i></span>Option 2</label></div><p>3. Rate us for this learning areas mentorship</p><div class='clearfix'><span class='star'></span><span class='star'></span><span class='star'></span><span class='star'></span><span class='star'></span></div><textarea placeholder='Type your comment here' class='normal' />"
+}

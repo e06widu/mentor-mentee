@@ -1,0 +1,488 @@
+{
+  "connections": "2",
+  "mentors": "2",
+  "mentees": "0",
+  "learning Areas": "2",
+  "All Connections": [
+    {
+      "img": "../../../assets/i/mentor-pic1.png",
+      "status": "ACTIVE",
+      "userName": "David Brown",
+      "title": "Basics of HTML & CSS",
+      "description": "PROGRAMMING"
+    },
+    {
+      "img": "../../../assets/i/mentor-pic1.png",
+      "status": "ACTIVE",
+      "userName": "Nancy Speaking",
+      "title": "Public Speaking",
+      "description": "MARKETING"
+    },
+    {
+      "img": "../../../assets/i/mentor-pic1.png",
+      "status": "PENDING",
+      "userName": "Alex Thompson",
+      "title": "German Classes",
+      "description": "LANGUAGES"
+    },
+    {
+      "img": "../../../assets/i/mentor-pic1.png",
+      "status": "ACTIVE",
+      "userName": "Donald Hill",
+      "title": "PHP Basics",
+      "description": "PROGRAMMING"
+    },
+    {
+      "img": "../../../assets/i/mentor-pic1.png",
+      "status": "ACTIVE",
+      "userName": "Karen Hall",
+      "title": "Body Language",
+      "description": "SOFT SKILLS"
+    },
+    {
+      "img": "../../../assets/i/mentor-pic1.png",
+      "status": "ACTIVE",
+      "userName": "Christina Snow",
+      "title": "Accounting Lessons",
+      "description": "ACCOUNTING"
+    }
+  ],
+  "availableLearningAreas": [
+    {
+      "title": "Learn Javascript",
+      "description": "PROGRAMMING",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Emotional Intelligence",
+      "description": "SOFT SKILLS",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "C# Basics",
+      "description": "PROGRAMMING",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Management",
+      "description": "SOFT SKILLS",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Negociation",
+      "description": "MARKETING",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Code in Swift",
+      "description": "PROGRAMMING",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Leadership Skills",
+      "description": "SOFT SKILLS",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Hindi Course",
+      "description": "LANGUAGES",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    }
+  ],
+  "availableLearningCategories": [
+    {
+      "title": "Programming",
+      "description": "15 Learning Areas",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Soft Skills",
+      "description": "5 Learning Areas",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Marketing",
+      "description": "14 Learning Areas",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Languages",
+      "description": "3 Learning Areas",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Sales",
+      "description": "8 Learning Areas",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Engineering",
+      "description": "5 Learning Areas",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Accounting",
+      "description": "13 Learning Areas",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Oil & Gas",
+      "description": "11 Learning Areas",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    }
+  ],
+  "newMeetingRequestData": {
+    "messageText": "Hi Jessica, I am going in a trip next Friday. Let's have the meeting ASAP. What time works best for you?<br/>Looking forward,<br/>Nancy",
+    "optionList": [
+      {
+        "value": "Feb 15, 15:00"
+      },
+      {
+        "value": "Feb 16, 14:00"
+      },
+      {
+        "value": "Feb 20, 10:00"
+      }
+    ]
+  }
+}

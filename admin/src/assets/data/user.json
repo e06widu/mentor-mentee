@@ -1,0 +1,8 @@
+{
+  "image": "/assets/i/user/user-large.jpg",
+  "name": "Jared Leto",
+  "role": "Administrator",
+  "admin": true,
+  "mentor": false,
+  "mentee": false
+}

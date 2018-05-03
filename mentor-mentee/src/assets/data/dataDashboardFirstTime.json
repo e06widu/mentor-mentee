@@ -1,0 +1,459 @@
+{
+  "title": "Welcome to Wipro Mentorship!",
+  "img": "../../../assets/i/mentor-pic1.png",
+  "description": [
+    "Wipro Mentorship platform is a program special designed for Wipro employee which gives them the opportunity to grow,in a collaborative endeavour. It includes two parts: a mentor, who will share insights, experience, and thoughts, as well as provide suggestions and a mentee, who will look to apply the feedback he gets from mentors to determine his strengths, weaknesses and improve his skills to achieve his career objective.",
+    "More Info comes here... lorem ipsum dolor sit amet, consectetur adipiscing edit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  ],
+  "mentorContent": {
+    "title": "Become a Mentor",
+    "description": "Becoming a mentor is an important step in your career as not you can help another person grow by seeing the potential in them, but also enhance your leadership skills as you are a master on that subject. Whether you shape the next great entrepreneur of our time or help someone achieve her dreams, you'll make a difference- and that's all that matters.",
+    "mentorItems": [
+      {
+        "img": "../../../assets/i/items-pic1.png",
+        "title": "Achieve Personal Career Gain",
+        "description": "Mentors will go the extra mile to help others and studies show that they are six times more likely to be promoted."
+      },
+      {
+        "img": "../../../assets/i/items-pic2.png",
+        "title": "Enhance your Leadership Skills",
+        "description": "Helping another persons to grow means setting up an example and also you'll push yourself to do your best."
+      },
+      {
+        "img": "../../../assets/i/items-pic3.png",
+        "title": "Gain Intrinsec Rewards",
+        "description": "Shaping someone on a subject brings a great deal of personal satisfaction and for sure a stong friendship."
+      }
+    ]
+  },
+  "menteeContent": {
+    "title": "Become a Mentee",
+    "description": "Much of that learning that contributes to our success happens not through books, but through real world experience. Without a mentor, that learning occurs mostly through trial and error. With a mentor, however, even experienced professionals can benefit from the experiences of someone who has withstood the trial and can help shorten the learning curve for acquiring the skills and knowledge most critical to a successful career.",
+    "menteeItems": [
+      {
+        "img": "../../../assets/i/items-pic4.png",
+        "title": "Improve your Skills",
+        "description": "Set clear defined goals to reach and have a specific plan to get there. It's much easier to do that with a mentor rather than trial and error."
+      },
+      {
+        "img": "../../../assets/i/items-pic5.png",
+        "title": "Grow in your Career",
+        "description": "Whether your looking to improve your job skills, or learn something new, you have higher chance to grow if you're multi-skilled."
+      },
+      {
+        "img": "../../../assets/i/items-pic6.png",
+        "title": "Expand your Network",
+        "description": "Having more mentors, means meeting more people that help you grow which can bring other opportunities."
+      }
+    ]
+  },
+  "availableLearningAreas": [
+    {
+      "title": "Learn Javascript",
+      "description": "PROGRAMMING",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Emotional Intelligence",
+      "description": "SOFT SKILLS",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "C# Basics",
+      "description": "PROGRAMMING",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Management",
+      "description": "SOFT SKILLS",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Negociation",
+      "description": "MARKETING",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Code in Swift",
+      "description": "PROGRAMMING",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Leadership Skills",
+      "description": "SOFT SKILLS",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Hindi Course",
+      "description": "LANGUAGES",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    }
+  ],
+  "availableLearningCategories": [
+    {
+      "title": "Programming",
+      "description": "15 Learning Areas",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Soft Skills",
+      "description": "5 Learning Areas",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Marketing",
+      "description": "14 Learning Areas",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Languages",
+      "description": "3 Learning Areas",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Sales",
+      "description": "8 Learning Areas",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Engineering",
+      "description": "5 Learning Areas",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Accounting",
+      "description": "13 Learning Areas",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Oil & Gas",
+      "description": "11 Learning Areas",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    }
+  ]
+}

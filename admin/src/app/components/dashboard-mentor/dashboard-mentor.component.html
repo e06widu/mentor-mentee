@@ -1,0 +1,35 @@
+<!-- mentors -->
+<div class="section">
+  <h3 class="clearfix">
+    <a href="javascript:;">See All</a>
+    NEW MENTORS
+  </h3>
+  <div class="clearfix images">
+    <a href="javascirpt:;"><img *ngFor="let item of data.mentors" src="{{item}}" alt=""/></a>
+  </div>
+</div>
+<!-- mentees -->
+<div class="section">
+  <h3 class="clearfix">
+    <a href="javascript:;">See All</a>
+    NEW MENTEES
+  </h3>
+  <div class="clearfix images">
+    <a href="javascirpt:;"><img *ngFor="let item of data.mentees" src="{{item}}" alt=""/></a>
+  </div>
+</div>
+
+<!-- admins -->
+<div class="section">
+  <h3 class="clearfix">
+    <a href="javascript:;">See All</a>
+    NEW SUB ADMINS
+  </h3>
+  <div class="clearfix images">
+    <a href="javascirpt:;"><img *ngFor="let item of data.admins" src="{{item}}" alt=""/></a>
+  </div>
+</div>
+<!-- show all -->
+<a class="show-all" href="javascript:;">
+  {{data.count}} NEW ACTIVE CONNECTIONS
+</a>

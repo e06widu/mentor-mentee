@@ -1,0 +1,1004 @@
+{
+  "availableLearningAreas": [
+    {
+      "title": "Learn Javascript",
+      "description": "PROGRAMMING",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Emotional Intelligence",
+      "description": "SOFT SKILLS",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "C# Basics",
+      "description": "PROGRAMMING",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Management",
+      "description": "SOFT SKILLS",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Negociation",
+      "description": "MARKETING",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Code in Swift",
+      "description": "PROGRAMMING",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Leadership Skills",
+      "description": "SOFT SKILLS",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Hindi Course",
+      "description": "LANGUAGES",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Learn Javascript",
+      "description": "PROGRAMMING",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Emotional Intelligence",
+      "description": "SOFT SKILLS",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "C# Basics",
+      "description": "PROGRAMMING",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Management",
+      "description": "SOFT SKILLS",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Learn Javascript",
+      "description": "PROGRAMMING",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Emotional Intelligence",
+      "description": "SOFT SKILLS",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "C# Basics",
+      "description": "PROGRAMMING",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Management",
+      "description": "SOFT SKILLS",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Negociation",
+      "description": "MARKETING",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Code in Swift",
+      "description": "PROGRAMMING",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Leadership Skills",
+      "description": "SOFT SKILLS",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Hindi Course",
+      "description": "LANGUAGES",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Learn Javascript",
+      "description": "PROGRAMMING",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Emotional Intelligence",
+      "description": "SOFT SKILLS",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "C# Basics",
+      "description": "PROGRAMMING",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Management",
+      "description": "SOFT SKILLS",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Negociation",
+      "description": "MARKETING",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Code in Swift",
+      "description": "PROGRAMMING",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Leadership Skills",
+      "description": "SOFT SKILLS",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Hindi Course",
+      "description": "LANGUAGES",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Learn Javascript",
+      "description": "PROGRAMMING",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Emotional Intelligence",
+      "description": "SOFT SKILLS",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "C# Basics",
+      "description": "PROGRAMMING",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Management",
+      "description": "SOFT SKILLS",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Learn Javascript",
+      "description": "PROGRAMMING",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Emotional Intelligence",
+      "description": "SOFT SKILLS",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "C# Basics",
+      "description": "PROGRAMMING",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    },
+    {
+      "title": "Management",
+      "description": "SOFT SKILLS",
+      "mentorsList": [
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        },
+        {
+          "img": "../../../assets/i/mentor-pic1.png"
+        }
+      ]
+    }
+  ],
+  "availableLearningCategoriesAndAreas": [
+    {
+      "img": "../../../assets/i/mentor-pic1.png",
+      "learningCategory": "Programming",
+      "learningAreas": "Learn Javascript, HTML5 in 20 days, Basics of Python, Matchine Learning, C# Basics, Code in Swift, Learning C++, Java in 3 steps, Ruby, PHP",
+      "showViewAll": true,
+      "menteesNumber": "85"
+    },
+    {
+      "img": "../../../assets/i/mentor-pic1.png",
+      "learningCategory": "Soft Skills",
+      "learningAreas": "Emotional Intelligence, Leadership Skills, Management, Persuation, Public Speaking, Storytelling, Reading Body Language",
+      "showViewAll": false,
+      "menteesNumber": "76"
+    },
+    {
+      "img": "../../../assets/i/mentor-pic1.png",
+      "learningCategory": "Languages",
+      "learningAreas": "Hindi Course, Learning German, Advanced Course of English, Spanish Course, Learn French in 30 Days",
+      "showViewAll": false,
+      "menteesNumber": "71"
+    },
+    {
+      "img": "../../../assets/i/mentor-pic1.png",
+      "learningCategory": "Marketing",
+      "learningAreas": "Improve your Sales Skills, Readign SWOT Analysises, How to Write Reports, How to Write Press Releases.",
+      "showViewAll": false,
+      "menteesNumber": "65"
+    },
+    {
+      "img": "../../../assets/i/mentor-pic1.png",
+      "learningCategory": "Accounting",
+      "learningAreas": "Financial Accounting, Forensic Accounting, Auditing, Managerial Accounting, Non-Profit Accounting Services",
+      "showViewAll": false,
+      "menteesNumber": "62"
+    }
+  ]
+}

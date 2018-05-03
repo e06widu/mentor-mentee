@@ -1,0 +1,26 @@
+<div class="areas-section">
+  <div class="title">{{title}}</div>
+  <ul class="areas-items">
+    <li *ngFor="let item of dataList">
+      <span class="left-pic">
+        <img src="{{item['img']}}" alt="img"/>
+      </span>
+      <span class="tag">
+        Learning Category
+        <a href="javascript:;">{{item['learningCategory']}}</a>
+      </span>
+      <span class="num">
+        Mentees
+        <em>{{item['menteesNumber']}}</em>
+      </span>
+      <div class="txt">
+        <em>Learning Areas</em>
+        <p>
+          {{item['learningAreas']}}
+          <a href="javascript:;" *ngIf="item['showViewAll']">View All</a>
+        </p>
+      </div>
+    </li>
+  </ul>
+</div>
+<!--end .areas-section-->

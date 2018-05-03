@@ -1,0 +1,125 @@
+@import "mixin";
+@import "variable";
+
+/* account list */
+.account-list {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px 20px 9px 18px;
+    li {
+      padding-bottom: 16px;
+      img {
+        float: left;
+        width: 43px;
+        height: 43px;
+        border-radius: 100%;
+        margin-right: 10px;
+      }
+      .text {
+        width: calc(((100% - 53px) / 2) - 20px);
+        float: left;
+      }
+      .value {
+        width: calc(((100% - 53px) / 2) + 20px);
+        float: left;
+      }
+      a {
+        text-decoration: none;
+        margin: 0;
+        padding: 5px 0 0 0;
+        font-size: 15px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: $button-color;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        &:hover {
+          opacity: $hover-opacity;
+        }
+      }
+      p {
+        margin: 0;
+        padding: 0;
+        font-size: 13px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: $header-name-color;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      span {
+        padding-top: 10px;
+        font-size: 13px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: $black-color;
+        line-height: 22px;
+        float: left;
+        margin-right: 14px;
+        &:last-child {
+          margin-right: 0;
+        }
+        i {
+          float: left;
+          margin-right: 5px;
+        }
+        strong {
+          font-weight: bold;
+        }
+        &.active {
+          i {
+            background: url('/assets/i/dashboard-status/connection-icon.png') no-repeat;
+            background-size: 22px 22px;
+            width: 22px;
+            height: 22px;
+            display: block;
+          }
+        }
+        &.taken {
+          i {
+            background: url('/assets/i/dashboard-status/learning-icon.png') no-repeat;
+            background-size: 22px 22px;
+            width: 22px;
+            height: 22px;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* account list tablet styles */
+@include tablet() {
+
+  .account-list {
+    ul {
+      li {
+        a, p {
+          float: left;
+        }
+        p {
+          margin-top: 7px;
+          margin-left: 12px;
+        }
+        .text, .value {
+          width: calc((100% - 53px));
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,105 @@
+<div class="body-wrapper flex-box" 
+  [ngClass]="{'open-left': hiddenElementGroup['showMenu']}"
+  (click)="hiddenElementGroup['showMenu'] = false">
+  <app-sd-left-side data-activeMenu="dashboard-first-time" [hiddenElementGroup]="hiddenElementGroup"></app-sd-left-side>
+  <div class="right-contents">
+    <app-sd-header data-activeMenu="dashboard-first-time" [hiddenElementGroup]="hiddenElementGroup"></app-sd-header>
+    <div class="right-mains inner" 
+      [ngClass]="{'mobile-hide': hiddenElementGroup['showSearchPopupMobile'] || hiddenElementGroup['showNotification']}">
+      <div class="top-title">
+        Welcome!
+      </div>
+      <!--end .top-title-->
+      <div class="left">
+        <div class="section">
+           <div class="title">{{dataList['title']}}</div>
+           <div class="section-part">
+             <div class="left-pic">
+               <img src="{{dataList['img']}}" alt="img"/>
+             </div>
+             <div class="right-txt">
+               <p *ngFor="let item of dataList['description']">
+                 {{item}}
+               </p>
+               <div class="link-btn">
+                 <a href="javascript:;">Learn More</a>
+               </div>
+             </div>
+           </div>
+        </div>
+        <!--end .section-->
+        <div class="section">
+          <div class="title">{{mentorContent['title']}}</div>
+          <div class="section-part">
+            <div class="right-txt margin-l">
+              <p>
+                {{mentorContent['description']}}
+              </p>
+              <ul class="mentor-items">
+                <li *ngFor="let item of mentorContent['mentorItems']">
+                  <span class="pic">
+                    <img src="{{item.img}}" alt=""/>
+                  </span>
+                  <div class="items-title">{{item.title}}</div>
+                  <p>
+                    {{item.description}}
+                  </p>
+                </li>
+              </ul>
+              <div class="link-btn text-center">
+                <a href="javascript:;">Register as Mentor</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end .section-->
+        <div class="section">
+          <div class="title">{{menteeContent['title']}}</div>
+          <div class="section-part">
+            <div class="right-txt margin-l">
+              <p>
+                {{menteeContent['description']}}
+              </p>
+              <ul class="mentor-items clearfix">
+                <li *ngFor="let item of menteeContent['menteeItems']">
+                  <span class="pic">
+                    <img src="{{item.img}}" alt=""/>
+                  </span>
+                  <div class="items-title">{{item.title}}</div>
+                  <p>
+                    {{item.description}}
+                  </p>
+                </li>
+              </ul>
+              <div class="link-btn text-center">
+                <a href="javascript:;">Register as Mentee</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end .section-->
+        
+        <app-sd-areas-list title="Available Learning Areas ({{availableLearningAreas.length}})"
+          linkTarget="learn-javascript-area"
+          [dataList]="availableLearningAreas">
+        </app-sd-areas-list>
+        <div class="areas-btn clearfix">
+          <a href="javascript:;" [routerLink]="['/mentee/programming-learning-areas']">View All Learning Areas</a>
+        </div>
+        
+        <app-sd-areas-list title="Available Learning Categories ({{availableLearningCategories.length}})"
+          linkTarget="programming-all"
+          [dataList]="availableLearningCategories">
+        </app-sd-areas-list>
+        <div class="areas-btn">
+          <a href="javascript:;" [routerLink]="['/mentee/learning-categories']">View All Learning Categories</a>
+        </div>
+      </div>
+      <!--end .left-->
+      <app-sd-right-side></app-sd-right-side>
+    </div>
+    <!-- end .right-mains -->
+  </div>
+  <!-- end .right-contents -->
+</div>
+<!-- end .body-wrapper -->

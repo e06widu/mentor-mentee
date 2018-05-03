@@ -1,0 +1,31 @@
+<div class="login-wrapper flex-boxs align-center">
+  <div class="login-main">
+  	<div class="login-header">
+  		
+  	</div>
+  	<form class="login-form">
+  	  <h4 class="titles">Login</h4>
+  		<div class="row-line">
+  			<div class="label-txt">Name</div>
+  			<div class="inputs"
+  				[ngClass]="{'error': nameText === '' && showError}">
+  				<input type="text" [(ngModel)]="nameText" name="nameText">
+  			</div>
+  		</div>
+  		<!-- end .row-line -->
+  		<div class="row-line">
+  			<div class="label-txt">Password</div>
+  			<div class="inputs"
+  				[ngClass]="{'error': passwordText === '' && showError}">
+  				<input type="password" [(ngModel)]="passwordText" name="passwordText">
+  			</div>
+  		</div>
+  		<!-- end .row-line -->
+  		<div class="btn-boxs">
+  			<a href="javascript:;" class="btn btn-blue" (click)="clickLogin()">LOGIN</a>
+  			<a href="javascript:;" class="btn btn-blue" [routerLink]="['/mentee/register']">REGISTER</a>
+  		</div>
+  	</form>
+  </div>
+</div>
+<!-- end .login-wrapper -->

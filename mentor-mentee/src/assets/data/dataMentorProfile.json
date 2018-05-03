@@ -1,0 +1,128 @@
+{
+  "userPhoto": "../../../assets/i/user-big-boy.jpg",
+  "userName": "David Brown",
+  "userRole": "Senior Web Developer",
+  "starNumber": 4,
+  "reviewLabelLeft": "5",
+  "reviewLabelRight": "110",
+  "status": "",
+  "sentRequest": false,
+  "formData": [
+    {
+      "personalDetails": {
+        "Name": "David Brown",
+        "Email": "david_brown@wipro.com",
+        "Phone": "0099540835394",
+        "Domain": "Information Technology",
+        "Designation": "Senior Web Developer",
+        "Location": "Dublin, Ireland",
+        "Wipro Experience": "5 years",
+        "Total Experience": "8 years"
+      },
+      "aboutMyCurrentRole": {
+        "description": "I have a Computer Science Degree and MBA. I am a web developer and I love conceiving and building new products and technology at the intersection of Media and Technology.",
+        "specialties": [
+          {
+            "value": "Intersection of Media & Technology"
+          },
+          {
+            "value": "Developing new startups" 
+          }
+        ],
+        "strengthAreas": [
+          {
+            "value": "Web 2.0 and Web Services"
+          },
+          {
+            "value": "Real Time Internet: Blogs, Podcasting" 
+          }
+        ]
+      },
+      "workDetails": [
+        {
+          "img": "wipo-logo",
+          "title": "Wipro",
+          "timeFrom": "Sept 2013",
+          "timeTo": "present",
+          "description": "Started as a Senior Front End Developer responsible for optimizing the Wipro main site and moved to backend where I worked with databased as large as 100K records."
+        },
+        {
+          "img": "f-logo",
+          "title": "Forbes",
+          "timeFrom": "Sept 2010",
+          "timeTo": "Sept 2013",
+          "description": "Technology contributor to Forbes focusing on the intersection of Silicon Valley and Business with an emphasis of where computer science meets social science."
+        },
+        {
+          "img": "visma-logo",
+          "title": "Visma",
+          "timeFrom": "Sept 2009",
+          "timeTo": "Sept 2010",
+          "description": "Junior web developer at Visma in Ireland, where I worked in the team responsible for developing responsive websites and mobile applications."
+        }
+      ],
+      "Volunteer as Mentor": {
+        "description": "I love helping people advance in my area of knowlege and I strongly believe that by helping another person one gets to understand better the things he explains and I always find pleasure in seeing other progressing.",
+        "learningCategory": "Programming",
+        "learningArea": "Learning Javascript",
+        "keyStrengths": "Patience, good english skills,offer materials to help mentees, close supervision"
+      },
+      "Skills and Band": {
+        "list": [
+          {
+            "value": "Analytical Thinking"
+          },
+          {
+            "value": "Strong Attention to Details"
+          },
+          {
+            "value": "Collaboration"
+          }
+        ],
+        "band": "B2"
+      },
+      "reviewsData": {
+        "labelMin": "3",
+        "labelMax": "15",
+        "length": 3,
+        "list": [
+          {
+            "img": "../../../assets/i/user1.jpg",
+            "starNumber": 4,
+            "time": "Feb 11, 2018",
+            "name": "Nikita Stone",
+            "description": "Jessica was a great mentee. She took detailed notes and our communication went very smooth. I'll gave her a 6 starts if I could!"
+          },
+          {
+            "img": "../../../assets/i/user2.jpg",
+            "starNumber": 3,
+            "time": "Jan 10, 2018",
+            "name": "Tom Hanks",
+            "description": "She has strong business development and deep technological know-how. Although she had no idea of PERL, she was quickly to make associations to other languages."
+          },
+          {
+            "img": "../../../assets/i/user3.jpg",
+            "starNumber": 4,
+            "time": "Jan 2, 2018",
+            "name": "Jessie Smith",
+            "description": "I met Jessica in Melbourne, Australia 2 years ago and I have a great deal of respect for his personal passion. It was great being able to have him as my mentee."
+          }
+        ]
+      }
+    }
+  ],
+  "newMeetingRequestData": {
+    "messageText": "Hi Jessica, I am going in a trip next Friday. Let's have the meeting ASAP. What time works best for you?<br/>Looking forward,<br/>Nancy",
+    "optionList": [
+      {
+        "value": "Feb 15, 15:00"
+      },
+      {
+        "value": "Feb 16, 14:00"
+      },
+      {
+        "value": "Feb 20, 10:00"
+      }
+    ]
+  }
+}

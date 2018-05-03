@@ -1,0 +1,37 @@
+<div class="row learn-list">
+  <div class="areas-view" *ngFor="let item of dataList">
+    <span class="mentor-pic">
+      <img src="{{item['img']}}" alt="img"/>
+    </span>
+    <a href="javascript:;" class="mentor-name" [routerLink]="['/mentee/mentor-profile']">{{item['userName']}}</a>
+    <span class="mentor-tag">{{item['businessUnit']}}</span>
+    <span class="exp" *ngIf="showYear === 'true'">{{item['experience']}} years exp.</span>
+    <ul class="start-group">
+      <li *ngIf="item['starNumber'] > 0" [ngClass]="{'full': item['starNumber'] >= 1, 'half': item['starNumber'] === 0.5}"></li>
+      <li *ngIf="item['starNumber'] > 1" [ngClass]="{'full': item['starNumber'] >= 2, 'half': item['starNumber'] === 1.5}"></li>
+      <li *ngIf="item['starNumber'] > 2" [ngClass]="{'full': item['starNumber'] >= 3, 'half': item['starNumber'] === 2.5}"></li>
+      <li *ngIf="item['starNumber'] > 3" [ngClass]="{'full': item['starNumber'] >= 4, 'half': item['starNumber'] === 3.5}"></li>
+      <li *ngIf="item['starNumber'] > 4" [ngClass]="{'full': item['starNumber'] >= 5, 'half': item['starNumber'] === 4.5}"></li>
+    </ul>
+    <div class="connect-btn">
+      <a href="javascript:;" (click)="openModalWindow(connectSentModal);" *ngIf="item['buttonType'] === 'Connect'">Connect</a>
+      <a href="javascript:;" *ngIf="item['buttonType'] === 'View'">View</a>
+    </div>
+  </div>
+</div>
+<!--end .row-->
+
+<ng-template #connectSentModal let-c="close" let-d="dismiss">
+  <div class="modal-mains">
+    <div class="inner">
+      <i class="icons icon-ok"></i>
+      <h4 class="titles">The Connection Request was Successfully Sent!</h4>
+      <p class="txt normal-txt">We will send you a note as soon as the mentor approves or rejects your request.</p>
+    </div>
+    <div class="btn-bottom">
+      <a href="javascript:;" class="btn btn-blue" (click)="c('Close click');">Close</a>
+    </div>
+   <!-- end .btn-bottom -->
+  </div>
+  <!-- end .modal-wrapper -->
+</ng-template>

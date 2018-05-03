@@ -1,0 +1,259 @@
+<header class="header flex-box align-center space-between mobile-hide">
+  <div class="left-area">
+    <a href="javascript:;" class="logo-link">
+      <img src="../../../assets/i/wipro-logo.png" alt="logo">
+      <div class="right-txt">
+        <span class="txt bold-txt">Wipro </span>
+        <span class="txt">Mentorship</span>
+      </div>
+    </a>
+    <div class="search" [ngClass]="{'open': hiddenElementGroup['showSearchPopup'] }">
+      <div class="auto-flex-wrapper">
+        <div class="inputs">
+          <input type="text" placeholder="Search learning areas or mentors..."
+            (click)="onKeySearch($event, 'desktop')" (keyup)="onKeySearch($event, 'desktop')">
+        </div>
+        <div class="auto-boxs">
+          <div class="lists learning-list" *ngIf="searchLearningAreasList.length > 0">
+            <div class="gray-bar">Learning Areas</div>
+            <ul>
+              <li *ngFor="let item of searchLearningAreasList">
+                <a href="javascript:;" class="items">
+                  <span class="left-title">
+                    <div class="blue-txt">
+                      <span>{{item.firstLabel}}</span>
+                      <span class="key-word">{{item.middleLabel}}</span>
+                      <span>{{item.lastLabel}}</span>
+                    </div>
+                    <span class="gray-txt">{{item['item'].description}}</span>
+                  </span>
+                  <span class="center-txt">
+                    {{item['item'].memberNumber}} members
+                  </span>
+                  <i class="fa fa-chevron-right"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- end .learning-list -->
+          <div class="lists employees-list" *ngIf="searchEmployeesList.length > 0">
+            <div class="gray-bar">EMPLOYEES</div>
+            <ul>
+              <li *ngFor="let item of searchEmployeesList">
+                <div class="items">
+                  <span class="left-title">
+                    <div class="blue-txt">
+                      <span>{{item.firstLabel}}</span>
+                      <span class="key-word">{{item.middleLabel}}</span>
+                      <span>{{item.lastLabel}}</span>
+                    </div>
+                    <span class="gray-txt">{{item['item'].description}}</span>
+                  </span>
+                  <span class="center-txt">
+                    {{item['item'].userRole}}
+                  </span>
+                  <a href="javascript:;" class="btn btn-blue" (click)="openModalWindow(connectSentModal);"
+                    *ngIf="item['item'].userRole === 'Mentor'">
+                    Connect
+                  </a>
+                  <div class="two-link" *ngIf="item['item'].userRole === 'Employee'">
+                    <a href="javascript:;" class="blue-links">Invite as Mentee</a>
+                    <a href="javascript:;" class="blue-links">Invite as Mentor</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- end .learning-list -->
+        </div>
+        <!-- end .auto-boxs -->
+      </div>
+      <!-- end .auto-flex-wrapper -->
+      <a href="javascript:;" class="btn btn-border-blue">
+        <i class="fa fa-search"></i>Search
+      </a>
+    </div>
+    <!-- end .search -->
+  </div>
+  <!-- end .left-area -->
+  <div class="user-area">
+    <div class="txt">
+      <div class="wel">Welcome,</div>
+      <a  href="javascript:;" class="name">Jessica Snow</a>
+    </div>
+    <div class="user-photo">
+      <a href="javascript:;"><img src="../../../assets/i/user-photo.jpg" alt="photo"></a>
+    </div>
+    <!-- end .user-photo -->
+    <div class="item message-item">
+      <a href="javascript:;" class="btn-icon" 
+        (click)="hiddenElementGroup['showNotification'] = !hiddenElementGroup['showNotification'];">
+        <i class="fa fa-bell"></i>
+        <span class="red"></span>
+      </a>
+    </div>
+    <!-- end.message-item -->
+    <div class="item logout-item">
+      <a href="javascript:;" class="btn-icon"><i class="fa fa-sign-out"></i></a>
+    </div>
+    <!-- end.message-item -->
+  </div>
+  <!-- end .user-area -->
+</header>
+<!-- end header -->
+<div class="mobile-search search desktop-hide mobile-show" [ngClass]="{'open': hiddenElementGroup['showSearchPopupMobile'] }">
+  <div class="search-bar">
+    <div class="inputs">
+      <input type="text" placeholder="Search learning areas or mentors..."
+        (click)="onKeySearch($event, 'mobile')" (keyup)="onKeySearch($event, 'mobile')">
+      <a href="javascript:;" class="fa fa-search"></a>
+    </div>
+    <!-- end .auto-flex-wrapper -->
+  </div>
+  <div class="auto-flex-wrapper">
+    <div class="auto-boxs" *ngIf="searchLearningAreasList.length > 0 || searchEmployeesList.length > 0">
+      <div class="lists learning-list" *ngIf="searchLearningAreasList.length > 0">
+        <div class="gray-bar">Learning Areas</div>
+        <ul>
+          <li *ngFor="let item of searchLearningAreasList">
+            <a href="javascript:;" class="items clearfix">
+              <span class="left-title">
+                <div class="blue-txt">
+                  <span>{{item.firstLabel}}</span>
+                  <span class="key-word">{{item.middleLabel}}</span>
+                  <span>{{item.lastLabel}}</span>
+                </div>
+                <span class="gray-txt">{{item['item'].description}}</span>
+              </span>
+              <span class="center-txt">
+                {{item['item'].memberNumber}} members
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- end .learning-list -->
+      <div class="lists employees-list" *ngIf="searchEmployeesList.length > 0">
+        <div class="gray-bar">EMPLOYEES</div>
+        <ul>
+          <li *ngFor="let item of searchEmployeesList">
+            <div class="items clearfix">
+              <span class="left-title">
+                <div class="blue-txt">
+                  <span>{{item.firstLabel}}</span>
+                  <span class="key-word">{{item.middleLabel}}</span>
+                  <span>{{item.lastLabel}}</span>
+                </div>
+                <span class="gray-txt">{{item['item'].description}}</span>
+              </span>
+              <span class="center-txt">
+                {{item['item'].userRole}}
+              </span>
+              <a href="javascript:;" class="btn btn-blue" (click)="openModalWindow(connectSentModal);"
+                *ngIf="item['item'].userRole === 'Mentor'">
+                Connect
+              </a>
+              <div class="two-link" *ngIf="item['item'].userRole === 'Employee'">
+                <a href="javascript:;" class="blue-links">Invite as Mentee</a>
+                <a href="javascript:;" class="blue-links">Invite as Mentor</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- end .learning-list -->
+    </div>
+    <!-- end .auto-boxs -->
+  </div>
+</div>
+<!-- end .mobile-search -->
+<div class="mobile-header flex-box align-center space-between desktop-hide mobile-show">
+  <div class="menu-btn">
+    <a href="javascript:;" class="btn-icons" *ngIf="!hiddenElementGroup['showNotification'] && !hiddenElementGroup['showSearchPopupMobile']"
+      (click)="hiddenElementGroup['showMenu'] = !hiddenElementGroup['showMenu'];$event.stopPropagation();">
+      <i class="fa fa-reorder"></i>
+    </a>
+    <a href="javascript:;" class="btn-icons" *ngIf="hiddenElementGroup['showNotification'] || hiddenElementGroup['showSearchPopupMobile']"
+      (click)="hiddenElementGroup['showNotification'] = false;hiddenElementGroup['showSearchPopupMobile'] = false;">
+      <i class="fa fa-angle-left"></i>
+    </a>
+  </div>
+  <div class="page-name" *ngIf="(activeMenu === 'dashboard-first-time' || activeMenu === 'dashboard') 
+                                && !hiddenElementGroup['showNotification'] && !hiddenElementGroup['showSearchPopupMobile']">
+    Dashboard
+  </div>
+  <div class="page-name" *ngIf="(activeMenu === 'learning-categories')
+                                && !hiddenElementGroup['showNotification'] && !hiddenElementGroup['showSearchPopupMobile']">
+    Learning Categories
+  </div>
+  <div class="page-name" *ngIf="(activeMenu === 'programming-all' 
+                             || activeMenu === 'programming-learning-areas' 
+                             || activeMenu === 'learn-javascript-area')
+                                && !hiddenElementGroup['showNotification'] && !hiddenElementGroup['showSearchPopupMobile']">
+    Programming
+  </div>
+  <div class="page-name" *ngIf="(activeMenu === 'mentor-profile')
+                                && !hiddenElementGroup['showNotification'] && !hiddenElementGroup['showSearchPopupMobile']">
+    Montor Details
+  </div>
+  <div class="page-name" *ngIf="(activeMenu === 'my-connections')
+                                && !hiddenElementGroup['showNotification'] && !hiddenElementGroup['showSearchPopupMobile']">
+    My Connections
+  </div>
+  <div class="page-name" *ngIf="(activeMenu === 'mentee-profile-edit')
+                                && !hiddenElementGroup['showNotification'] && !hiddenElementGroup['showSearchPopupMobile']">
+    My Profile
+  </div>
+  <div class="page-name" *ngIf="hiddenElementGroup['showNotification']">
+    Notifications
+  </div>
+  <div class="page-name" *ngIf="hiddenElementGroup['showSearchPopupMobile']">
+    Search
+  </div>
+  <div class="bell-btn">
+    <a href="javascript:;" class="btn-icons" (click)="hiddenElementGroup['showNotification'] = !hiddenElementGroup['showNotification'];hiddenElementGroup['showSearchPopupMobile'] = false">
+      <i class="fa fa-bell"><span class="red"></span></i>
+    </a>
+  </div>
+</div>
+<!-- end .mobile-header -->
+<div class="gray-cover" *ngIf="hiddenElementGroup['showNotification'] || hiddenElementGroup['showSearchPopup']" 
+(click)="hiddenElementGroup['showNotification'] = false;hiddenElementGroup['showSearchPopup'] = fasle;"></div>
+<!-- end .gray-cover -->
+<div class="right-aside" *ngIf="hiddenElementGroup['showNotification']">
+  <div class="top-bar flex-box align-center space-between">
+    <h4 class="titles">Notifications <span class="red-point">{{notificationList.length}}</span></h4>
+    <a href="javascript:;" class="btn-close" (click)="hiddenElementGroup['showNotification'] = false">
+      <i class="fa fa-close"></i>Close
+    </a>
+  </div>
+  <div class="notification-list">
+    <ul>
+      <li *ngFor="let item of notificationList">
+        <i class="icons icon-link" *ngIf="item['iconType'] === 'link'"></i>
+        <i class="icons fa fa-calendar" *ngIf="item['iconType'] === 'date'"></i>
+        <div class="right-txt">
+          <div class="date">{{item['date']}}</div>
+          <p class="txt" [innerHTML]="item['description']"></p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!-- end .notification-list -->
+</div>
+<!-- end .right-aside -->
+
+<ng-template #connectSentModal let-c="close" let-d="dismiss">
+  <div class="modal-mains">
+    <div class="inner">
+      <i class="icons icon-ok"></i>
+      <h4 class="titles">The Connection Request was Successfully Sent!</h4>
+      <p class="txt normal-txt">We will send you a note as soon as the mentor approves or rejects your request.</p>
+    </div>
+    <div class="btn-bottom">
+      <a href="javascript:;" class="btn btn-blue" (click)="c('Close click');">Close</a>
+    </div>
+   <!-- end .btn-bottom -->
+  </div>
+  <!-- end .modal-wrapper -->
+</ng-template>

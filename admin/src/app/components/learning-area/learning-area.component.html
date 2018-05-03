@@ -1,0 +1,11 @@
+<!-- learning area items -->
+<div class="learning-area">
+  <ul>
+    <li *ngFor="let item of data | orderBy:'mentees':sortOrder">
+
+      <span><strong>{{item.mentees}}</strong> Mentees</span>
+      <a href="javascript:;">{{item.name}}</a>
+      <p>{{item.type}}</p>
+    </li>
+  </ul>
+</div>

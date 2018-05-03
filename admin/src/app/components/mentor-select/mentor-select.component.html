@@ -1,0 +1,36 @@
+<!-- search wrapper -->
+<div class="search-wrapper">
+  <div class="search-input-wrapper">
+    <input
+      [class.error]="error"
+      (change)="onChange()" (focus)="openPopup()" [(ngModel)]="query" placeholder="Search Mentor" type="search"/>
+    <i (click)="openPopup()"></i>
+  </div>
+  <!-- drop down popup -->
+  <div *ngIf="open" class="popup">
+    <div class="header">
+      <a href="javascript:;" (click)="selectToggle()">{{ selectAll ? 'Deselect All' : 'Select All'}}</a>
+      <strong>{{(items | mentor: query).length}} Mentors found</strong>
+    </div>
+    <div class="content-wrapper">
+      <div class="content">
+        <ul>
+          <li *ngFor="let item of items | mentor: query;" class="clearfix">
+            <label>
+              <div class="check-box">
+                <input (change)="onChange()" type="checkbox" [(ngModel)]="item.checked"/>
+                <span></span>
+              </div>
+              <img src="{{item.image}}">
+              <div class="description">
+                <h5>{{item.name}}</h5>
+                <p>{{item.title}}</p>
+              </div>
+            </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,68 @@
+@import "variable";
+/* dashboard */
+.section {
+  padding: 19px 14px 17px 14px;
+  border-bottom: solid 2px #eaeef4;
+  &:last-child {
+    border-bottom: 0;
+  }
+  h3 {
+    margin: 0;
+    padding: 0 0 13px 0;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: $header-name-color;
+    a {
+      text-decoration: none;
+      float: right;
+      font-size: 13px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: right;
+      color: $button-color;
+      &:hover {
+        opacity: $hover-opacity;
+      }
+    }
+  }
+  .images {
+    img {
+      border-radius: 100%;
+      margin-right: 5px;
+      margin-bottom: 2px;
+      width: 47px;
+      height: 47px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+/* show all button */
+a.show-all {
+  padding: 15px 0;
+  display: block;
+  text-align: center;
+  height: 46px;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  color: $button-color;
+  text-decoration: none;
+  &:hover {
+    opacity: $hover-opacity;
+  }
+}

@@ -1,0 +1,117 @@
+<div class="content">
+  <h1>Dashboard</h1>
+
+  <!-- dashboard status card -->
+  <div class="clearfix dashboard-status-cards desktop-block">
+    <div class="dashboard-status-card" *ngFor="let item of dashboard.status;">
+      <app-dashboard-status-card [data]="item"></app-dashboard-status-card>
+    </div>
+  </div>
+  <!-- mobile carsolue -->
+  <div class="mobile-block">
+    <ngx-carousel
+      class="banner"
+      [inputs]="statusCardOption"
+      (carouselLoad)="statusCardOnLoad($event)">
+      <ngx-item NgxCarouselItem *ngFor="let item of  dashboard.status;">
+        <div class="banner-item">
+          <app-dashboard-status-card [data]="item"></app-dashboard-status-card>
+        </div>
+      </ngx-item>
+
+      <button NgxCarouselPrev class="leftRs">&lt;</button>
+      <button NgxCarouselNext class="rightRs">&gt;</button>
+    </ngx-carousel>
+  </div>
+  <div class="clearfix">
+    <!-- left panel -->
+    <div class="left-side">
+      <div class="clearfix tab-panel">
+
+        <div class="panel clearfix">
+          <div class="tab-wrapper">
+            <!-- tabs -->
+            <ul class="tab-nav">
+              <li><a [class.active]="tabIndex === 'mentorRequests'" (click)="tabIndex = 'mentorRequests'"
+                     href="javascript:;">MENTOR REQUESTS
+                <i>{{dashboard.mentorRequests && dashboard.mentorRequests.length}}</i>
+              </a></li>
+              <li><a [class.active]="tabIndex === 'topMentors'" (click)="tabIndex = 'topMentors'" href="javascript:;">TOP
+                MENTORS</a></li>
+              <li><a [class.active]="tabIndex === 'bottomMentors'" (click)="tabIndex = 'bottomMentors'"
+                     href="javascript:;">BOTTOM MENTORS</a></li>
+              <li><a [class.active]="tabIndex === 'inactiveMentors'" (click)="tabIndex = 'inactiveMentors'"
+                     href="javascript:;">INACTIVE MENTORS</a></li>
+            </ul>
+          </div>
+          <div class="clearfix desktop-block tab-content">
+            <div class="dashboard-mentor-card-wrapper" *ngFor="let item of dashboard[tabIndex]">
+              <!-- dashboard mentor card -->
+              <app-dashboard-mentor-card [data]="item"></app-dashboard-mentor-card>
+            </div>
+          </div>
+          <div class="clearfix mobile-block">
+            <ngx-carousel
+              class="banner"
+              [inputs]="avatarCardOption"
+              (carouselLoad)="statusCardOnLoad($event)">
+              <ngx-item NgxCarouselItem *ngFor="let item of dashboard[tabIndex];">
+                <div class="banner-item">
+                  <!-- dashboard mentor card mobile -->
+                  <app-dashboard-mentor-card [data]="item"></app-dashboard-mentor-card>
+                </div>
+              </ngx-item>
+
+              <button NgxCarouselPrev class="leftRs">&lt;</button>
+              <button NgxCarouselNext class="rightRs">&gt;</button>
+            </ngx-carousel>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix">
+        <div class="panel half-panel">
+          <h2>
+            <span class="drop-down">
+              <app-dropdown
+                (select)="onLearningAreaSort($event)"
+                [options]="dashboard.filters" [value]="filterValue"></app-dropdown>
+            </span>
+            <span>Learning Areas</span>
+          </h2>
+          <app-learning-area [sortOrder]="sortOrder" [data]="dashboard.learningAreas"></app-learning-area>
+
+        </div>
+
+        <div class="panel half-panel">
+          <h2>
+            <span>active accounts</span>
+          </h2>
+          <app-account-list [data]="dashboard.accounts"></app-account-list>
+
+        </div>
+      </div>
+
+    </div>
+    <!-- right side panel  -->
+    <div class="right-side">
+      <div class="panel">
+        <!-- dashboard mentors -->
+        <app-dashboard-mentor [data]="dashboard.mentors"></app-dashboard-mentor>
+      </div>
+
+      <div class="panel">
+        <!-- learning request -->
+        <app-learning-request [data]="dashboard.learnings"
+                              [title]="'NEW LEARNING AREA REQUESTS'"></app-learning-request>
+      </div>
+
+      <div class="analytics">
+        <div class="mask">Analytics</div>
+      </div>
+
+      <div class="reports">
+        <div class="mask">Reports</div>
+      </div>
+    </div>
+  </div>
+</div>

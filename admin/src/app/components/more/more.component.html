@@ -1,0 +1,7 @@
+<!-- more action popup -->
+<div class="more-wrapper">
+  <a (click)="open = !open" href="javascript:;"><i></i><i></i><i></i></a>
+  <div *ngIf="open" class="popup">
+    <a href="javascript:;" (click)="onAction(item.name)" *ngFor="let item of items" class="{{item.type}}">{{item.name}}</a>
+  </div>
+</div>

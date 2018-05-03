@@ -1,0 +1,276 @@
+@import "mixin";
+@import "variable";
+
+body {
+  font-family: 'Arial', Arial;
+  margin: 0;
+  padding: 0;
+  background: $bg-color;
+  padding-top: 63px;
+  padding-left: 71px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+* html .clearfix {
+  height: 1%;
+}
+
+.clearfix {
+  display: block;
+}
+
+.content {
+  padding: 39px 43px 40px 24px;
+  max-width: 1295px;
+  margin: 0 auto;
+  h1 {
+    height: 33px;
+    font-size: 30px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    color: $primary-text-color;
+  }
+}
+
+.panel {
+  border-radius: 4px;
+  background-color: $white-color;
+}
+
+.desktop-block {
+  display: block;
+}
+
+.mobile-block {
+  display: none;
+}
+
+textarea,
+input {
+  outline: none;
+  padding: 0 15px;
+  height: 40px;
+  border-radius: 2px;
+  border: 1px solid $header-role-bg;
+  background-color: $header-role-bg;
+  font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  width: 380px;
+  color: $black-color;
+  ::-webkit-input-placeholder {
+    color: $header-role-color;
+  }
+  ::-moz-placeholder {
+    color: $header-role-color;
+  }
+  :-ms-input-placeholder {
+    color: $header-role-color;
+  }
+  :-moz-placeholder {
+    color: $header-role-color;
+  }
+  &.error {
+    border-color: $notification-bg;
+  }
+}
+
+textarea {
+  width: 600px;
+  height: 195px;
+  border-radius: 2px;
+  resize: none;
+  padding: 14px 15px;
+  font-size: 13px;
+  &.normal {
+    width: 100%;
+    height: 157px;
+  }
+}
+
+/* radio button */
+.radio-box {
+  display: inline-block;
+  padding-bottom: 15px;
+  input {
+    display: none;
+    &:checked + span {
+      border: 6px solid $button-color;
+      i {
+        border: 0;
+      }
+    }
+  }
+  span {
+    border: 6px solid transparent;
+    border-radius: 100%;
+    float: left;
+    width: 25px;
+    height: 25px;
+    margin-right: 9px;
+    position: relative;
+    i {
+      position: absolute;
+      top: -3px;
+      left: -2px;
+      border-radius: 100%;
+      display: block;
+      width: 18px;
+      height: 18px;
+      border: solid 1px $button-color;
+    }
+  }
+  label {
+    line-height: 25px;
+    font-size: 15px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: $black-color;
+    padding-right: 62px;
+  }
+}
+
+/* check box button */
+.check-box {
+  display: inline-block;
+  padding-bottom: 15px;
+  input {
+    display: none;
+    &:checked + span {
+      background: $button-color url('/assets/i/checkbox-icon.png') center center no-repeat;
+      background-size: 17px 13px;
+    }
+  }
+  span {
+    display: block;
+    width: 21px;
+    height: 21px;
+    margin-right: 0;
+    border-radius: 2px;
+    border: 2px solid $button-color;
+  }
+}
+
+@import "button";
+
+@include tablet() {
+  textarea {
+    width: 380px;
+  }
+}
+
+@include mobile() {
+  body {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .desktop-block {
+    display: none;
+  }
+
+  .mobile-block {
+    display: block;
+  }
+  .content {
+    padding: 17px 10px 20px 10px;
+    h1 {
+      height: 20px;
+      font-size: 20px;
+    }
+  }
+  input,
+  textarea {
+    width: 100%;
+  }
+  .radio-box {
+    label {
+      padding-right: 8px;
+    }
+  }
+}
+
+/* template preview */
+.preview-wrapper {
+  width: 588px;
+  min-height: 336px;
+  border: solid 1px $preview-border;
+  margin-bottom: 47px;
+  padding: 20px;
+  p {
+    display: block;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    text-align: left;
+    color: $black-color;
+    span {
+      color: $primary-color;
+    }
+  }
+  .radio-box {
+    padding-bottom: 0;
+  }
+  .star {
+    width: 46px;
+    height: 46px;
+    background: url('/assets/i/star-rating-icon.png') no-repeat;
+    background-size: 46px 46px;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 10px;
+  }
+}
+
+@include mobile() {
+  .preview-wrapper {
+    width: 100%;
+    height: calc(100% - 100px);
+    overflow: auto;
+  }
+}
+
+/* IE10+ */
+::-ms-clear {
+  display: none;
+}
+
+/* Chrome */
+::-webkit-search-decoration,
+::-webkit-search-cancel-button,
+::-webkit-search-results-button,
+::-webkit-search-results-decoration {
+  display: none;
+}

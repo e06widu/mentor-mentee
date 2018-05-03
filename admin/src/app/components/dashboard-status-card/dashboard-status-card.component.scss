@@ -1,0 +1,109 @@
+@import "variable";
+/* dashboard status card */
+.dashboard-status-card {
+  width: 100%;
+  height: 74px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 20px 0 0 16px;
+  i {
+    float: left;
+  }
+  .text {
+    margin-left: 12px;
+    float: left;
+    width: calc(100% - 50px);
+    .value {
+      font-size: 20px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      letter-spacing: normal;
+      text-align: left;
+      height: 23px;
+      line-height: 23px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      strong {
+        font-weight: bold;
+        font-size: 28px;
+      }
+    }
+    .label {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+      font-size: 14px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: 0.2px;
+      text-align: left;
+      color: $dashboard-status-label;
+    }
+  }
+  &.type-connection {
+    i {
+      background: url('/assets/i/dashboard-status/connection-icon.png') no-repeat;
+      background-size: 30px 32px;
+      width: 30px;
+      height: 32px;
+      display: block;
+    }
+    .text .value {
+      color: $dashboard-status-connection;
+    }
+  }
+  &.type-mentor {
+    i {
+      background: url('/assets/i/dashboard-status/mentor-icon.png') no-repeat;
+      background-size: 26px 32px;
+      width: 26px;
+      height: 32px;
+      display: block;
+    }
+    .text .value {
+      color: $dashboard-status-mentor;
+    }
+  }
+  &.type-mentee {
+    i {
+      background: url('/assets/i/dashboard-status/mentee-icon.png') no-repeat;
+      background-size: 30px 30px;
+      width: 30px;
+      height: 30px;
+      display: block;
+    }
+    .text .value {
+      color: $dashboard-status-mentee;
+    }
+  }
+  &.type-learning {
+    i {
+      background: url('/assets/i/dashboard-status/learning-icon.png') no-repeat;
+      background-size: 32px 31px;
+      width: 32px;
+      height: 31px;
+      display: block;
+    }
+    .text .value {
+      color: $dashboard-status-learning;
+    }
+  }
+  &.type-admin {
+    i {
+      background: url('/assets/i/dashboard-status/admin-icon.png') no-repeat;
+      background-size: 30px 32px;
+      width: 30px;
+      height: 32px;
+      display: block;
+    }
+    .text .value {
+      color: $dashboard-status-admin;
+    }
+  }
+
+}

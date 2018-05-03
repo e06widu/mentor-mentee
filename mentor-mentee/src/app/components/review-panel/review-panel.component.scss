@@ -1,0 +1,135 @@
+@import '../../../styles/variables';
+
+/* .right-white-panel */
+.right-white-panel {
+  padding: 30px 20px 27px 20px;
+  background-color: $whiteColor;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .title {
+    font-size: 15px;
+    letter-spacing: 0.2px;
+    color: $grayTitleColor;
+    font-weight: bold;
+    line-height: 17px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+}
+
+/* .review-panel */
+.review-panel {
+  &.right-white-panel {
+    padding: 40px 53px 30px 38px;
+  }
+  .bottom-btn {
+    text-align: center;
+    .btn {
+      font-size: 14px;
+    }
+  }
+  .title-area {
+    .right-top {
+      float: right;
+      .num {
+        font-size: 14px;
+        color: $grayInputTextColor;
+      }
+      .num-gray,
+      .gray-txt {
+        color: #929292;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+/* .reviews-list */
+.reviews-list {
+  ul {
+    li {
+      margin-bottom: 33px;
+      padding-left: 62px;
+      position: relative;
+      .user-photo {
+        position: absolute;
+        left: 0;
+        top: 10px;
+        img {
+          width: 39px;
+          height: 39px;
+          border-radius: 100%;
+        }
+      }
+      .right-area {
+        .star-list {
+          text-align: left;
+          li {
+            margin-bottom: 4px;
+            padding-left: 0;
+            margin-right: -2px;
+            height: 12px;
+            vertical-align: middle;
+            .star {
+              width: 12px;
+              height: 12px;
+              background-size: 12px auto;
+            }
+          }
+        }
+        .top-txt {
+          .date,
+          .blue-links {
+            font-size: 14px;
+            color: #929292;
+            display: inline;
+          }
+          .blue-links {
+            color: $blueNameColor;
+          }
+        }
+        .txt {
+          font-size: 15px;
+          font-style: italic;
+          padding: 2px 0;
+          color: $grayInputTextColor;
+        }
+      }
+    }
+  }
+}
+
+/* .star-list */
+.star-list {
+  text-align: center;
+  li {
+    display: inline-block;
+    .star {
+      background: url(../../../assets/i/icons-star@2x.png) no-repeat;
+      display: inline-block;
+      width: 17px;
+      height: 17px;
+    }
+  }
+}
+
+/* fix layout issue when smaller than 1024px width */
+@media (max-width: 1024px) {
+  /* .review-panel */
+  .review-panel {
+    &.right-white-panel {
+      padding: 20px 53px 30px 20px;
+    }
+    .bottom-btn {
+      .btn {
+        font-size: 18px;
+        height: 48px;
+        line-height: 48px;
+        width: 100%;
+      }
+    }
+  }
+}

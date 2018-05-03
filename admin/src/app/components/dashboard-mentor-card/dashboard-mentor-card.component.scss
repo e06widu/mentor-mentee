@@ -1,0 +1,146 @@
+@import "mixin";
+@import "variable";
+
+/* dashboard mentor card */
+.dashboard-mentor-card {
+  width: 174px;
+  text-align: center;
+  padding: 25px 22px 21px;
+  img {
+    margin: 0 auto 5px auto;
+    display: block;
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+  }
+  a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: $button-color;
+    &:hover {
+      opacity: $hover-opacity;
+    }
+  }
+  p.designation {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: $header-name-color;
+  }
+  p.experience {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: $header-role-color;
+    &.login {
+      padding-top: 10px;
+    }
+  }
+  p.last-login {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: $red-color;
+  }
+  .star {
+    width: 81px;
+    height: 16px;
+    margin: 12px auto 5px auto;
+    background: url('/assets/i/stars-icon.png') no-repeat;
+    background-size: 81px 16px;
+    .bar {
+      width: 0;
+      height: 16px;
+      background: url('/assets/i/stars-icon-hover.png') no-repeat;
+      background-size: 81px 16px;
+    }
+  }
+  p.mentees {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: $black-color;
+  }
+  /* buttons */
+  .buttons {
+    width: 150px;
+    padding-top: 12px;
+    margin: 0 auto;
+    .btn-reject {
+      float: left;
+      width: 71px;
+      height: 28px;
+      border-radius: 4px;
+      background-color: transparent;
+      border: solid 1px $dashboard-status-mentor;
+      margin-right: 8px;
+      font-size: 13px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 24px;
+      letter-spacing: normal;
+      text-align: center;
+      color: $dashboard-status-mentor;
+      display: inline-block;
+      &:hover {
+        opacity: $hover-opacity;
+      }
+    }
+    .btn-approve {
+      float: left;
+      width: 71px;
+      height: 28px;
+      border-radius: 4px;
+      background-color: $header-role-active-bg;
+      border: solid 1px $header-role-active-bg;
+      font-size: 13px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 24px;
+      letter-spacing: normal;
+      text-align: center;
+      color: $white-color;
+      display: inline-block;
+      &:hover {
+        opacity: $hover-opacity;
+      }
+    }
+  }
+
+}

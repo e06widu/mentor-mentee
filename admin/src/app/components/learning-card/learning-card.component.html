@@ -1,0 +1,16 @@
+<div class="learning-card">
+  <a href="javascript:;">{{data.title}}</a>
+  <p>{{data.type}}</p>
+  <!-- icons -->
+  <div class="icons clearfix">
+    <div class="item"><i class="mentor"></i><span>{{data.mentor}}</span></div>
+    <div class="item"><i class="mentee"></i><span>{{data.mentee}}</span></div>
+    <div class="item"><i class="connection"></i><span>{{data.connection}}</span></div>
+  </div>
+
+  <!-- buttons -->
+  <div class="clearfix">
+    <button class="btn-share" (click)="onShare()">Share</button>
+    <button class="btn-edit">Edit</button>
+  </div>
+</div>

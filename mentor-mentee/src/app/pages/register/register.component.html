@@ -1,0 +1,99 @@
+<div class="register-wrapper">
+  <div class="register-main">
+  	<div class="register-header">
+  		
+  	</div>
+  	<form class="register-form">
+  		<h4 class="titles">Register</h4>
+  		<div class="info">
+        <div class="list-line clearfix">
+          <div class="label-txt">Name:</div>
+          <div class="right-area">
+          	<div class="inputs"
+				      [ngClass]="{'error': nameText === '' && showError}">
+              	<input type="text" [(ngModel)]="nameText" name="nameText">
+            </div>
+          </div>
+        </div>
+        <div class="list-line clearfix">
+          <div class="label-txt">Password:</div>
+          <div class="right-area">
+          	<div class="inputs"
+				      [ngClass]="{'error': passwordText === '' && showError}">
+              	<input type="password" [(ngModel)]="passwordText" name="passwordText">
+            </div>
+          </div>
+        </div>
+        <div class="list-line clearfix">
+          <div class="label-txt">Email:</div>
+		      <div class="right-area">
+            <div class="inputs"
+				      [ngClass]="{'error': (emailText === '' || showEmailError) && showError}">
+              <input type="email" [(ngModel)]="emailText" name="emailText">
+            </div>
+        </div>
+   	  </div>
+        <div class="list-line clearfix">
+          <div class="label-txt">Phone:</div>
+          <div class="right-area">
+            <div class="inputs"
+				      [ngClass]="{'error': phoneText === '' && showError}">
+              <input type="tel" [(ngModel)]="phoneText" name="phoneText">
+            </div>
+      	</div>
+        </div> 
+        <div class="list-line clearfix">
+          <div class="label-txt">Domain:</div>
+          <div class="right-area">
+            <div class="inputs"
+				      [ngClass]="{'error': domainText === '' && showError}">
+              <input type="text" [(ngModel)]="domainText" name="domainText">
+            </div>
+        </div>
+        </div>
+        <div class="list-line clearfix">
+          <div class="label-txt">Designation:</div>
+          <div class="right-area">
+            <div class="inputs"
+				      [ngClass]="{'error': designationText === '' && showError}">
+              <input type="text" [(ngModel)]="designationText" name="designationText">
+            </div>
+        </div>
+        </div>
+        <div class="list-line clearfix">
+           <div class="label-txt">Location:</div>
+           <div class="right-area">
+             <div class="inputs"
+				      [ngClass]="{'error': locationText === '' && showError}">
+              <input type="text" [(ngModel)]="locationText" name="locationText">
+            </div>
+        </div>
+        </div>
+        <div class="list-line clearfix">
+          <div class="label-txt">Wipro Experience:</div>
+          <div class="right-area">
+            <div class="inputs"
+				      [ngClass]="{'error': wiproExperienceText === '' && showError}">
+              <input type="text" [(ngModel)]="wiproExperienceText" name="wiproExperienceText">
+            </div>
+        </div>
+        </div>
+        <div class="list-line clearfix">
+          <div class="label-txt">Total Experience:</div>
+          <div class="right-area">
+             <div class="inputs"
+				      [ngClass]="{'error': totalExperienceText === '' && showError}">
+              <input type="text" [(ngModel)]="totalExperienceText" name="totalExperienceText">
+            </div>
+        </div>
+        </div>
+      </div>
+      <!-- end .info -->
+  		<div class="btn-boxs">
+  			<a href="javascript:;" class="btn btn-border-blue" [routerLink]="['/mentee/login']">CANCEL</a>
+  			<a href="javascript:;" class="btn btn-blue" (click)="clickRegister()">REGISTER</a>
+  		</div>
+  	</form>
+  </div>
+</div>
+<!-- end .register-wrapper -->

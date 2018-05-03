@@ -1,0 +1,76 @@
+<div class="content learning-area-content">
+  <h1>
+    Learning Areas
+    <button class="btn-blue new-category">New Category</button>
+  </h1>
+
+  <div class="clearfix main-content">
+    <!-- left side -->
+    <div class="left-side">
+      <div class="header clearfix">
+        <button [class.active]="view == 'GRID'" (click)="view = 'GRID'" class="grid-view"></button>
+        <button [class.active]="view == 'LIST'" (click)="view = 'LIST'" class="list-view"></button>
+        <span class="drop-down">
+        <app-dropdown
+          (select)="filterChange($event)"
+          [value]="filter"
+          [placeholder]="'Category'"
+          [options]="learning.filters"></app-dropdown>
+      </span>
+        <h3>ALL LEARNING AREAS ({{filterType ? (learning.rows | mentor:filterType:'type').length : learning.count}})</h3>
+      </div>
+      <!-- list view -->
+      <div [class.hide]="view == 'LIST'" class="clearfix card-items">
+        <div class="card-item" *ngFor="let row of learning.rows | mentor:filterType:'type'">
+          <app-learning-card
+            (share)="openShareModal($event)"
+            [data]="row"></app-learning-card>
+        </div>
+      </div>
+      <!-- table view-->
+      <div [class.hide]="view == 'GRID'" class="clearfix table-items">
+        <div class="table-item" *ngFor="let row of learning.rows | mentor:filterType:'type'; let index = index;">
+          <app-learning-table-row
+            (share)="openShareModal($event)"
+            [data]="row" [index]="index"></app-learning-table-row>
+        </div>
+      </div>
+      <!-- load more results-->
+      <button *ngIf="NO_OF_LOAD !== MAX_LOADS && filter === 'Category'" class="btn-blue" (click)="loadMore()">Load
+        More
+      </button>
+    </div>
+    <!-- right side -->
+    <div class="right-side">
+      <div class="panel">
+        <app-learning-request
+          [data]="learning.learnings"
+          [title]="'NEW REQUESTS'"></app-learning-request>
+      </div>
+      <div class="panel">
+        <app-learning-request [data]="learning.rejectedRequests"
+                              [approval]="true"
+                              [title]="'REJECTED  REQUESTS'"></app-learning-request>
+      </div>
+      <!-- create new learning area -->
+      <a routerLink="/admin/learning-areas/create" class="btn-green left-button">New Learning Area</a>
+      <!-- bulk upload -->
+      <button class="btn-blue right-button" (click)="openBulkUpdateModal()">Bulk Update<i class="info"></i></button>
+    </div>
+  </div>
+</div>
+
+<!-- share modal -->
+<app-share-document-modal
+  [mentorsDropDown]="learning.mentorsDropDown"
+  (share)="closeShareModal()"
+  (cancel)="closeShareModal()"
+  *ngIf="sharedModal"></app-share-document-modal>
+<!-- bulk upload modal -->
+<app-bulk-upload
+  [learningDropDown]="learning.learningDropDown"
+  [categoryDropDown]="learning.categoryDropDown"
+  (update)="updateBulkUpdateModal()"
+  (cancel)="closeBulkUpdateModal()"
+  *ngIf="bulkUploadModal"
+></app-bulk-upload>

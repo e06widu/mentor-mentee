@@ -1,0 +1,70 @@
+<!-- bulk upload modal -->
+<div class="modal" [class.done]="done">
+  <div *ngIf="!done" class="upload-section">
+    <!-- header -->
+    <h3>Bulk Update</h3>
+    <div class="clearfix row">
+
+      <div class="first">
+        <app-dropdown
+          [extraLarge]="true"
+          [value]="category"
+          [placeholder]="'Category'"
+          (select)="onCategoryChange($event)"
+          [options]="categoryDropDown"></app-dropdown>
+      </div>
+      <div class="second">
+        <app-dropdown
+          [extraLarge]="true"
+          [value]="areas"
+          (select)="onAreasChange($event)"
+          [placeholder]="'Learning Areas'"
+          [options]="learningDropDown"></app-dropdown>
+      </div>
+
+    </div>
+    <!-- tabs -->
+    <ul>
+      <li [class.active]="tabIndex === 0"
+          (click)="tabIndex = 0; fileSelected = null; dropText = 'Drag and drop mentor predefined list here or'"
+      ><a href="javascript:;">Mentor List</a></li>
+      <li [class.active]="tabIndex === 1"
+          (click)="tabIndex = 1; fileSelected = null; dropText = 'Drag and drop mentee list here or'"
+      ><a href="javascript:;">Mentee List</a></li>
+      <li [class.active]="tabIndex === 2"
+          (click)="tabIndex = 2; fileSelected = null; dropText = 'Drag and drop mentor and mentees mapping list here or'"
+      ><a href="javascript:;">Mentor mentees mapping</a></li>
+    </ul>
+    <!-- file upload -->
+    <div class="content-wrapper">
+      <div class="clearfix drop-wrapper">
+        <app-file-drop-zone
+          [large]="true"
+          [fileSelected]="fileSelected"
+          [text]="dropText"
+          (filesChangeEmitter)="uploadFile($event)"
+        ></app-file-drop-zone>
+      </div>
+      <!-- modal actions -->
+      <div class="buttons">
+        <button class="btn-modal-blue" (click)="onCancel()">Cancel</button>
+        <button [disabled]="fileSelected === null || category === 'Category' || areas === 'Learning Areas'"
+                class="btn-modal-green"
+                (click)="onUpdate(); done = true;">Update
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- success modal -->
+  <div *ngIf="done" class="upload-section-done">
+
+    <h3>Update Success</h3>
+    <i class="ok-icon"></i>
+    <p class="text">New mentor and mentees connections<br/>
+      mapping has been updated</p>
+    <div class="buttons">
+      <button class="btn-modal-blue-bg" (click)="onCancel()">Finish</button>
+    </div>
+  </div>
+</div>
+<div class="overlay" (click)="onCancel()"></div>

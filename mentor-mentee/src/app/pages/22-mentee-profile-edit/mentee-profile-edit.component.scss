@@ -1,0 +1,398 @@
+@import '../../../styles/variables';
+
+/* .left-white */
+.left-white {
+  padding: 24px 20px 43px 20px;
+  text-align: center;
+  background-color: $whiteColor;
+  border-radius: 4px;
+  .user-photo {
+    margin-bottom: 20px;
+    position: relative;
+    img {
+      width: 188px;
+      height: 188px;
+      border-radius: 100%;
+      overflow: hidden;
+    }
+    input[type='file'] {
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .user-info {
+    .name {
+      font-size: 18px;
+      color: $blueTitleColor;
+      margin-bottom: 10px;
+      line-height: 20px;
+      font-weight: bold;
+    }
+    .txt {
+      font-size: 14px;
+      line-height: 16px;
+      color: $grayInputTextColor;
+      margin-bottom: 20px;
+    }
+  }
+  .success-txt {
+    display: block;
+    color: $greenBgColor;
+    text-transform: uppercase;
+  }
+}
+
+/* .right-white-panel */
+.right-white-panel {
+  padding: 30px 20px 27px 35px;
+  background-color: $whiteColor;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .title {
+    font-size: 15px;
+    letter-spacing: 0.2px;
+    color: $grayTitleColor;
+    font-weight: bold;
+    line-height: 17px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+}
+
+/* .detail-box */
+.detail-box {
+  padding-right: 148px;
+  .list-line {
+    margin-bottom: 14px;
+    min-height: 20px;
+    display: table;
+    width: 100%;
+    .label-txt {
+      display: table-cell;
+      vertical-align: middle;
+      color: $grayFormTextColor;
+      font-size: 15px;
+      line-height: 22px;
+      width: 50%;
+    }
+    .btn-boxs {
+      padding-top: 10px;
+    }
+    .value-txt {
+      display: table-cell;
+      vertical-align: middle;
+      color: $grayInputTextColor;
+      font-size: 15px;
+    }
+  }
+}
+
+.detail-bottom-btn {
+  margin: 0 36px;
+  padding: 34px 0 0 93px;
+  border-top: 1px solid #f1f1f1;
+  .btn {
+    margin-right: 15px;
+    min-width: 141px;
+    height: 43px;
+    line-height: 43px;
+    font-size: 16px;
+  }
+}
+
+/* .my-profile-detail  */
+.my-profile-detail {
+  .list-line {
+    margin-bottom: 10px;
+    min-height: 34px;
+    .label-txt {
+      min-width: 126px;
+      width: 126px;
+      margin-right: 5px;
+    }
+    .inputs {
+      max-width: 311px;
+    }
+  }
+  .right-area {
+    display: table-cell;
+  }
+  .btn-border-blue {
+    &.mw182 {
+      min-width: 182px;
+    }
+  }
+  .tool-boxs {
+    margin-bottom: 15px;
+    .inputs {
+      width: 311px;
+      float: left;
+    }
+    .btn-boxs {
+      display: inline-block;
+      float: left;
+    }
+    .btn {
+      padding: 0;
+      height: 34px;
+      line-height: 27px;
+      width: 34px;
+      font-size: 34px;
+      margin-left: 6px;
+      &.btn-border-blue {
+        font-size: 30px;
+        line-height: 34px;
+      }
+    }
+  }
+  .label-top {
+    &.list-line {
+      .label-txt {
+        vertical-align: top;
+      }
+    }
+  }
+  .date-two {
+    display: table-cell;
+    vertical-align: middle;
+    .inputs {
+      width: 140px;
+      display: inline-block;
+      position: relative;
+      padding-right: 30px;
+      .fa-calendar {
+        font-size: 22px;
+        color: #64b4e3;
+        position: absolute;
+        right: 10px;
+        top: 5px;
+      }
+    }
+  }
+}
+
+.drop-down {
+  width: 311px;
+  height: 34px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* .about-role */
+.about-role {
+  .txt {
+    color: $grayInputTextColor;
+    font-size: 15px;
+    font-style: italic;
+    line-height: 1.3;
+  }
+  .txt-list {
+    margin-top: 30px;
+    .title {
+      margin-bottom: 4px;
+      color: $grayInputTextColor;
+      font-style: italic;
+      font-size: 15px;
+      text-transform: none;
+      font-weight: normal;
+    }
+    .list {
+      li {
+        line-height: 17px;
+        color: $grayInputTextColor;
+        margin-bottom: 4px;
+        font-style: italic;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+/* .work-details */
+.work-details {
+  ul {
+    li {
+      padding: 20px 24px 20px 90px;
+      position: relative;
+      border-bottom: solid 1px #f1f1f1;
+      .icons {
+        &.wipo-logo {
+          background: url(../../../assets/i/wipro-logo.png) no-repeat;
+          background-size: 60px auto;
+          width: 60px;
+          height: 60px;
+          position: absolute;
+          left: 20px;
+          top: 50%;
+          margin-top: -30px;
+        }
+        &.f-logo {
+          background: url(../../../assets/i/f-logo.jpg) no-repeat;
+          background-size: 55px auto;
+          width: 55px;
+          height: 55px;
+          position: absolute;
+          left: 20px;
+          top: 50%;
+          margin-top: -28px;
+        }
+        &.visma-logo {
+          background: url(../../../assets/i/visma-logo.jpg) no-repeat;
+          background-size: 60px auto;
+          width: 60px;
+          height: 28px;
+          position: absolute;
+          left: 20px;
+          top: 50%;
+          margin-top: -14px;
+        }
+      }
+      /* .right-txt */
+      .right-txt {
+        .top-txt {
+          font-size: 15px;
+          margin-bottom: 5px;
+          .logo-name {
+            font-weight: bold;
+            color: $grayInputTextColor;
+            display: inline;
+          }
+          .gray-txt {
+            font-size: 15px;
+            color: $grayFormTextColor;
+            line-height: 17px;
+            display: inline;
+          }
+        }
+        .txt {
+          font-size: 15px;
+          color: $grayInputTextColor;
+          line-height: 19px;
+        }
+      }
+    }
+  }
+}
+
+.section {
+  margin-bottom: 60px;
+}
+
+.row-line {
+  .left {
+    float: left;
+    width: 297px;
+    margin-right: 0;
+    padding-bottom: 0;
+  }
+  .right {
+    margin-left: 325px;
+  }
+}
+
+/* fix layout issue when smaller than 1024px width */
+@media (max-width: 1024px) {
+  .right-mains {
+    .titles {
+      display: none;
+    }
+  }
+  .row-line {
+    .left {
+      float: none;
+      width: 100%;
+    }
+    .right {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+  }
+  .detail-box {
+    padding-right: 0;
+  }
+  .drop-down {
+    width: 100%;
+  }
+  .section {
+    margin-bottom: 50px;
+  }
+  .my-profile-detail {
+    .list-line {
+      margin-bottom: 30px;
+      .label-txt {
+        min-width: 20%;
+        width: 100%;
+        display: block;
+        margin-bottom: 5px;
+      }
+      .right-area {
+        display: block;
+      }
+      .btn-border-blue {
+        width: 100%;
+        &.btn-plus {
+          width: 34px;
+        }
+      }
+      .inputs,
+      .textareas,
+      .drop-down {
+        width: 100%;
+        max-width: 100%;
+      }
+      .date-two {
+        margin: 0 -1%;
+        display: block;
+        .inputs {
+          width: 43%;
+          margin: 0 1%;
+          float: left;
+        }
+        .to {
+          float: left;
+          width: 8%;
+          margin: 0 1%;
+          text-align: center;
+        }
+      }
+    }
+    .tool-boxs {
+      .inputs {
+        width: 70%;
+        float: left;
+      }
+      .btn-boxs {
+        display: inline-block;
+        float: left;
+      }
+    }
+  }
+  .detail-bottom-btn {
+    margin: 0;
+    padding: 34px 0 0 0;
+    .btn {
+      float: left;
+      width: 46%;
+      margin: 0 2%;
+      min-width: 46%;
+    }
+  }
+  .right-white-panel {
+    padding: 30px 20px 27px 20px;
+    .title {
+      font-size: 12px;
+    }
+  }
+}

@@ -1,0 +1,298 @@
+<div class="body-wrapper flex-box" 
+  [ngClass]="{'open-left': hiddenElementGroup['showMenu']}"
+  (click)="hiddenElementGroup['showMenu'] = false">
+  <app-sd-left-side data-activeMenu="mentor-profile" [hiddenElementGroup]="hiddenElementGroup"></app-sd-left-side>
+  <div class="right-contents">
+    <app-sd-header data-activeMenu="mentor-profile" [hiddenElementGroup]="hiddenElementGroup"></app-sd-header>
+    <div class="right-mains inner" 
+      [ngClass]="{'mobile-hide': hiddenElementGroup['showSearchPopupMobile'] || hiddenElementGroup['showNotification']}">
+      <div class="top-tip success"
+        *ngIf="showMessageBar && dataList['status'] === 'Connected'">
+        <span class="txt">Good news! David Brown has accepted your mentor request.</span>
+        <a href="javascript:;" class="icons icon-close" (click)="showMessageBar = false"></a>
+      </div>
+      <!-- end .top-tip -->
+      <div class="top-tip error"
+        *ngIf="showMessageBar && dataList['status'] === 'Rejected'">
+        <span class="txt">Bad news! David Brown has rejected your mentor request.</span>
+        <a href="javascript:;" class="icons icon-close" (click)="showMessageBar = false"></a>
+      </div>
+      <!-- end .top-tip -->
+      <div class="inner">
+        <h4 class="titles">Mentor Details</h4>
+        <div class="row-line">
+          <div class="left">
+            <div class="left-white">
+              <div class="user-info">
+                <div class="user-photo">
+                  <a href="javascript:;"><img src="{{dataList['userPhoto']}}" alt="img"></a>
+                </div>
+                <div class="name">{{dataList['userName']}}</div>
+                <div class="txt">{{dataList['userRole']}}</div>
+                <ul class="star-list">
+                  <li><i class="star"></i></li>
+                  <li><i class="star"></i></li>
+                  <li><i class="star"></i></li>
+                  <li><i class="star"></i></li>
+                </ul>
+                <div class="txt">
+                  <span class="bold">{{dataList['reviewLabelLeft']}}</span>
+                  <span class="gray-txt"> / {{dataList['reviewLabelRight']}} reviews</span>
+                </div>
+                <div class="request-status accepted">
+                  <div class="status-txt">
+                    <div class="success-txt" *ngIf="dataList['status'] === 'Connected'">CONNECTED</div>
+                    <div class="error-txt" *ngIf="dataList['status'] === 'Rejected'">REJECTED</div>
+                  </div>
+                  <a href="javascript:;" class="btn btn-blue" *ngIf="!dataList['sentRequest']"
+                    (click)="openModalWindow(connectSentModal);">
+                    Connect
+                  </a>
+                  <a href="javascript:;" class="btn btn-blue" *ngIf="dataList['sentRequest']"
+                    (click)="openModalWindow(newMeetingRequestModal);">
+                    <i class="fa fa-calendar"></i>Send Request
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div> 
+          <!-- end .col-3 -->
+          <div class="right clearfix">
+            <div class="right-white-panel" *ngFor="let formItem of dataList['formData']">
+              <div class="detail-box">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="personal">
+                      <h4 class="title">Personal Details</h4>
+                      <div class="info">
+                        <div class="list-line">
+                           <div class="label-txt">Name:</div>
+                           <div class="value-txt">{{formItem['personalDetails']['Name']}}</div>
+                        </div>
+                        <div class="list-line">
+                           <div class="label-txt">Email:</div>
+                           <div class="value-txt">{{formItem['personalDetails']['Email']}}</div>
+                        </div>
+                        <div class="list-line">
+                           <div class="label-txt">Phone:</div>
+                           <div class="value-txt">{{formItem['personalDetails']['Phone']}}</div>
+                        </div>
+                        <div class="list-line">
+                           <div class="label-txt">Domain:</div>
+                           <div class="value-txt">{{formItem['personalDetails']['Domain']}}</div>
+                        </div>
+                        <div class="list-line">
+                           <div class="label-txt">Designation:</div>
+                           <div class="value-txt">{{formItem['personalDetails']['Designation']}}</div>
+                        </div>
+                        <div class="list-line">
+                           <div class="label-txt">Location:</div>
+                           <div class="value-txt">{{formItem['personalDetails']['Location']}}</div>
+                        </div>
+                        <div class="list-line">
+                           <div class="label-txt">Wipro Experience:</div>
+                           <div class="value-txt">{{formItem['personalDetails']['Wipro Experience']}}</div>
+                        </div>
+                        <div class="list-line">
+                           <div class="label-txt">Total Experience:</div>
+                           <div class="value-txt">{{formItem['personalDetails']['Total Experience']}}</div>
+                        </div>
+                      </div>
+                      <!-- end .info -->
+                    </div>
+                  </div>  
+                  <div class="col-md-6">
+                    <div class="about-role">
+                      <h4 class="title">ABOUT MY CURRENT ROLE</h4>
+                      <p class="txt">
+                        {{formItem['aboutMyCurrentRole']['description']}}
+                      </p>
+                      <div class="txt-list">
+                        <div class="title">
+                          Specialties:
+                        </div>
+                        <ul class="list">
+                          <li *ngFor="let specialtiesItem of formItem['aboutMyCurrentRole']['specialties']">
+                            - {{specialtiesItem.value}}
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- end .txt-list -->
+                      <div class="txt-list">
+                        <div class="title">
+                          Strength Areas:
+                        </div>
+                        <ul class="list">
+                          <li *ngFor="let strengthAreasItem of formItem['aboutMyCurrentRole']['strengthAreas']">
+                            - {{strengthAreasItem.value}}
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- end .txt-list -->
+                    </div>
+                  </div>  
+                  <!-- end .col-5  -->
+                </div>
+              </div>
+              <!-- end .detail-box -->
+              <div class="work-details">
+                <h4 class="title">Work Details</h4>
+                <ul>
+                  <li *ngFor="let workDetailsItem of formItem['workDetails']">
+                    <i class="icons" [ngClass]="workDetailsItem['img']"></i>
+                    <div class="right-txt">
+                      <div class="top-txt">
+                        <div class="logo-name">{{workDetailsItem['title']}},</div>
+                        <span class="gray-txt">{{workDetailsItem['timeFrom']}} - {{workDetailsItem['timeTo']}}</span>
+                      </div>
+                      <!-- end .top-txt -->
+                      <p class="txt">
+                        {{workDetailsItem['description']}}  
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <!-- end .work-details -->
+              <div class="volunteer-as-mentor">
+                <h4 class="title">VOLUNTEER AS MENTOR</h4>
+                <div class="txt">
+                  <span class="point">"</span>
+                  <p>
+                    {{formItem['Volunteer as Mentor']['description']}}
+                  </p>
+                </div>
+                <!-- end .txt -->
+                <div class="ul-list">
+                  <ul>
+                    <li>
+                      <span class="label-txt">Learning Category:</span>
+                      <span class="value-txt">{{formItem['Volunteer as Mentor']['learningCategory']}}</span>
+                    </li>
+                    <li>
+                      <span class="label-txt">Learning Area:</span>
+                      <span class="value-txt">{{formItem['Volunteer as Mentor']['learningArea']}}</span>
+                    </li>
+                    <li>
+                      <span class="label-txt">Key Strengths:</span>
+                      <span class="value-txt">{{formItem['Volunteer as Mentor']['keyStrengths']}}</span>
+                    </li>
+                  </ul>
+                </div>
+               <!--  end .ul-list -->
+               <h4 class="title">SKILLS AND BAND</h4>
+               <div class="ul-list">
+                  <ul>
+                    <li><span class="label-txt">Skills:</span><span class="value-txt">Analytical Thinking, Strong Attention to Details, Collaboration</span></li>
+                    <li><span class="label-txt">Band:</span><span class="value-txt">B2</span></li>
+                  </ul>
+                </div>
+               <!--  end .ul-list -->
+              </div>
+              <!-- end .volunteer-as-mentor -->
+            </div>
+            <!-- end .right-white-panel -->
+            <app-sd-review-panel [dataList]="reviewsData"></app-sd-review-panel>
+            <!-- end .right-white-panel -->
+          </div> 
+          <!-- end .col-3 -->
+        </div>
+      </div>
+    </div>
+    <!-- end .right-mains -->
+  </div>
+  <!-- end .right-contents -->
+</div>
+<!-- end .body-wrapper -->
+
+<ng-template #newMeetingRequestModal let-c="close" let-d="dismiss"> 
+  <div class="modal-new-meeting modal-mains">
+    <div class="inner">
+      <h4 class="title">New Meeting Request</h4>
+      <div class="form-boxs">
+        <div class="title-txt">FROM</div>
+        <div class="photo-area clearfix">
+          <img src="../../../assets/i/user3.jpg" alt="photo">
+          <div class="name-area">
+            <span class="blue-txt">Nancy Allen</span>
+            <span class="txt">MENTOR</span>
+          </div>
+        </div>
+        <!-- end .photo-area -->
+        <div class="two-col clearfix">
+          <div class="col-left">
+            <div class="title-txt">Date and Time</div>
+            <div class="option-list">
+              <ul>
+                <li *ngFor="let item of dataList['newMeetingRequestData']['optionList']; let i = index;">
+                  <span class="label-txt">Option {{i + 1}}:</span>
+                  <span class="time">{{item['value']}} </span>
+                  <div class="radio-wrap">
+                    <input type="radio" id="radio{{i + 1}}" name="radio">
+                    <label for="radio{{i + 1}}"></label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-right">
+            <div class="title-txt">Message</div>
+            <div class="txt" [innerHTML]="dataList['newMeetingRequestData']['messageText']">
+            </div>
+          </div>
+        </div>
+        <!-- end two-col. -->
+        <div class="txt-area">
+          <div class="reason-title">Reason for chosing this time</div>
+          <div class="textareas">
+            <textarea placeholder="Add reason of why this time works for you"></textarea>
+          </div>
+        </div>
+      </div>
+      <!-- end .form-boxs -->
+    </div>
+    <div class="btn-bottom">
+      <a href="javascript:;" class="btn btn-border-blue" (click)="c('Close click')">Cancel</a>
+      <a href="javascript:;" class="btn btn-green" 
+        (click)="c('Close click');openModalWindow(confirmRequestModal);">
+        Save
+      </a>
+    </div>
+   <!-- end .btn-bottom -->
+  </div>
+ <!-- end .modal-save-success -->
+</ng-template>
+
+<ng-template #confirmRequestModal let-c="close" let-d="dismiss">
+  <div class="modal-great-news modal-mains">
+    <div class="inner">
+      <i class="icons icon-ok"></i>
+      <h4 class="titles">Great News!</h4>
+      <p class="txt">Your meeting was successfully confirmed!</p>
+      <div class="date-book">
+        Book the date for:
+        <span class="green-txt">Feb 16, 14:00</span>
+      </div>
+    </div>
+    <div class="btn-bottom">
+      <a href="javascript:;" class="btn btn-blue" (click)="c('Close click')">Close</a>
+    </div>
+   <!-- end .btn-bottom -->
+  </div>
+  <!-- end .modal-save-success -->
+</ng-template>
+
+<ng-template #connectSentModal let-c="close" let-d="dismiss">
+  <div class="modal-mains">
+    <div class="inner">
+      <i class="icons icon-ok"></i>
+      <h4 class="titles">The Connection Request was Successfully Sent!</h4>
+      <p class="txt normal-txt">We will send you a note as soon as the mentor approves or rejects your request.</p>
+    </div>
+    <div class="btn-bottom">
+      <a href="javascript:;" class="btn btn-blue" (click)="c('Close click');connectSent()">Close</a>
+    </div>
+   <!-- end .btn-bottom -->
+  </div>
+  <!-- end .modal-wrapper -->
+</ng-template>

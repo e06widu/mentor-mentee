@@ -1,0 +1,80 @@
+{
+  "searchList": {
+    "learningAreas": [
+      {
+        "title": "Java",
+        "description": "Programming",
+        "memberNumber": "50"
+      },
+      {
+        "title": "Javascript",
+        "description": "Programming",
+        "memberNumber": "35"
+      },
+      {
+        "title": "Emotional Intelligence",
+        "description": "Soft Skills",
+        "memberNumber": "35"
+      },
+      {
+        "title": "C# Basics",
+        "description": "Programming",
+        "memberNumber": "35"
+      },
+      {
+        "title": "Management",
+        "description": "Soft Skills",
+        "memberNumber": "35"
+      },
+      {
+        "title": "Negociation",
+        "description": "Marketing",
+        "memberNumber": "35"
+      },
+      {
+        "title": "Code in Swift",
+        "description": "Programming",
+        "memberNumber": "35"
+      },
+      {
+        "title": "Leadership Skills",
+        "description": "Soft Skills",
+        "memberNumber": "35"
+      },
+      {
+        "title": "Hindi Course",
+        "description": "Languages",
+        "memberNumber": "35"
+      }
+    ],
+    "employees": [
+      {
+        "title": "Jared Anderson",
+        "description": "Languages",
+        "userRole": "Mentor"
+      },
+      {
+        "title": "Javed Smith",
+        "description": "Programming",
+        "userRole": "Employee"
+      }
+    ]
+  },
+  "notificationList": [
+    {
+      "iconType": "link",
+      "date": "13 Feb 2018, 08:00",
+      "description": "New connection with <a href='javascript:;' class='notify-link'>Tina Smith</a>"
+    },
+    {
+      "iconType": "date",
+      "date": "4 Feb 2018, 09:00",
+      "description": "Reminder about upcoming meeting with <a href='javascript:;' class='notify-link'>David Brown</a> on 13 Feb, 10:00"
+    },
+    {
+      "iconType": "date",
+      "date": "13 Feb 2018, 09:10",
+      "description": "Upcoming meeting with <a href='javascript:;' class='notify-link'>Nancy Allen</a> on Wed on 13 Feb, 12:00"
+    }
+  ]
+}

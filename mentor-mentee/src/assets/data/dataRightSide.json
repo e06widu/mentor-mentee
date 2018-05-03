@@ -1,0 +1,173 @@
+{
+  "topMentors": [
+    {
+      "title": "Ronald Evans",
+      "description": "Languages",
+      "starNumber": 4,
+      "leftNumber": 5,
+      "rightNumber": 110
+    },
+    {
+      "title": "Karen Hall",
+      "description": "Soft Skills",
+      "starNumber": 3.5,
+      "leftNumber": 4.5,
+      "rightNumber": 85
+    },
+    {
+      "title": "Donald Hill",
+      "description": "Marketing",
+      "starNumber": 3.5,
+      "leftNumber": 4.5,
+      "rightNumber": 3
+    },
+    {
+      "title": "Nancy Allen",
+      "description": "Programming",
+      "starNumber": 3,
+      "leftNumber": 3,
+      "rightNumber": 36
+    },
+    {
+      "title": "Kambham Nagarjuna",
+      "description": "Languages",
+      "starNumber": 3,
+      "leftNumber": 3,
+      "rightNumber": 15
+    },
+    {
+      "title": "Kim Black",
+      "description": "Soft Skills",
+      "starNumber": 3,
+      "leftNumber": 3,
+      "rightNumber": 15
+    },
+    {
+      "title": "Alex Thompson",
+      "description": "Marketing",
+      "starNumber": 2.5,
+      "leftNumber": 3,
+      "rightNumber": 15
+    },
+    {
+      "title": "Christina Snow",
+      "description": "Programming",
+      "starNumber": 2.5,
+      "leftNumber": 2.5,
+      "rightNumber": 15
+    }
+  ],
+  "topMentees": [
+    {
+      "title": "Linda Clark",
+      "description": "Programming",
+      "starNumber": 4,
+      "leftNumber": 5,
+      "rightNumber": 110
+    },
+    {
+      "title": "George Ramirez",
+      "description": "Languages",
+      "starNumber": 3.5,
+      "leftNumber": 4.5,
+      "rightNumber": 85
+    },
+    {
+      "title": "Mark Nelson",
+      "description": "Soft Skills",
+      "starNumber": 3.5,
+      "leftNumber": 4.5,
+      "rightNumber": 3
+    },
+    {
+      "title": "Charles Miller",
+      "description": "Marketing",
+      "starNumber": 3,
+      "leftNumber": 3,
+      "rightNumber": 36
+    },
+    {
+      "title": "Mary Thompson",
+      "description": "Programming",
+      "starNumber": 3,
+      "leftNumber": 3,
+      "rightNumber": 15
+    },
+    {
+      "title": "Karen Hall",
+      "description": "Languages",
+      "starNumber": 3,
+      "leftNumber": 3,
+      "rightNumber": 15
+    },
+    {
+      "title": "Edward Mitchell",
+      "description": "Soft Skills",
+      "starNumber": 2.5,
+      "leftNumber": 3,
+      "rightNumber": 15
+    },
+    {
+      "title": "Brian Carter",
+      "description": "Marketing",
+      "starNumber": 2.5,
+      "leftNumber": 2.5,
+      "rightNumber": 15
+    }
+  ],
+  "chartList": [
+    {
+      "title": "Programming",
+      "color": "gray",
+      "menteesNumber": 100,
+      "mentorsNumber": 35
+    },
+    {
+      "title": "Marketing",
+      "color": "blue",
+      "menteesNumber": 85,
+      "mentorsNumber": 20
+    },
+    {
+      "title": "Languages",
+      "color": "green",
+      "menteesNumber": 82,
+      "mentorsNumber": 35
+    },
+    {
+      "title": "Leadership Skills",
+      "color": "yellow",
+      "menteesNumber": 78,
+      "mentorsNumber": 35
+    },
+    {
+      "title": "Soft Skills",
+      "color": "pink",
+      "menteesNumber": 69,
+      "mentorsNumber": 20
+    },
+    {
+      "title": "Accounting",
+      "color": "red",
+      "menteesNumber": 47,
+      "mentorsNumber": 35
+    },
+    {
+      "title": "Engineering",
+      "color": "dark-blue",
+      "menteesNumber": 45,
+      "mentorsNumber": 35
+    }
+  ],
+  "calendarList": [
+    {
+      "date": "2018-03-24"
+    },
+    {
+      "date": "2017-03-10"
+    },
+    {
+      "date": "2017-03-12"
+    }
+  ]
+}

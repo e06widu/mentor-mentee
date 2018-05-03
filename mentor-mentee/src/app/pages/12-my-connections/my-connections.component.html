@@ -1,0 +1,245 @@
+<div class="body-wrapper flex-box" 
+  [ngClass]="{'open-left': hiddenElementGroup['showMenu']}"
+  (click)="hiddenElementGroup['showMenu'] = false">
+  <app-sd-left-side data-activeMenu="my-connections" [hiddenElementGroup]="hiddenElementGroup"></app-sd-left-side>
+  <div class="right-contents">
+    <app-sd-header data-activeMenu="my-connections" [hiddenElementGroup]="hiddenElementGroup"></app-sd-header>
+    <div class="right-mains inner" 
+      [ngClass]="{'mobile-hide': hiddenElementGroup['showSearchPopupMobile'] || hiddenElementGroup['showNotification']}">
+      <h4 class="titles">My Connections</h4>
+	  <!--end .titles-->
+      <div class="left">
+        <div class="lefts">
+          <div class="some-card row">
+            <div class="items">
+              <div class="white-panel">
+                <i class="icons icon-connections"></i>
+                <div class="right-area">
+                  <span class="num blue">{{dataList['connections']}}</span>
+                  <span class="txt">Connections</span>
+                </div>
+              </div>
+            </div>
+            <!-- end .col -->
+            <div class="items">
+              <div class="white-panel">
+                <i class="icons icon-mentors"></i>
+                <div class="right-area">
+                  <span class="num red">{{dataList['mentors']}}</span>
+                  <span class="txt">Mentors</span>
+                </div>
+              </div>
+            </div>
+            <!-- end .col -->
+            <div class="items">
+              <div class="white-panel">
+                <i class="icons icon-mentees"></i>
+                <div class="right-area">
+                  <span class="num yellow">{{dataList['mentees']}}</span>
+                  <span class="txt">Mentees</span>
+                </div>
+              </div>
+            </div>
+            <!-- end .col -->
+            <div class="items">
+              <div class="white-panel">
+                <i class="icons icon-learning"></i>
+                <div class="right-area">
+                  <span class="num green">{{dataList['learning Areas']}}</span>
+                  <span class="txt">Learning Areas</span>
+                </div>
+              </div>
+            </div>
+            <!-- end .col -->
+            
+          </div>
+          <!-- end .row -->
+          <div class="table-data">
+            <div class="th-row clearfix">
+              <div class="th-list">
+                <ul>
+                  <li class="width30">Type & Name</li>
+                  <li class="width26">Learning Area & Category</li>
+                  <li class="width11">Status</li>
+                  <li class="width14">Start Date</li>
+                  <li class="width19">Upcoming Meeting</li>
+                </ul>
+              </div>
+            </div>
+            <!-- end .th-row -->
+            <div class="table-panel" *ngFor="let item of connectionList">
+              <div class="td-row">
+                <ul class="list-area clearfix">
+                  <li class="width30">
+                    <div class="img-box">
+                      <img src="{{item['img']}}" alt="photo">
+                    </div>
+                    <div class="name">
+                      <a href="javascript:;" class="my-mentor">My Mentor 
+                        <i class="icons" [ngClass]="{'icon-right': item.status !== 'Pending', 'icon-left': item.status === 'Pending'}"
+                          [routerLink]="['/mentee/mentor-profile']">
+                        </i> 
+                      </a>
+                      <a href="javascript:;" class="blue-links" [routerLink]="['/mentee/mentor-profile']">{{item['userName']}}</a>
+                    </div>
+                    <!-- end .name -->
+                  </li>
+                  <li class="width26">
+                    <span class="desktop-hide mobile-show gray-txt">Learning Area & Category</span>
+                    <div class="blue-txt">{{item['title']}}</div>
+                    <div class="gray-txt">{{item.description}}</div>
+                  </li>
+                  <li class="width11">
+                    <div class="green-txt" [ngClass]="{'yellow-txt': item.status === 'Pending'}">{{item.status}}</div>
+                  </li>
+                  <li class="width14" *ngIf="item.status !== 'Pending'">
+                    <span class="desktop-hide mobile-show gray-txt">Start Date</span>
+                    <span class="date">{{item.startDate}}</span>
+                  </li>
+                  <li class="width19" *ngIf="item.status !== 'Pending'">
+                    <span class="desktop-hide mobile-show gray-txt">Upcoming Meeting</span>
+                    <span class="date have-calendar" [ngClass]="{'upcomming-label': item.upcomingMeeting === 'Waiting confirmation'}">
+                      <i class="fa fa-calendar"></i>{{item.upcomingMeeting}}
+                    </span>
+                  </li>
+                  <li class="txt-right width19" *ngIf="item.status === 'Pending'">
+                    <a href="javascript:;" class="btn btn-border-red">Reject</a>
+                    <a href="javascript:;" class="btn btn-green"><i class="fa fa-check"></i>Approve</a>
+                  </li>
+                </ul>
+                <div class="bottom-bar clearfix" *ngIf="item.status !== 'Pending'">
+                  <div class="left-area">
+                    <a href="javascript:;" class="btn btn-border-blue">View Notes</a>
+                    <a href="javascript:;" class="btn btn-border-red">Close</a>
+                  </div>
+                  <div class="right-area" *ngIf="item.upcomingMeeting !== 'Waiting confirmation'">
+                    <a href="javascript:;" class="btn btn-blue"
+                      (click)="openModalWindow(newMeetingRequestModal);">
+                      <i class="fa fa-calendar"></i>Send Request
+                    </a>
+                  </div>
+                  <div class="right-area" *ngIf="item.upcomingMeeting === 'Waiting confirmation'">
+                    <a href="javascript:;" class="btn btn-green"><i class="fa fa-check"></i>Confirm</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end .table-panel -->
+          </div>
+          <!-- end .table-data -->
+          <div class="three-color clearfix">
+            <div class="col col-md-4 col-sm">
+              <div class="block-boxs red">
+                <i class="icons icon-ball"></i>
+                <div class="right-area">
+                  Tips for Making your Mentoring Journey Effective
+                </div>
+              </div>
+            </div>
+            <div class="col col-md-4 col-sm">
+              <div class="block-boxs blue">
+                <i class="icons icon-ball"></i>
+                <div class="right-area">
+                  Tips for Making your Mentoring Journey Effective
+                </div>
+              </div>
+            </div>
+            <div class="col col-md-4 col-sm">
+              <div class="block-boxs yellow">
+                <i class="icons icon-library"></i>
+                <div class="right-area">
+                  Mentoring Resource Library
+                </div>
+              </div>
+            </div>
+          </div>
+         <!-- end .col  -->
+        </div> 
+      </div>
+      <!-- end .row -->
+      <app-sd-right-side data-status="Mentee" [showMainContent]="false" [showCalendar]="true"></app-sd-right-side>
+      
+    </div>
+    <!-- end .right-mains -->
+  </div>
+  <!-- end .right-contents -->
+</div>
+<!-- end .body-wrapper -->
+
+<ng-template #newMeetingRequestModal let-c="close" let-d="dismiss"> 
+  <div class="modal-new-meeting modal-mains">
+    <div class="inner">
+      <h4 class="title">New Meeting Request</h4>
+      <div class="form-boxs">
+        <div class="title-txt">FROM</div>
+        <div class="photo-area clearfix">
+          <img src="../../../assets/i/user3.jpg" alt="photo">
+          <div class="name-area">
+            <span class="blue-txt">Nancy Allen</span>
+            <span class="txt">MENTOR</span>
+          </div>
+        </div>
+        <!-- end .photo-area -->
+        <div class="two-col clearfix">
+          <div class="col-left">
+            <div class="title-txt">Date and Time</div>
+            <div class="option-list">
+              <ul>
+                <li *ngFor="let item of dataList['newMeetingRequestData']['optionList']; let i = index;">
+                  <span class="label-txt">Option {{i + 1}}:</span>
+                  <span class="time">{{item['value']}} </span>
+                  <div class="radio-wrap">
+                    <input type="radio" id="radio{{i + 1}}" name="radio">
+                    <label for="radio{{i + 1}}"></label>
+                  </div>
+                 <!-- end .radio-wrap -->
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-right">
+            <div class="title-txt">Message</div>
+            <div class="txt" [innerHTML]="dataList['newMeetingRequestData']['messageText']">
+            </div>
+          </div>
+        </div>
+        <!-- end two-col. -->
+        <div class="txt-area">
+          <div class="reason-title">Reason for chosing this time</div>
+          <div class="textareas">
+            <textarea placeholder="Add reason of why this time works for you"></textarea>
+          </div>
+        </div>
+      </div>
+      <!-- end .form-boxs -->
+    </div>
+    <div class="btn-bottom">
+      <a href="javascript:;" class="btn btn-border-blue" (click)="c('Close click')">Cancel</a>
+      <a href="javascript:;" class="btn btn-green" 
+        (click)="c('Close click');openModalWindow(confirmRequestModal);">
+        Save
+      </a>
+    </div>
+   <!-- end .btn-bottom -->
+  </div>
+ <!-- end .modal-save-success -->
+</ng-template>
+
+<ng-template #confirmRequestModal let-c="close" let-d="dismiss">
+  <div class="modal-great-news modal-mains">
+    <div class="inner">
+      <i class="icons icon-ok"></i>
+      <h4 class="titles">Great News!</h4>
+      <p class="txt">Your meeting was successfully confirmed!</p>
+      <div class="date-book">
+        Book the date for:
+        <span class="green-txt">Feb 16, 14:00</span>
+      </div>
+    </div>
+    <div class="btn-bottom">
+      <a href="javascript:;" class="btn btn-blue" (click)="c('Close click')">Close</a>
+    </div>
+   <!-- end .btn-bottom -->
+  </div>
+  <!-- end .modal-save-success -->
+</ng-template>

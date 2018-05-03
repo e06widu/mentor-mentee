@@ -1,0 +1,64 @@
+<aside [class.open]="open">
+  <!-- user information -->
+  <div class="user-block">
+    <img src="{{user.image}}" alt=""/>
+
+    <h5>{{user.name}}<a href="javascript:;"></a></h5>
+    <p>{{user.role}}</p>
+  </div>
+  <!-- navigation -->
+  <nav>
+    <ul>
+      <li class="clearfix">
+        <a (click)="closeMenu()" routerLink="/admin/dashboard" routerLinkActive="active">
+          <i class="dashboard"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li class="clearfix">
+        <a (click)="closeMenu()" routerLink="/admin/learning-areas" routerLinkActive="active">
+          <i class="learning"></i>
+          <span>Learning Areas</span>
+        </a>
+      </li>
+      <li class="clearfix">
+        <a href="javascript:;" routerLinkActive="active">
+          <i class="connections"></i>
+          <span>Connections</span>
+        </a>
+      </li>
+      <li class="clearfix">
+        <a href="javascript:;" routerLinkActive="active">
+          <i class="mentors"></i>
+          <span>Mentors</span>
+        </a>
+      </li>
+      <li class="clearfix">
+        <a href="javascript:;" routerLinkActive="active">
+          <i class="analytics"></i>
+          <span>Analytics</span>
+        </a>
+      </li>
+      <li class="clearfix">
+        <a href="javascript:;" routerLinkActive="active">
+          <i class="reports"></i>
+          <span>Reports</span>
+        </a>
+      </li>
+      <li class="clearfix">
+        <a href="javascript:;" routerLinkActive="active">
+          <i class="admins"></i>
+          <span>Sub Admins</span>
+        </a>
+      </li>
+      <li class="clearfix logout-menu">
+        <a href="javascript:;" routerLinkActive="active">
+          <i class="logout"></i>
+          <span>Log out</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+<!-- overlay -->
+<div (click)="closeMenu()" *ngIf="open" class="overlay"></div>

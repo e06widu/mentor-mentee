@@ -1,0 +1,41 @@
+<div class="right-white-panel review-panel">
+  <div class="title-area">
+    <span class="right-top align-end">
+      <span class="num">{{dataList['labelMin']}}</span>
+      <span class="gray-txt"> / <span class="num-gray">{{dataList['labelMax']}} </span>rev.</span>
+    </span>
+    <h4 class="title">Reviews (<span class="num">{{dataList.length}}</span>)</h4>
+  </div>
+  <div class="reviews-list">
+    <ul>
+      <li *ngFor="let item of dataList['list']">
+        <div class="user-photo">
+          <img src="{{item.img}}" alt="photo">
+        </div>
+        <div class="right-area">
+          <div class="star-list clearfix">
+            <ul>
+              <li><span class="star"></span></li>
+              <li><span class="star"></span></li>
+              <li><span class="star"></span></li>
+              <li><span class="star"></span></li>
+            </ul>
+          </div>
+          <!-- end .star-list -->
+          <div class="top-txt">
+            <div class="date">{{item.time}} by</div>
+            <a href="javascript:;" class="blue-links" [routerLink]="['/mentee/mentor-profile']">{{item.name}}</a>
+          </div>
+          <!-- end .top-txt -->
+          <p class="txt">
+            {{item.description}}
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="bottom-btn">
+    <a href="javascript:;" class="btn btn-blue" (click)="readMore()">Read More</a>
+  </div>
+</div>
+<!-- end .right-white-panel -->

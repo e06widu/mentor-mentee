@@ -1,0 +1,200 @@
+<div class="body-wrapper flex-box" 
+  [ngClass]="{'open-left': hiddenElementGroup['showMenu']}"
+  (click)="hiddenElementGroup['showMenu'] = false">
+  <app-sd-left-side data-activeMenu="dashboard" [hiddenElementGroup]="hiddenElementGroup"></app-sd-left-side>
+  <div class="right-contents">
+    <app-sd-header data-activeMenu="dashboard" [hiddenElementGroup]="hiddenElementGroup"></app-sd-header>
+    <div class="right-mains inner" 
+      [ngClass]="{'mobile-hide': hiddenElementGroup['showSearchPopupMobile'] || hiddenElementGroup['showNotification']}">
+      <div class="top-title">
+        Dashboard
+      </div>
+      <!--end .top-title-->
+      <div class="left">
+        <div class="areas-section">
+          <div class="row">
+            <div class="areas-view">
+              <div class="left-pic">
+                <img src="../../../assets/i/icons-connections@2x.png" alt="img"/>
+              </div>
+              <div class="right-txt">
+                <p class="color-blue">{{dataList['connections']}}</p>
+                <span>Connections</span>
+              </div>
+            </div>
+            <!--end .areas-view-->
+            <div class="areas-view">
+              <div class="left-pic">
+                <img src="../../../assets/i/icons-school-director@2x.png" alt="img"/>
+              </div>
+              <div class="right-txt">
+                <p class="color-red">{{dataList['mentors']}}</p>
+                <span>Mentors</span>
+              </div>
+            </div>
+            <!--end .areas-view-->
+            <div class="areas-view">
+              <div class="left-pic">
+                <img src="../../../assets/i/icons-student-male@2x.png" alt="img"/>
+              </div>
+              <div class="right-txt">
+                <p class="color-yellow">{{dataList['mentees']}}</p>
+                <span>Mentees</span>
+              </div>
+            </div>
+            <!--end .areas-view-->
+            <div class="areas-view">
+              <div class="left-pic">
+                <img src="../../../assets/i/icons-8-literature@2x.png" alt="img"/>
+              </div>
+              <div class="right-txt">
+                <p class="color-green">{{dataList['learning Areas']}}</p>
+                <span>Learning Areas</span>
+              </div>
+            </div>
+            <!--end .areas-view-->
+          </div>
+          <!--end .row-->
+        </div>
+        <!--end .areas-section-->
+
+        <div class="areas-section">
+          <div class="title">All Connections</div>
+          <div class="row">
+            <div class="connection-view" *ngFor="let item of dataList['All Connections']">
+              <a href="javascript:;" class="arrow arrow-right" [routerLink]="['/mentee/mentor-profile']"></a>
+              <div class="left-pic">
+                <span class="pic">
+                  <img src="{{item.img}}" alt=""/>
+                </span>
+                <span class="txt" [ngClass]="{'color-green': item.status === 'ACTIVE', 'color-orange': item.status === 'PENDING'}">
+                  {{item.status}}
+                </span>
+              </div>
+              <!--end .left-pic-->
+              <div class="right-txt">
+                <div class="member">MENTEE OF</div>
+                <a href="javascript:;" class="name" [routerLink]="['/mentee/mentor-profile']">{{item.userName}}</a>
+                <div class="category">{{item.title}}</div>
+                <div class="tag">{{item.description}}</div>
+                <div class="btn-group" *ngIf="item.status === 'ACTIVE'">
+                  <a href="javascript:;" class="blue-btn" 
+                    (click)="openModalWindow(newMeetingRequestModal);">
+                    <i class="fa fa-calendar"></i>Send Request
+                  </a>
+                </div>
+                <div class="btn-group" *ngIf="item.status === 'PENDING'">
+                  <a href="javascript:;" class="btn green-btn">Approve</a>
+                  <a href="javascript:;" class="btn red-btn">Reject</a>
+                </div>
+              </div>
+              <!--end .right-txt-->
+            </div>
+            <!--end .connection-view-->
+          </div>
+          <!--end .row-->
+        </div>
+        <!--end .areas-section-->
+        
+        <app-sd-areas-list title="Available Learning Areas ({{availableLearningAreas.length}})"
+          linkTarget="learn-javascript-area"
+          [dataList]="availableLearningAreas">
+        </app-sd-areas-list>
+        <div class="areas-btn">
+          <a href="javascript:;" [routerLink]="['/mentee/programming-learning-areas']">View All Learning Areas</a>
+        </div>
+        
+        <app-sd-areas-list title="Available Learning Categories ({{availableLearningCategories.length}})"
+          linkTarget="programming-all"
+          [dataList]="availableLearningCategories">
+        </app-sd-areas-list>
+        <div class="areas-btn">
+          <a href="javascript:;" [routerLink]="['/mentee/learning-categories']">View All Learning Categories</a>
+        </div>
+      </div>
+      <!--end .left-->
+      <app-sd-right-side data-status="Mentee"></app-sd-right-side>
+      
+    </div>
+    <!-- end .right-mains -->
+  </div>
+  <!-- end .right-contents -->
+</div>
+<!-- end .body-wrapper -->
+
+<ng-template #newMeetingRequestModal let-c="close" let-d="dismiss"> 
+  <div class="modal-new-meeting modal-mains">
+    <div class="inner">
+      <h4 class="title">New Meeting Request</h4>
+      <div class="form-boxs">
+        <div class="title-txt">FROM</div>
+        <div class="photo-area clearfix">
+          <img src="../../../assets/i/user3.jpg" alt="photo">
+          <div class="name-area">
+            <span class="blue-txt">Nancy Allen</span>
+            <span class="txt">MENTOR</span>
+          </div>
+        </div>
+        <!-- end .photo-area -->
+        <div class="two-col clearfix">
+          <div class="col-left">
+            <div class="title-txt">Date and Time</div>
+            <div class="option-list">
+              <ul>
+                <li *ngFor="let item of dataList['newMeetingRequestData']['optionList']; let i = index;">
+                  <span class="label-txt">Option {{i + 1}}:</span>
+                  <span class="time">{{item['value']}} </span>
+                  <div class="radio-wrap">
+                    <input type="radio" id="radio{{i + 1}}" name="radio">
+                    <label for="radio{{i + 1}}"></label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-right">
+            <div class="title-txt">Message</div>
+            <div class="txt" [innerHTML]="dataList['newMeetingRequestData']['messageText']">
+            </div>
+          </div>
+        </div>
+        <!-- end two-col. -->
+        <div class="txt-area">
+          <div class="reason-title">Reason for chosing this time</div>
+          <div class="textareas">
+            <textarea placeholder="Add reason of why this time works for you"></textarea>
+          </div>
+        </div>
+      </div>
+      <!-- end .form-boxs -->
+    </div>
+    <div class="btn-bottom">
+      <a href="javascript:;" class="btn btn-border-blue" (click)="c('Close click')">Cancel</a>
+      <a href="javascript:;" class="btn btn-green" 
+        (click)="c('Close click');openModalWindow(confirmRequestModal);">
+        Save
+      </a>
+    </div>
+   <!-- end .btn-bottom -->
+  </div>
+ <!-- end .modal-save-success -->
+</ng-template>
+
+<ng-template #confirmRequestModal let-c="close" let-d="dismiss">
+  <div class="modal-great-news modal-mains">
+    <div class="inner">
+      <i class="icons icon-ok"></i>
+      <h4 class="titles">Great News!</h4>
+      <p class="txt">Your meeting was successfully confirmed!</p>
+      <div class="date-book">
+        Book the date for:
+        <span class="green-txt">Feb 16, 14:00</span>
+      </div>
+    </div>
+    <div class="btn-bottom">
+      <a href="javascript:;" class="btn btn-blue" (click)="c('Close click')">Close</a>
+    </div>
+   <!-- end .btn-bottom -->
+  </div>
+  <!-- end .modal-save-success -->
+</ng-template>

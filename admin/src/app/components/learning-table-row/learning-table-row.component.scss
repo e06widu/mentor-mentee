@@ -1,0 +1,127 @@
+@import "mixin";
+@import "variable";
+
+.learning-table-row {
+  height: 67px;
+  border-radius: 4px;
+  width: 100%;
+  background-color: $white-color;
+  margin-bottom: 8px;
+  padding: 15px 20px 15px 10px;
+  &.header {
+    background: transparent;
+    height: 37px;
+    padding: 10px 20px 10px 10px;
+    .td.th {
+      font-size: 14px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: $header-role-color;
+      &.day-td {
+        text-align: center;
+      }
+      &.mentee-td {
+        text-align: center;
+        position: relative;
+      }
+      i {
+        width: 26px;
+        height: 26px;
+        display: inline-block;
+        position: absolute;
+        top: -5px;
+        left: -7px;
+        &.mentor {
+          background: url('/assets/i/dashboard-status/mentor-icon.png') no-repeat;
+          background-size: 26px 26px;
+        }
+        &.mentee {
+          background: url('/assets/i/dashboard-status/mentee-icon.png') no-repeat;
+          background-size: 26px 26px;
+          left: 0;
+        }
+      }
+    }
+  }
+  .td {
+    float: left;
+    &:first-child {
+      width: calc(100% - 700px);
+    }
+    &.day-td {
+      width: 90px;
+      text-align: center;
+    }
+    &.mentee-td {
+      width: 160px;
+      text-align: center;
+    }
+    a.link {
+      font-size: 17px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: 0.2px;
+      text-align: left;
+      color: $primary-color;
+      text-decoration: none;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      display: block;
+      &:hover {
+        opacity: $hover-opacity;
+      }
+    }
+    p {
+      margin: 0;
+      padding: 0;
+      font-size: 12px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: 0.2px;
+      text-align: left;
+      text-transform: uppercase;
+      color: $header-name-color;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    span {
+      font-size: 15px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: 0.2px;
+      text-align: center;
+      &.red {
+        color: $red-color;
+        width: 80px;
+        display: inline-block;
+        text-align: center;
+        line-height: 34px;
+      }
+      &.orange {
+        color: $orange-color;
+        width: 80px;
+        display: inline-block;
+        text-align: center;
+        line-height: 34px;
+      }
+      &.gray {
+        font-weight: normal;
+        font-size: 14px;
+        color: $header-role-color;
+        line-height: 34px;
+      }
+    }
+  }
+}

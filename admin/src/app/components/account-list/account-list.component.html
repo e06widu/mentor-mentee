@@ -1,0 +1,17 @@
+<!-- list account component -->
+<div class="account-list">
+  <ul>
+    <li *ngFor="let item of data" class="clearfix">
+
+      <a href="javascipt:;"><img src="{{item.image}}" alt=""/></a>
+      <div class="text">
+        <a href="javascript:;">{{item.name}}</a>
+        <p>{{item.field}}</p>
+      </div>
+      <div class="value">
+        <span class="active"><i></i> <b>{{item.active}}</b> active</span>
+        <span class="taken"><i></i> <b>{{item.taken}}</b> taken</span>
+      </div>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,23 @@
+<div class="areas-section">
+  <div class="title">{{title}}</div>
+  <div class="row clearfix">
+    <div class="areas-view" *ngFor="let item of dataList">
+      <a href="javascript:;" class="title" [routerLink]="['/mentee/'+ linkTarget]">
+        {{item['title']}}
+      </a>
+      <div class="tag">{{item['description']}}</div>
+      <div class="subtitle">Mentors</div>
+      <ul class="members">
+        <li *ngFor="let photoItem of item['mentorsList'].slice(0,5)">
+          <img src="{{photoItem['img']}}" alt="img"/>
+        </li>
+        <li *ngIf="item['mentorsList'].length > 5">
+          {{item['mentorsList'].length > 5 ? '+' + (item['mentorsList'].length-5) : ''}}
+        </li>
+      </ul>
+    </div>
+    <!--end .areas-view-->
+  </div>
+  <!--end .row-->
+</div>
+<!--end .areas-section-->

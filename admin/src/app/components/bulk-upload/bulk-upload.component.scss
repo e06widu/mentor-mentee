@@ -1,0 +1,174 @@
+@import "mixin";
+@import "variable";
+
+/* buld modal */
+.modal {
+  z-index: 301;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 512px;
+  border-radius: 4px;
+  background-color: $white-color;
+  padding: 30px 0 20px 0;
+
+  &.done {
+    width: 437px;
+    height: 366px;
+    .buttons {
+      margin: 0 auto;
+      width: calc(100% - 50px);
+    }
+  }
+  .row {
+    padding-bottom: 18px;
+    padding-left: 28px;
+    padding-right: 28px;
+    .first {
+      float: left;
+      width: 234px;
+      margin-right: 16px;
+    }
+    .second {
+      float: left;
+      width: 294px;
+    }
+  }
+  h3 {
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: $black-color;
+    margin: 0;
+    padding: 0 0 20px 0;
+    display: block;
+  }
+  .content-wrapper {
+    padding-left: 40px;
+    padding-right: 40px;
+    .drop-wrapper {
+      padding: 17px 5px;
+    }
+  }
+  .buttons {
+    text-align: center;
+    border-top: solid 1px $bg-color;
+    padding-top: 18px;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    li {
+      text-align: center;
+      flex-grow: 1;
+      height: 47px;
+      background-color: $bg-color;
+      line-height: 47px;
+      padding: 0 40px;
+      &.active {
+        background: $button-color;
+        a {
+          color: $white-color;
+        }
+      }
+      a {
+        font-size: 15px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: $header-role-color;
+        text-decoration: none;
+      }
+    }
+  }
+  .ok-icon {
+    display: block;
+    width: 131px;
+    height: 131px;
+    background: url('/assets/i/ok-icon.png') no-repeat;
+    background-size: 131px 131px;
+    margin: 0 auto;
+  }
+  p.text {
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: $dark-gray-color;
+    padding: 10px 0 30px 0;
+    margin: 0;
+  }
+}
+
+/* overlay style */
+.overlay {
+  z-index: 300;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $modal-overlay-bg;
+}
+
+/* bulk modal mobile */
+@include mobile() {
+  .modal {
+    width: 350px;
+    height: auto;
+    &.done {
+      width: 350px;
+      height: 366px;
+    }
+    h3 {
+      font-size: 20px;
+      padding-bottom: 10px;
+    }
+    .row {
+      padding-bottom: 5px;
+      padding-left: 15px;
+      padding-right: 15px;
+      .first {
+        padding-bottom: 5px;
+        float: none;
+        width: 100%;
+      }
+      .second {
+        padding-bottom: 5px;
+        float: none;
+        width: 100%;
+      }
+    }
+    .content-wrapper {
+      padding-left: 20px;
+      padding-right: 20px;
+      .drop-wrapper {
+        padding: 10px 5px;
+      }
+    }
+    ul {
+      li {
+        height: 30px;
+        line-height: 30px;
+        padding: 0 5px;
+        a {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
